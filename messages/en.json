@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Skip to main content"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Critical",
+      "warning": "Warning",
+      "info": "Information"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Understand your dataset before training",
+    "description": "Dataset Doctor surfaces missing values, duplicates, class imbalance, suspicious features and leakage in a clear diagnostic report — before you train your model.",
+    "keywords": [
+      "dataset",
+      "data quality",
+      "machine learning",
+      "ML tooling",
+      "dataset diagnostics"
+    ]
+  },
+  "Theme": {
+    "label": "Theme",
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "Language": {
+    "label": "Language",
+    "select": "Select language",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — home",
+    "links": {
+      "features": "Features",
+      "workflow": "How it Works",
+      "report": "Report",
+      "opensource": "Open Source"
+    },
+    "githubAria": "Dataset Doctor on GitHub",
+    "cta": "View sample report",
+    "openMenu": "Open menu",
+    "sheetTitle": "Navigation",
+    "sheetDesc": "Site sections and actions",
+    "sheetMeta": "Open source · Python-friendly",
+    "closeMenu": "Close menu",
+    "sectionsAria": "Page sections"
+  },
+  "Hero": {
+    "eyebrow": "Open-source dataset diagnostics",
+    "title": "Know your dataset<br></br><em>before</em> you train<br></br>your model.",
+    "ledeLead": "Catch data quality problems before they become model problems.",
+    "ledeRest": "Dataset Doctor helps surface missing values, duplicates, imbalance, suspicious features and other common dataset issues in a clear report.",
+    "ctaPrimary": "View sample report",
+    "conceptNote": "A design concept — an open-source Python toolkit in the making. Every figure here is illustrative.",
+    "meta": {
+      "source": "Open source",
+      "python": "Python-friendly",
+      "builtFor": "Built for ML workflows"
+    }
+  },
+  "Tech": {
+    "caption": "Designed for modern machine-learning workflows.",
+    "aria": "Machine-learning technologies"
+  },
+  "Preview": {
+    "reportChrome": "Dataset Report",
+    "sampleTag": "Sample output",
+    "specimenStats": "{rows} rows · {columns} columns",
+    "analyzedIn": "Sample analysis: {seconds}s",
+    "healthScore": "Health Score",
+    "chip": "Needs attention",
+    "headFinding": "Finding",
+    "headDetail": "Detail",
+    "headSeverity": "Severity",
+    "issues": [
+      {
+        "name": "Missing Values",
+        "detail": "4 columns"
+      },
+      {
+        "name": "Duplicate Rows",
+        "detail": "218"
+      },
+      {
+        "name": "Class Imbalance",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Potential Leakage",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Illustrative sample report · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Why it matters",
+    "title": "Model problems often begin before training starts.",
+    "body": "Most teams discover dataset problems too late — after hours spent tuning architectures and hyperparameters that were never the bottleneck. By then the fix belongs upstream, and the experiments have to be re-run.",
+    "quote": "A model trained on a sick dataset learns the sickness.",
+    "indexLabel": "Symptom index",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Missing data",
+        "gloss": "Silent NaN drift in 4 columns"
+      },
+      {
+        "name": "Duplicate observations",
+        "gloss": "218 rows recorded twice"
+      },
+      {
+        "name": "Class imbalance",
+        "gloss": "87 / 13 split between priors"
+      },
+      {
+        "name": "Suspicious features",
+        "gloss": "Target proxies in disguise"
+      },
+      {
+        "name": "Incorrect data types",
+        "gloss": "Numerics parsed as strings"
+      },
+      {
+        "name": "Data leakage",
+        "gloss": "Answer keys in the training frame"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "The checklist",
+    "title": "Everything worth checking<br></br>before <code>model.fit()</code>",
+    "body": "Eight passes over the schema, the statistics and the relationships between them — the quiet checks that decide whether a model will generalize.",
+    "big1": {
+      "label": "Pass 01 · Completeness",
+      "title": "Missing Value Analysis",
+      "body": "Null patterns grouped by column, dtype and row segment — not just one sad total count.",
+      "caption": "Filled squares mark present values, red outlines mark nulls — 4 of 31 columns carry nulls · 0.8% of cells"
+    },
+    "big2": {
+      "label": "Pass 02 · Uniqueness",
+      "title": "Duplicate Detection",
+      "body": "Exact and near-duplicate rows caught by fingerprint hashing, across every column pair.",
+      "dupTag": "dup",
+      "caption": "Row bars preview record fingerprints; matching rows highlight amber — 218 rows collapse into 109 unique records"
+    },
+    "compact": [
+      {
+        "label": "Pass 03",
+        "title": "Class Distribution",
+        "body": "Majority and minority priors, surfaced before they skew metrics."
+      },
+      {
+        "label": "Pass 04",
+        "title": "Outlier Detection",
+        "body": "Values drifting far outside their column's expected range."
+      },
+      {
+        "label": "Pass 05",
+        "title": "Data Type Validation",
+        "body": "Numerics stored as strings, dates stored as anything but."
+      },
+      {
+        "label": "Pass 06",
+        "title": "Leakage Warnings",
+        "body": "Features holding answers they should not have access to."
+      }
+    ],
+    "corr": {
+      "label": "Pass 07 · Relationships",
+      "title": "Correlation Analysis",
+      "body": "Which features move together — and which ones happen to move with the target.",
+      "legend": "Illustrative correlation map",
+      "note": "Example finding: field_12 and field_27 have<hi> ρ 0.94</hi> — review for leakage"
+    },
+    "summary": {
+      "label": "Overview",
+      "title": "Dataset Summary",
+      "body": "The factual shape of your data, before any modelling decision.",
+      "rows": [
+        {
+          "term": "Rows",
+          "value": "12,458"
+        },
+        {
+          "term": "Columns",
+          "value": "31"
+        },
+        {
+          "term": "Numeric",
+          "value": "22"
+        },
+        {
+          "term": "Categorical",
+          "value": "9"
+        },
+        {
+          "term": "Memory",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Dataset Health",
+    "title": "One score. A clearer starting point.",
+    "body": "Dataset Health summarizes common quality signals to help identify which areas deserve attention before training.",
+    "ofTotal": "/ 100",
+    "overall": "Overall score",
+    "chip": "Needs attention",
+    "disclaimer": "<lbl>Concept preview</lbl> — this page is a product concept. Scores and findings shown here are illustrative, not computed from real data.",
+    "catsHeadL": "Diagnostic categories",
+    "catsHeadR": "Score",
+    "categories": [
+      {
+        "label": "Completeness",
+        "value": "92",
+        "note": "nulls in 4 of 31 columns"
+      },
+      {
+        "label": "Consistency",
+        "value": "81",
+        "note": "mixed encodings in region"
+      },
+      {
+        "label": "Class Balance",
+        "value": "44",
+        "note": "87 / 13 class prior"
+      },
+      {
+        "label": "Duplicate Quality",
+        "value": "76",
+        "note": "218 duplicate rows"
+      },
+      {
+        "label": "Leakage Risk",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 strong",
+      "50–79 watch",
+      "0–49 act now"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Sample report",
+    "title": "Problems, <em>prioritized</em>.",
+    "body": "Every finding ships with evidence and a suggested next action — sorted by severity, so the first hour goes to the biggest risk.",
+    "excerptNote": "Selected findings — the full report lists every check with its evidence.",
+    "evidence": "Evidence",
+    "actionLabel": "Suggested action",
+    "leakLabels": [
+      "customer_status",
+      "median feature"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Potential target leakage",
+        "body": "The feature \"customer_status\" has a suspiciously strong relationship with the target.",
+        "action": "Review whether this column would actually be available at prediction time.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Class imbalance detected",
+        "body": "Training on this split will bias the model toward the majority class unless it is weighted or resampled.",
+        "action": "Weight the classes or resample the training split before fitting; report precision and recall per class instead of plain accuracy.",
+        "distLabelA": "Class A",
+        "distLabelB": "Class B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Duplicate observations",
+        "body": "218 duplicated rows detected.",
+        "action": "Keep one copy of each duplicated record and regenerate the split before training — or trace why duplicates enter the pipeline upstream.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "duplicated rows · 1.75% of dataset"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "How it works",
+    "title": "From dataset to insight<br></br>in three steps.",
+    "steps": [
+      {
+        "title": "Upload",
+        "body": "CSV or Parquet dataset.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Inspect",
+        "body": "Automated quality and ML-readiness checks.",
+        "meta": "Illustrative checks"
+      },
+      {
+        "title": "Improve",
+        "body": "Fix issues before training.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Workflow integration",
+    "title": "Fits into the workflow you already use.",
+    "body": "Run one command in CI, or import the analyzer beside your notebook. Either way the report arrives as a single self-contained HTML file.",
+    "termTag": "Sample session",
+    "analyzing": "Analyzing dataset...",
+    "rowsOk": "{count} rows",
+    "colsOk": "{count} features",
+    "warnings": "{count} warnings",
+    "critical": "{count} critical issues",
+    "healthLabel": "Dataset health:",
+    "generated": "report.html generated",
+    "apiNote": "Command and API shown are illustrative — the interface is still being shaped."
+  },
+  "OSS": {
+    "eyebrow": "Open source",
+    "title": "Transparent by design.",
+    "body": "Dataset Doctor is envisioned as an open-source toolkit that developers can inspect, extend and integrate into their existing workflows.",
+    "cta": "View on GitHub",
+    "pillars": [
+      {
+        "title": "Open Source",
+        "body": "Read every check, audit every heuristic, ship your own fork.",
+        "meta": "MIT license"
+      },
+      {
+        "title": "Python First",
+        "body": "A proposed interface for notebooks, scripts and pipelines.",
+        "meta": "Proposed Python interface"
+      },
+      {
+        "title": "Extensible Checks",
+        "body": "A proposed catalogue of checks with room for custom validation passes.",
+        "meta": "Custom checks concept"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Inspect first.",
+    "title2": "Train <em>second</em>.",
+    "sub": "Catch obvious dataset problems before spending time optimizing the wrong model.",
+    "ctaPrimary": "View sample report",
+    "note": "Product concept · sample data throughout"
+  },
+  "Project": {
+    "link": "View on GitHub",
+    "status": "Not published yet",
+    "hint": "Concept stage — the repository, documentation and issue tracker arrive with the first public release."
+  },
+  "Footer": {
+    "tagline": "Dataset diagnostics for machine-learning workflows.",
+    "linksAria": "Project references",
+    "linkSource": "View source",
+    "linkReadme": "README",
+    "linkIssues": "Report a problem",
+    "copyright": "© {year} Dataset Doctor. A design concept — sample figures throughout."
+  }
+}

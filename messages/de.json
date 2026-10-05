@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Zum Hauptinhalt springen"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kritisch",
+      "warning": "Warnung",
+      "info": "Information"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Verstehe deinen Datensatz, bevor du trainierst",
+    "description": "Dataset Doctor macht fehlende Werte, Duplikate, Klassen-Ungleichgewicht, verdächtige Merkmale und Leakage in einem klaren Diagnosebericht sichtbar — bevor du dein Modell trainierst.",
+    "keywords": [
+      "Datensatz",
+      "Datenqualität",
+      "Maschinelles Lernen",
+      "ML-Tooling",
+      "Datensatz-Diagnose"
+    ]
+  },
+  "Theme": {
+    "label": "Design",
+    "toggle": "Design wechseln",
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "Language": {
+    "label": "Sprache",
+    "select": "Sprache wählen",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — Startseite",
+    "links": {
+      "features": "Funktionen",
+      "workflow": "So funktioniert's",
+      "report": "Bericht",
+      "opensource": "Open Source"
+    },
+    "githubAria": "Dataset Doctor auf GitHub",
+    "cta": "Beispielbericht ansehen",
+    "openMenu": "Menü öffnen",
+    "sheetTitle": "Navigation",
+    "sheetDesc": "Seitenbereiche und Aktionen",
+    "sheetMeta": "Open source · Python-freundlich",
+    "closeMenu": "Menü schließen",
+    "sectionsAria": "Seitenbereiche"
+  },
+  "Hero": {
+    "eyebrow": "Open-Source-Datensatz-Diagnostik",
+    "title": "Kenne deinen Datensatz,<br></br><em>bevor</em> du dein<br></br>Modell trainierst.",
+    "ledeLead": "Fange Datenqualitätsprobleme ab, bevor sie zu Modellproblemen werden.",
+    "ledeRest": "Dataset Doctor macht fehlende Werte, Duplikate, Ungleichgewichte, verdächtige Merkmale und andere häufige Datensatz-Probleme in einem klaren Bericht sichtbar.",
+    "ctaPrimary": "Beispielbericht ansehen",
+    "conceptNote": "Ein Designkonzept — ein Open-Source-Python-Toolkit im Entstehen. Alle Werte hier sind illustrativ.",
+    "meta": {
+      "source": "Open source",
+      "python": "Python-freundlich",
+      "builtFor": "Für ML-Workflows gebaut"
+    }
+  },
+  "Tech": {
+    "caption": "Entwickelt für moderne Machine-Learning-Workflows.",
+    "aria": "Machine-Learning-Technologien"
+  },
+  "Preview": {
+    "reportChrome": "Datensatz-Bericht",
+    "sampleTag": "Beispielausgabe",
+    "specimenStats": "{rows} Zeilen · {columns} Spalten",
+    "analyzedIn": "Beispielanalyse: {seconds}s",
+    "healthScore": "Datensatzqualität",
+    "chip": "Handlungsbedarf",
+    "headFinding": "Befund",
+    "headDetail": "Detail",
+    "headSeverity": "Schweregrad",
+    "issues": [
+      {
+        "name": "Fehlende Werte",
+        "detail": "4 Spalten"
+      },
+      {
+        "name": "Duplikate",
+        "detail": "218"
+      },
+      {
+        "name": "Klassen-Ungleichgewicht",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Mögliche Leakage",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Illustrativer Beispielbericht · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Warum es zählt",
+    "title": "Modellprobleme beginnen oft, bevor das Training startet.",
+    "body": "Die meisten Teams entdecken Datensatz-Probleme zu spät — nach stundenlangem Tuning von Architekturen und Hyperparametern, die nie der Engpass waren. Bis dahin gehört die Korrektur in die Datenaufbereitung, und die Experimente müssen neu durchlaufen.",
+    "quote": "Ein Modell, das auf einem kranken Datensatz trainiert, lernt die Krankheit.",
+    "indexLabel": "Symptomindex",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Fehlende Daten",
+        "gloss": "Stiller NaN-Drift in 4 Spalten"
+      },
+      {
+        "name": "Doppelte Beobachtungen",
+        "gloss": "218 Zeilen doppelt erfasst"
+      },
+      {
+        "name": "Klassen-Ungleichgewicht",
+        "gloss": "87 / 13 Aufteilung zwischen den Klassen"
+      },
+      {
+        "name": "Verdächtige Merkmale",
+        "gloss": "Verschleierte Ziel-Proxies"
+      },
+      {
+        "name": "Falsche Datentypen",
+        "gloss": "Numerisches als Strings geparst"
+      },
+      {
+        "name": "Data Leakage",
+        "gloss": "Antwortschlüssel im Trainingsframe"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Die Checkliste",
+    "title": "Alles, was es zu prüfen gilt,<br></br>bevor <code>model.fit()</code> läuft",
+    "body": "Acht Durchgänge über Schema, Statistiken und die Beziehungen dazwischen — die leisen Checks, die darüber entscheiden, ob ein Modell generalisiert.",
+    "big1": {
+      "label": "Durchgang 01 · Vollständigkeit",
+      "title": "Fehlende-Werte-Analyse",
+      "body": "Nullmuster gruppiert nach Spalte, dtype und Zeilensegment — nicht nur eine traurige Gesamtzahl.",
+      "caption": "Gefüllte Quadrate zeigen vorhandene Werte, rote Umrisse Nullwerte — 4 von 31 Spalten enthalten Nullwerte · 0,8 % der Zellen"
+    },
+    "big2": {
+      "label": "Durchgang 02 · Eindeutigkeit",
+      "title": "Duplikat-Erkennung",
+      "body": "Exakte und nahe Duplikate, gefangen über Fingerprint-Hashing, über jedes Spaltenpaar hinweg.",
+      "dupTag": "dup",
+      "caption": "Zeilenbalken zeigen Datensatz-Fingerprints; übereinstimmende Zeilen leuchten bernsteinfarben — 218 Zeilen fallen auf 109 eindeutige Datensätze zusammen"
+    },
+    "compact": [
+      {
+        "label": "Durchgang 03",
+        "title": "Klassenverteilung",
+        "body": "Mehrheits- und Minderheits-Priors, sichtbar bevor sie Kennzahlen verzerren."
+      },
+      {
+        "label": "Durchgang 04",
+        "title": "Ausreißererkennung",
+        "body": "Werte, die weit außerhalb des erwarteten Bereichs ihrer Spalte liegen."
+      },
+      {
+        "label": "Durchgang 05",
+        "title": "Datentyp-Validierung",
+        "body": "Numerisches als Strings gespeichert, Daten als alles außer Datumsangaben."
+      },
+      {
+        "label": "Durchgang 06",
+        "title": "Leakage-Warnungen",
+        "body": "Merkmale, die Antworten halten, auf die sie keinen Zugriff haben sollten."
+      }
+    ],
+    "corr": {
+      "label": "Durchgang 07 · Beziehungen",
+      "title": "Korrelationsanalyse",
+      "body": "Welche Merkmale sich gemeinsam bewegen — und welche zufällig mit dem Ziel mitbewegt sind.",
+      "legend": "Illustrative Korrelationskarte",
+      "note": "Beispielbefund: field_12 und field_27 haben<hi> ρ 0.94</hi> — auf Leakage prüfen"
+    },
+    "summary": {
+      "label": "Überblick",
+      "title": "Datensatz-Zusammenfassung",
+      "body": "Die faktische Form deiner Daten, vor jeder Modellierungsentscheidung.",
+      "rows": [
+        {
+          "term": "Zeilen",
+          "value": "12,458"
+        },
+        {
+          "term": "Spalten",
+          "value": "31"
+        },
+        {
+          "term": "Numerisch",
+          "value": "22"
+        },
+        {
+          "term": "Kategorisch",
+          "value": "9"
+        },
+        {
+          "term": "Speicher",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Datensatz-Health",
+    "title": "Ein Score. Ein klarerer Startpunkt.",
+    "body": "Dataset Health fasst gängige Qualitätssignale zusammen, um zu zeigen, welche Bereiche vor dem Training Aufmerksamkeit brauchen.",
+    "ofTotal": "/ 100",
+    "overall": "Gesamtscore",
+    "chip": "Handlungsbedarf",
+    "disclaimer": "<lbl>Vorschau-Konzept</lbl> — diese Seite ist ein Produktkonzept. Scores und Befunde hier sind illustrativ, nicht aus echten Daten berechnet.",
+    "catsHeadL": "Diagnosekategorien",
+    "catsHeadR": "Score",
+    "categories": [
+      {
+        "label": "Vollständigkeit",
+        "value": "92",
+        "note": "Nullwerte in 4 von 31 Spalten"
+      },
+      {
+        "label": "Konsistenz",
+        "value": "81",
+        "note": "gemischte Kodierungen in region"
+      },
+      {
+        "label": "Klassen-Balance",
+        "value": "44",
+        "note": "87 / 13 Klassen-Prior"
+      },
+      {
+        "label": "Duplikat-Qualität",
+        "value": "76",
+        "note": "218 doppelte Zeilen"
+      },
+      {
+        "label": "Leakage-Risiko",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 stark",
+      "50–79 beobachten",
+      "0–49 handeln"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Beispielbericht",
+    "title": "Probleme, <em>priorisiert</em>.",
+    "body": "Jeder Befund liefert Belege und einen empfohlenen nächsten Schritt — nach Schweregrad sortiert, damit die erste Stunde dem größten Risiko gilt.",
+    "evidence": "Belege",
+    "actionLabel": "Empfohlener Schritt",
+    "leakLabels": [
+      "customer_status",
+      "Median-Merkmal"
+    ],
+    "excerptNote": "Ausgewählte Befunde — der vollständige Bericht listet jeden Check samt Belegen.",
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Potenzielles Target Leakage",
+        "body": "Das Merkmal \"customer_status\" hat eine verdächtig starke Beziehung zum Ziel.",
+        "action": "Prüfe, ob diese Spalte zum Zeitpunkt der Vorhersage überhaupt verfügbar wäre.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Klassen-Ungleichgewicht erkannt",
+        "body": "Training auf dieser Aufteilung wird das Modell zugunsten der Mehrheitsklasse verzerren, sofern nicht gewichtet oder resampelt wird.",
+        "action": "Gewichte die Klassen oder resample den Trainings-Split vor dem Fitten; berichte Präzision und Recall je Klasse statt bloßer Genauigkeit.",
+        "distLabelA": "Klasse A",
+        "distLabelB": "Klasse B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Doppelte Beobachtungen",
+        "body": "218 doppelte Zeilen gefunden.",
+        "action": "Behalte nur eine Kopie jedes Duplikats und regeneriere den Split vor dem Training — oder kläre, warum Duplikate weiter oben in die Pipeline geraten.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "doppelte Zeilen · 1,75 % des Datensatzes"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "So funktioniert's",
+    "title": "Vom Datensatz zur Erkenntnis<br></br>in drei Schritten.",
+    "steps": [
+      {
+        "title": "Upload",
+        "body": "CSV- oder Parquet-Datensatz.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Prüfen",
+        "body": "Automatisierte Qualitäts- und ML-Readiness-Checks.",
+        "meta": "Beispielprüfungen"
+      },
+      {
+        "title": "Verbessern",
+        "body": "Probleme vor dem Training beheben.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Workflow-Integration",
+    "title": "Passt in den Workflow, den du schon nutzt.",
+    "body": "Führe einen Befehl in CI aus oder importiere den Analyzer neben deinem Notebook. So oder so kommt der Bericht als eine einzige eigenständige HTML-Datei.",
+    "termTag": "Beispielsitzung",
+    "analyzing": "Analysiere Datensatz...",
+    "rowsOk": "{count} Zeilen",
+    "colsOk": "{count} Merkmale",
+    "warnings": "{count} Warnungen",
+    "critical": "{count} kritische Probleme",
+    "healthLabel": "Dataset-Health:",
+    "generated": "report.html erstellt",
+    "apiNote": "Gezeigter Befehl und API sind illustrativ — die Oberfläche wird noch geformt."
+  },
+  "OSS": {
+    "eyebrow": "Open source",
+    "title": "Transparent von Grund auf.",
+    "body": "Dataset Doctor ist als Open-Source-Toolkit gedacht, das Entwickler:innen prüfen, erweitern und in bestehende Workflows integrieren können.",
+    "cta": "Auf GitHub ansehen",
+    "pillars": [
+      {
+        "title": "Open Source",
+        "body": "Jeden Check lesen, jede Heuristik auditen, den eigenen Fork shippen.",
+        "meta": "MIT-Lizenz"
+      },
+      {
+        "title": "Python First",
+        "body": "Eine geplante Schnittstelle für Notebooks, Skripte und Pipelines.",
+        "meta": "Geplante Python-Schnittstelle"
+      },
+      {
+        "title": "Erweiterbare Checks",
+        "body": "Ein geplanter Prüfkatalog mit Platz für eigene Validierungen.",
+        "meta": "Konzept für eigene Prüfungen"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Erst inspizieren.",
+    "title2": "Dann <em>trainieren</em>.",
+    "sub": "Fange offensichtliche Datensatz-Probleme ab, bevor du Zeit mit dem Optimieren des falschen Modells verbringst.",
+    "ctaPrimary": "Beispielbericht ansehen",
+    "note": "Produktkonzept · durchgehend Beispieldaten"
+  },
+  "Project": {
+    "link": "Auf GitHub ansehen",
+    "status": "Noch nicht veröffentlicht",
+    "hint": "Konzeptphase – Repository, Dokumentation und Issue-Tracker erscheinen mit der ersten öffentlichen Version."
+  },
+  "Footer": {
+    "tagline": "Datensatz-Diagnosen für Machine-Learning-Workflows.",
+    "linksAria": "Projektquellen",
+    "linkSource": "Quellcode ansehen",
+    "linkReadme": "README",
+    "linkIssues": "Problem melden",
+    "copyright": "© {year} Dataset Doctor. Ein Designkonzept — durchgehend Beispielwerte."
+  }
+}

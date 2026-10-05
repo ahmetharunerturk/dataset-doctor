@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Ana içeriğe geç"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kritik",
+      "warning": "Uyarı",
+      "info": "Bilgi"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Eğitmeden önce veri kümenizi tanıyın",
+    "description": "Dataset Doctor; eksik değerleri, kopyaları, sınıf dengesizliğini, şüpheli özellikleri ve sızıntıyı net bir tanı raporunda gösterir — modelinizi eğitmeden önce.",
+    "keywords": [
+      "veri kümesi",
+      "veri kalitesi",
+      "makine öğrenmesi",
+      "ML araçları",
+      "veri kümesi tanılama"
+    ]
+  },
+  "Theme": {
+    "label": "Tema",
+    "toggle": "Temayı değiştir",
+    "light": "Açık",
+    "dark": "Koyu",
+    "system": "Sistem"
+  },
+  "Language": {
+    "label": "Dil",
+    "select": "Dil seçin",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — ana sayfa",
+    "links": {
+      "features": "Özellikler",
+      "workflow": "Nasıl çalışır",
+      "report": "Rapor",
+      "opensource": "Açık kaynak"
+    },
+    "githubAria": "Dataset Doctor GitHub deposu",
+    "cta": "Örnek raporu görüntüle",
+    "openMenu": "Menüyü aç",
+    "sheetTitle": "Gezinme",
+    "sheetDesc": "Site bölümleri ve işlemler",
+    "sheetMeta": "Açık kaynak · Python dostu",
+    "closeMenu": "Menüyü kapat",
+    "sectionsAria": "Sayfa bölümleri"
+  },
+  "Hero": {
+    "eyebrow": "Açık kaynaklı veri kümesi tanılama",
+    "title": "Modelinizi <em>eğitmeden</em> önce<br></br>veri kümenizi tanıyın.",
+    "ledeLead": "Veri kalitesi sorunlarını, model sorunlarına dönüşmeden yakalayın.",
+    "ledeRest": "Dataset Doctor; eksik değerleri, kopyaları, dengesizliği, şüpheli özellikleri ve diğer yaygın veri kümesi sorunlarını net bir raporda görünür kılar.",
+    "ctaPrimary": "Örnek raporu görüntüle",
+    "conceptNote": "Tasarım konsepti — gelişmekte olan açık kaynaklı bir Python araç seti. Buradaki tüm rakamlar temsilîdir.",
+    "meta": {
+      "source": "Açık kaynak",
+      "python": "Python dostu",
+      "builtFor": "ML iş akışları için"
+    }
+  },
+  "Tech": {
+    "caption": "Modern makine öğrenmesi iş akışları için tasarlandı.",
+    "aria": "Makine öğrenmesi teknolojileri"
+  },
+  "Preview": {
+    "reportChrome": "Veri Kümesi Raporu",
+    "sampleTag": "Örnek çıktı",
+    "specimenStats": "{rows} satır · {columns} sütun",
+    "analyzedIn": "Örnek analiz: {seconds} sn",
+    "healthScore": "Sağlık Puanı",
+    "chip": "İyileştirme gerekli",
+    "headFinding": "Bulgu",
+    "headDetail": "Ayrıntı",
+    "headSeverity": "Önem",
+    "issues": [
+      {
+        "name": "Eksik Değerler",
+        "detail": "4 sütun"
+      },
+      {
+        "name": "Kopya Satırlar",
+        "detail": "218"
+      },
+      {
+        "name": "Sınıf Dengesizliği",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Olası Sızıntı",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Temsili örnek rapor · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Neden önemli",
+    "title": "Model sorunları çoğu zaman eğitim başlamadan önce başlar.",
+    "body": "Çoğu ekip veri kümesi sorunlarını çok geç fark eder — hiç darboğaz olmayan mimari ve hiperparametreleri saatlerce ayarladıktan sonra. O noktada düzeltmenin yeri yukarı akıştır ve deneylerin yeniden çalıştırılması gerekir.",
+    "quote": "Hasta bir veri kümesinde eğitilen model hastalığı öğrenir.",
+    "indexLabel": "Belirti dizini",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Eksik veri",
+        "gloss": "4 sütunda sessiz NaN kayması"
+      },
+      {
+        "name": "Kopya gözlemler",
+        "gloss": "218 satır iki kez kaydedilmiş"
+      },
+      {
+        "name": "Sınıf dengesizliği",
+        "gloss": "öncüler arasında 87 / 13 dağılımı"
+      },
+      {
+        "name": "Şüpheli özellikler",
+        "gloss": "gizlice hedef vekilleri"
+      },
+      {
+        "name": "Yanlış veri tipleri",
+        "gloss": "sayısal değerler metin olarak ayrıştırılmış"
+      },
+      {
+        "name": "Veri sızıntısı",
+        "gloss": "eğitim çerçevesinde cevap anahtarları"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Kontrol listesi",
+    "title": "<code>model.fit()</code> öncesinde<br></br>kontrol edilmeye değer her şey",
+    "body": "Şema, istatistikler ve aralarındaki ilişkiler üzerinde sekiz geçiş — bir modelin genelleştirip genelleştirmeyeceğine karar veren sessiz kontroller.",
+    "big1": {
+      "label": "Geçiş 01 · Tamlık",
+      "title": "Eksik Değer Analizi",
+      "body": "Sütuna, dtype'a ve satır dilimine göre gruplanan boş kalıplar — yalnızca tek bir üzücü toplam sayı değil.",
+      "caption": "Dolu kareler mevcut değerleri, kırmızı çerçeveler boş değerleri işaretler — 31 sütunun 4'ünde boş değer var · hücrelerin %0,8'i"
+    },
+    "big2": {
+      "label": "Geçiş 02 · Benzersizlik",
+      "title": "Kopya Tespiti",
+      "body": "Parmak izi karmalamasıyla yakalanan birebir ve yakın kopya satırlar — her sütun çiftinde.",
+      "dupTag": "dup",
+      "caption": "Satır çubukları kayıt parmak izlerini önizler; eşleşen satırlar kehribar rengiyle vurgulanır — 218 satır 109 benzersiz kayda indirgenir"
+    },
+    "compact": [
+      {
+        "label": "Geçiş 03",
+        "title": "Sınıf Dağılımı",
+        "body": "Metrikleri bozmadan önce görünür olan çoğunluk ve azınlık öncüleri."
+      },
+      {
+        "label": "Geçiş 04",
+        "title": "Aykırı Değer Tespiti",
+        "body": "Sütunlarının beklenen aralığının çok dışına kayan değerler."
+      },
+      {
+        "label": "Geçiş 05",
+        "title": "Veri Tipi Doğrulaması",
+        "body": "Metin olarak saklanmış sayısal değerler, tarih olmaktan uzak tarihler."
+      },
+      {
+        "label": "Geçiş 06",
+        "title": "Sızıntı Uyarıları",
+        "body": "Erişimleri olmaması gereken cevapları taşıyan özellikler."
+      }
+    ],
+    "corr": {
+      "label": "Geçiş 07 · İlişkiler",
+      "title": "Korelasyon Analizi",
+      "body": "Hangi özellikler birlikte hareket eder — ve hangileri tesadüfen hedefle birlikte hareket eder.",
+      "legend": "Temsili korelasyon haritası",
+      "note": "Örnek bulgu: field_12 ve field_27 arasında<hi> ρ 0.94</hi> var — sızıntı açısından inceleyin"
+    },
+    "summary": {
+      "label": "Genel Bakış",
+      "title": "Veri Kümesi Özeti",
+      "body": "Herhangi bir modelleme kararı öncesinde verinizin olgusal biçimi.",
+      "rows": [
+        {
+          "term": "Satırlar",
+          "value": "12,458"
+        },
+        {
+          "term": "Sütunlar",
+          "value": "31"
+        },
+        {
+          "term": "Sayısal",
+          "value": "22"
+        },
+        {
+          "term": "Kategorik",
+          "value": "9"
+        },
+        {
+          "term": "Bellek",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Veri Kümesi Sağlığı",
+    "title": "Tek bir puan. Daha net bir başlangıç noktası.",
+    "body": "Dataset Health, eğitimden önce hangi alanların ilgiyi hak ettiğini belirlemeye yardımcı olmak için yaygın kalite sinyallerini özetler.",
+    "ofTotal": "/ 100",
+    "overall": "Genel puan",
+    "chip": "İyileştirme gerekli",
+    "disclaimer": "<lbl>Konsept önizleme</lbl> — bu sayfa bir ürün konseptidir. Buradaki puanlar ve bulgular örnek amaçlıdır; gerçek verilerden hesaplanmamıştır.",
+    "catsHeadL": "Tanı kategorileri",
+    "catsHeadR": "Puan",
+    "categories": [
+      {
+        "label": "Tamlık",
+        "value": "92",
+        "note": "31 sütunun 4'ünde boş değer"
+      },
+      {
+        "label": "Tutarlılık",
+        "value": "81",
+        "note": "region sütununda karışık kodlamalar"
+      },
+      {
+        "label": "Sınıf Dengesi",
+        "value": "44",
+        "note": "87 / 13 sınıf öncüsü"
+      },
+      {
+        "label": "Kopya Kalitesi",
+        "value": "76",
+        "note": "218 kopya satır"
+      },
+      {
+        "label": "Sızıntı Riski",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 güçlü",
+      "50–79 izle",
+      "0–49 şimdi müdahale et"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Örnek rapor",
+    "title": "Sorunlar, <em>önceliklendirilmiş</em>.",
+    "body": "Her bulgu kanıt ve önerilen bir sonraki adımla birlikte gelir — önem derecesine göre sıralanır, böylece ilk saat en büyük riske gider.",
+    "excerptNote": "Seçilmiş bulgular — tam rapor her kontrolü kanıtlarıyla listeler.",
+    "evidence": "Kanıt",
+    "actionLabel": "Önerilen adım",
+    "leakLabels": [
+      "customer_status",
+      "medyan özellik"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Olası hedef sızıntısı",
+        "body": "\"customer_status\" özelliği ile hedef arasında şüpheli biçimde güçlü bir ilişki var.",
+        "action": "Bu sütunun tahmin anında gerçekten kullanılabilir olup olmadığını inceleyin.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Sınıf dengesizliği tespit edildi",
+        "body": "Bu ayrımda eğitim, ağırlıklandırılmaz veya yeniden örneklenmezse modeli çoğunluk sınıfına doğru yanlı yapacak.",
+        "action": "Eğitimden önce sınıfları ağırlıklandırın veya eğitim ayrımını yeniden örnekleyin; doğruluk yerine sınıf başına kesinlik ve geri çağırma raporlayın.",
+        "distLabelA": "Sınıf A",
+        "distLabelB": "Sınıf B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Kopya gözlemler",
+        "body": "218 yinelenen satır tespit edildi.",
+        "action": "Yinelenen her kaydın tek kopyasını tutup eğitimden önce ayrımı yeniden üretin — ya da kopyaların hattın başındaki nedenini araştırın.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "yinelenen satır · veri kümesinin %1,75'i"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Nasıl çalışır",
+    "title": "Veri kümesinden içgörüye<br></br>üç adımda.",
+    "steps": [
+      {
+        "title": "Yükle",
+        "body": "CSV veya Parquet veri kümesi.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "İncele",
+        "body": "Otomatik kalite ve ML-hazırlık kontrolleri.",
+        "meta": "Temsili kontroller"
+      },
+      {
+        "title": "İyileştir",
+        "body": "Eğitimden önce sorunları çözün.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "İş akışı bütünleşmesi",
+    "title": "Zaten kullandığınız iş akışına uyum sağlar.",
+    "body": "CI'da tek komut çalıştırın ya da analyzer'ı defterinizin yanına içe aktarın. Her iki şekilde de rapor tek ve kendine yeterli bir HTML dosyası olarak gelir.",
+    "termTag": "Örnek oturum",
+    "analyzing": "Veri kümesi analiz ediliyor...",
+    "rowsOk": "{count} satır",
+    "colsOk": "{count} özellik",
+    "warnings": "{count} uyarı",
+    "critical": "{count} kritik sorun",
+    "healthLabel": "Veri kümesi sağlığı:",
+    "generated": "report.html üretildi",
+    "apiNote": "Gösterilen komut ve API örnektir — arayüz şekillendirme aşamasındadır."
+  },
+  "OSS": {
+    "eyebrow": "Açık kaynak",
+    "title": "Tasarımdan itibaren şeffaf.",
+    "body": "Dataset Doctor, geliştiricilerin inceleyebileceği, genişletebileceği ve mevcut iş akışlarına bütünleştirebileceği açık kaynaklı bir araç seti olarak kurgulanmıştır.",
+    "cta": "GitHub'da görüntüle",
+    "pillars": [
+      {
+        "title": "Açık Kaynak",
+        "body": "Her kontrolü okuyun, her sezgiseli denetleyin, kendi çatalınızı yayınlayın.",
+        "meta": "MIT lisansı"
+      },
+      {
+        "title": "Python Öncelikli",
+        "body": "Not defterleri, betikler ve işlem hatları için planlanan arayüz.",
+        "meta": "Planlanan Python arayüzü"
+      },
+      {
+        "title": "Genişletilebilir Kontroller",
+        "body": "Özel doğrulamalarla genişletilmesi planlanan kontrol kataloğu.",
+        "meta": "Özel kontrol konsepti"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Önce inceleyin.",
+    "title2": "Sonra <em>eğitin</em>.",
+    "sub": "Yanlış modeli optimize etmek için zaman harcamadan önce belirgin veri kümesi sorunlarını yakalayın.",
+    "ctaPrimary": "Örnek raporu görüntüle",
+    "note": "Ürün konsepti · baştan sona örnek veriler"
+  },
+  "Project": {
+    "link": "GitHub'da görüntüle",
+    "status": "Henüz yayımlanmadı",
+    "hint": "Konsept aşamasında — depo, belgeler ve sorun takipçisi ilk herkese açık sürümle birlikte gelecek."
+  },
+  "Footer": {
+    "tagline": "Makine öğrenmesi iş akışları için veri kümesi tanılaması.",
+    "linksAria": "Proje kaynakları",
+    "linkSource": "Kaynağı görüntüle",
+    "linkReadme": "README",
+    "linkIssues": "Sorun bildir",
+    "copyright": "© {year} Dataset Doctor. Bir tasarım konsepti — baştan sona örnek rakamlar."
+  }
+}

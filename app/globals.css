@@ -1,26 +1,263 @@
 @import "tailwindcss";
 
+/*
+  Dataset Doctor — "clinical diagnostics for data" design system
+  Near-black canvas · hairline report grid · instrument-lime measurement accent
+  Semantic hues (critical/warning/info/ok) appear at micro scale only.
+
+  Theming: :root carries the canonical dark palette (the original design, and
+  the no-JS fallback). The `.light` class — applied to <html> by next-themes —
+  swaps every semantic token for its paper-and-ink counterpart. The accent
+  keeps a lime hue in both directions, with darker ink on paper to preserve
+  contrast for measurement marks and text.
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: dark;
+  --background: #08090a;
+  --foreground: #f0f2f4;
+  --raised: #0b0d0f;
+  --panel: #101316;
+  --deep: #060708;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --muted-foreground: #8a9199;
+  --faint-foreground: #7b828a;
+  --accent: #d6f35f;
+  --accent-text: #d6f35f;
+  --accent-ring: #d6f35f;
+  --primary: #eef0f2;
+  --primary-foreground: #0a0b0c;
+  --critical: #ff6b5e;
+  --warning: #e9b949;
+  --info: #9bb4cc;
+  --ok: #7fc79a;
+  /* rgb triple so translucent "shine" layers can dial alpha per use */
+  --veil-rgb: 255 255 255;
+  --code-bg: #0a0c0d;
+  --shadow-report: 0 32px 64px -32px rgba(0, 0, 0, 0.9);
+}
+
+.light {
+  color-scheme: light;
+  --background: #f7f6f3;
+  --foreground: #16181a;
+  --raised: #fdfcf9;
+  --panel: #edece7;
+  --deep: #e7e4dd;
+  --line: rgba(22, 25, 28, 0.1);
+  --line-strong: rgba(22, 25, 28, 0.22);
+  --muted-foreground: #5b6166;
+  --faint-foreground: #60666b;
+  --accent: #70821a;
+  --accent-text: #5c6d00;
+  --accent-ring: #70821a;
+  --primary: #16181a;
+  --primary-foreground: #f7f6f3;
+  --critical: #c22b1c;
+  --warning: #7d590f;
+  --info: #3d5a73;
+  --ok: #2b6b45;
+  --veil-rgb: 20 23 26;
+  --code-bg: #eceae4;
+  --shadow-report: 0 24px 48px -28px rgba(22, 25, 28, 0.18);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-raised: var(--raised);
+  --color-panel: var(--panel);
+  --color-deep: var(--deep);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-faint-foreground: var(--faint-foreground);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-critical: var(--critical);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+  --color-ok: var(--ok);
+  --color-code-bg: var(--code-bg);
+
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo,
+    monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* Translucent "shine" layers — the same print-noise fills in both themes */
+.veil-15 {
+  background-color: rgb(var(--veil-rgb) / 0.015);
+}
+
+.veil-2 {
+  background-color: rgb(var(--veil-rgb) / 0.02);
+}
+
+.veil-6 {
+  background-color: rgb(var(--veil-rgb) / 0.06);
+}
+
+.veil-14 {
+  background-color: rgb(var(--veil-rgb) / 0.14);
+}
+
+.veil-25 {
+  background-color: rgb(var(--veil-rgb) / 0.25);
+}
+
+.veil-fill {
+  background-color: rgb(var(--veil-rgb));
+}
+
+/* instrument dot grid (hero) */
+.dot-grid {
+  background-image: radial-gradient(rgb(var(--veil-rgb) / 0.07) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* Film grain — barely-there print texture over the whole canvas */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  pointer-events: none;
+  opacity: 0.032;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: rgba(214, 243, 95, 0.92);
+  color: #0a0b0c;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-ring);
+  outline-offset: 3px;
+}
+
+[id] {
+  scroll-margin-top: 96px;
+}
+
+/* Site container: 1240px max, generous gutters */
+.shell {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (min-width: 768px) {
+  .shell {
+    padding-inline: 40px;
+  }
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Measurement ruler (lab-report motif) */
+.ruler {
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--line-strong) 0 1px,
+      transparent 1px 12px
+    ),
+    repeating-linear-gradient(
+      to right,
+      rgb(var(--veil-rgb) / 0.28) 0 1px,
+      transparent 1px 60px
+    );
+  background-size:
+    100% 7px,
+    100% 13px;
+  background-position:
+    left bottom,
+    left bottom;
+  background-repeat: repeat-x;
+}
+
+/* Print-stack report drop (dataset preview) */
+.report-shadow {
+  box-shadow: var(--shadow-report);
+}
+
+@keyframes dd-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dd-slide-in-right {
+  from {
+    transform: translateX(28px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.sheet-overlay[data-state="open"] {
+  animation: dd-fade-in 0.2s ease-out;
+}
+
+
+.sheet-panel[data-state="open"] {
+  animation: dd-slide-in-right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; }
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--veil-rgb) / 0.1);
+  border: 2px solid var(--background);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--veil-rgb) / 0.2);
 }

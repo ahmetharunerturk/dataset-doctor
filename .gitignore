@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local agent configuration and development scratch files
+/.agents/
+/.clinerules/
+/memory-bank/
+/skills-lock.json
+/shots/
+/UX_UI_CLINE_PROMPT.md
+/.devlog.txt
+/scripts/_sheet-probe.mjs
+/scripts/screenshots.mjs

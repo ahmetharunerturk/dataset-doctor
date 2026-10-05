@@ -12,6 +12,14 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Harness output + scratch dirs:
+    "shots/**",
+    ".agents/**",
+    ".clinerules/**",
+    "memory-bank/**",
+    "scripts/_sheet-probe.mjs",
+    "scripts/screenshots.mjs",
+    "node_modules/**",
   ]),
 ]);
 
