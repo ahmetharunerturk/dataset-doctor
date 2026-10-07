@@ -11,7 +11,7 @@ export async function SkipLink() {
   return (
     <a
       href="#main-content"
-      className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-raised focus:px-5 focus:py-3 focus:font-medium focus:text-[14px] focus:shadow-lg"
+      className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:inset-inline-start-4 focus:z-[60] focus:rounded-full focus:bg-raised focus:px-5 focus:py-3 focus:font-medium focus:text-[14px] focus:shadow-lg"
     >
       {t("skip")}
     </a>

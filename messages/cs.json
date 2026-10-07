@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Přejít k hlavnímu obsahu"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kritické",
+      "warning": "Upozornění",
+      "info": "Informace"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Poznej svůj dataset dřív, než začneš trénovat",
+    "description": "Dataset Doctor zvýrazňuje chybějící hodnoty, duplicity, nerovnováhu tříd, podezřelé proměnné a úniky dat v přehledné diagnostické zprávě — dřív, než natrénuješ svůj model.",
+    "keywords": [
+      "dataset",
+      "kvalita dat",
+      "strojové učení",
+      "ML nástroje",
+      "diagnostika datasetů"
+    ]
+  },
+  "Theme": {
+    "label": "Motiv",
+    "toggle": "Přepnout motiv",
+    "light": "Světlý",
+    "dark": "Tmavý",
+    "system": "Systémový"
+  },
+  "Language": {
+    "label": "Jazyk",
+    "select": "Vybrat jazyk",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — domů",
+    "links": {
+      "features": "Funkce",
+      "workflow": "Jak to funguje",
+      "report": "Zpráva",
+      "opensource": "Open source"
+    },
+    "githubAria": "Dataset Doctor na GitHubu",
+    "cta": "Zobrazit ukázkovou zprávu",
+    "openMenu": "Otevřít nabídku",
+    "sheetTitle": "Navigace",
+    "sheetDesc": "Sekce a akce webu",
+    "sheetMeta": "Open source · přátelské k Pythonu",
+    "closeMenu": "Zavřít nabídku",
+    "sectionsAria": "Sekce stránky"
+  },
+  "Hero": {
+    "eyebrow": "Diagnostika datasetů s otevřeným kódem",
+    "title": "Poznej svůj dataset<br></br><em>dřív</em> než natrénuješ<br></br>svůj model.",
+    "ledeLead": "Zachyť problémy s kvalitou dřív, než se stanou problémy modelu.",
+    "ledeRest": "Dataset Doctor pomáhá zviditelnit chybějící hodnoty, duplicity, nerovnováhu, podezřelé proměnné a další běžné problémy datasetů v přehledné zprávě.",
+    "ctaPrimary": "Zobrazit ukázkovou zprávu",
+    "conceptNote": "Designový koncept — open source Python toolkit v přípravě. Všechna čísla jsou ilustrativní.",
+    "meta": {
+      "source": "Open source",
+      "python": "Přátelské k Pythonu",
+      "builtFor": "Pro ML workflowy"
+    }
+  },
+  "Tech": {
+    "caption": "Navrženo pro moderní workflow strojového učení.",
+    "aria": "Technologie strojového učení"
+  },
+  "Preview": {
+    "reportChrome": "Zpráva o datasetu",
+    "sampleTag": "Ukázkový výstup",
+    "specimenStats": "řádků: {rows} · sloupců: {columns}",
+    "analyzedIn": "Ukázková analýza: {seconds} s",
+    "healthScore": "Skóre zdraví",
+    "chip": "Vyžaduje pozornost",
+    "headFinding": "Nález",
+    "headDetail": "Detail",
+    "headSeverity": "Závažnost",
+    "issues": [
+      {
+        "name": "Chybějící hodnoty",
+        "detail": "4 sloupce"
+      },
+      {
+        "name": "Duplicitní řádky",
+        "detail": "218"
+      },
+      {
+        "name": "Nerovnováha tříd",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Možný únik",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Ilustrativní ukázková zpráva · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Proč na tom záleží",
+    "title": "Problémy modelu často začínají ještě před tréninkem.",
+    "body": "Většina týmů odhalí problémy datasetu pozdě — po hodinách ladění architektur a hyperparametrů, které nikdy nebyly úzkým hrdlem. Oprava pak patří výš v pipeline a experimenty se musí opakovat.",
+    "quote": "Model natrénovaný na nemocném datasetu se naučí nemoc.",
+    "indexLabel": "Index příznaků",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Chybějící data",
+        "gloss": "Tichý drift NaN ve 4 sloupcích"
+      },
+      {
+        "name": "Duplicitní pozorování",
+        "gloss": "218 řádků zaznamenáno dvakrát"
+      },
+      {
+        "name": "Nerovnováha tříd",
+        "gloss": "Rozdělení 87 / 13 mezi třídami"
+      },
+      {
+        "name": "Podezřelé proměnné",
+        "gloss": "Maskované proxy cílové proměnné"
+      },
+      {
+        "name": "Chybné datové typy",
+        "gloss": "Čísla uložená jako řetězce"
+      },
+      {
+        "name": "Únik dat",
+        "gloss": "Odpovědi uvnitř trénovacího rámce"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Kontrolní seznam",
+    "title": "Všechno, co stojí za prověření<br></br>před <code>model.fit()</code>",
+    "body": "Osm průchodů schématem, statistikami a vztahy mezi nimi — tiché kontroly, které rozhodnou, zda model zobecňuje.",
+    "big1": {
+      "label": "Průchod 01 · Úplnost",
+      "title": "Analýza chybějících hodnot",
+      "body": "Vzorce nullů seskupené podle sloupce, dtype a segmentu řádků — ne jen jeden smutný součet.",
+      "caption": "Plné čtverce označují přítomné hodnoty, červené obrysy nully — 4 z 31 sloupců mají nuly · 0.8% buněk"
+    },
+    "big2": {
+      "label": "Průchod 02 · Jedinečnost",
+      "title": "Detekce duplicit",
+      "body": "Přesné i téměř shodné řádky zachycené otiskem hashe v každém páru sloupců.",
+      "dupTag": "dup",
+      "caption": "Pruhy řádků ukazují otisky záznamů; shodné řádky září jantarově — 218 řádků se sbalí na 109 jedinečných záznamů"
+    },
+    "compact": [
+      {
+        "label": "Průchod 03",
+        "title": "Rozložení tříd",
+        "body": "Priority majority a minority viditelné dřív, než zkreslí metriky."
+      },
+      {
+        "label": "Průchod 04",
+        "title": "Detekce odlehlých hodnot",
+        "body": "Hodnoty, které zabloudily daleko za očekávaný rozsah svého sloupce."
+      },
+      {
+        "label": "Průchod 05",
+        "title": "Validace datových typů",
+        "body": "Čísla uložená jako řetězce, data uložená jako cokoli jiného než data."
+      },
+      {
+        "label": "Průchod 06",
+        "title": "Varování před úniky",
+        "body": "Proměnné, které drží odpovědi, k nimž by neměly mít přístup."
+      }
+    ],
+    "corr": {
+      "label": "Průchod 07 · Vztahy",
+      "title": "Analýza korelace",
+      "body": "Které proměnné se pohybují spolu — a které se náhodou pohybují s cílem.",
+      "legend": "Ilustrativní korelační mapa",
+      "note": "Ukázkový nález: field_12 a field_27 mají<hi> ρ 0.94</hi> — prověř možný únik"
+    },
+    "summary": {
+      "label": "Přehled",
+      "title": "Souhrn datasetu",
+      "body": "Faktický tvar tvých dat před jakýmkoli rozhodnutím o modelování.",
+      "rows": [
+        {
+          "term": "Řádky",
+          "value": "12,458"
+        },
+        {
+          "term": "Sloupce",
+          "value": "31"
+        },
+        {
+          "term": "Číselné",
+          "value": "22"
+        },
+        {
+          "term": "Kategoriální",
+          "value": "9"
+        },
+        {
+          "term": "Paměť",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Zdraví datasetu",
+    "title": "Jedno skóre. Jasnější výchozí bod.",
+    "body": "Zdraví datasetu shrnuje běžné signály kvality, aby bylo vidět, které oblasti si zaslouží pozornost před tréninkem.",
+    "ofTotal": "/ 100",
+    "overall": "Celkové skóre",
+    "chip": "Vyžaduje pozornost",
+    "disclaimer": "<lbl>Náhled konceptu</lbl> — tato stránka je produktem konceptu. Zobrazená skóre a nálezy jsou ilustrativní, nevypočtená z reálných dat.",
+    "catsHeadL": "Diagnostické kategorie",
+    "catsHeadR": "Skóre",
+    "categories": [
+      {
+        "label": "Úplnost",
+        "value": "92",
+        "note": "nully ve 4 z 31 sloupců"
+      },
+      {
+        "label": "Konzistence",
+        "value": "81",
+        "note": "smíšená kódování v region"
+      },
+      {
+        "label": "Rovnováha tříd",
+        "value": "44",
+        "note": "prior tříd 87 / 13"
+      },
+      {
+        "label": "Kvalita duplicit",
+        "value": "76",
+        "note": "218 duplicitních řádků"
+      },
+      {
+        "label": "Riziko úniku",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 silné",
+      "50–79 sledovat",
+      "0–49 jednat hned"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Ukázková zpráva",
+    "title": "Problémy <em>seřazené podle priority</em>.",
+    "body": "Každý nález přichází s důkazem a navrhovaným dalším krokem — seřazené podle závažnosti, aby první hodina šla na největší riziko.",
+    "excerptNote": "Vybrané nálezy — úplná zpráva uvádí každou kontrolu s jejími důkazy.",
+    "evidence": "Důkaz",
+    "actionLabel": "Navrhovaný krok",
+    "leakLabels": [
+      "customer_status",
+      "medián proměnné"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Možný únik cíle",
+        "body": "Proměnná \"customer_status\" má podezřele silný vztah k cíli.",
+        "action": "Prověř, zda by tento sloupec byl v době predikce skutečně k dispozici.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Zjištěna nerovnováha tříd",
+        "body": "Trénink na tomto rozdělení odkloní model k většinové třídě, pokud se nepoužije vážení nebo resampling.",
+        "action": "Ohodnoť třídy váhami nebo přeresampluj trénovací část před fittingem; uváděj precision a recall po třídách místo prosté accuracy.",
+        "distLabelA": "Třída A",
+        "distLabelB": "Třída B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Duplicitní pozorování",
+        "body": "Zjištěno 218 duplicitních řádků.",
+        "action": "Nech jednu kopii každého duplicitního záznamu a znovu vytvoř rozdělení před tréninkem — nebo vystopuj, proč duplicity do pipeline přitékají výš po proudu.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "duplicitních řádků · 1.75% datasetu"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Jak to funguje",
+    "title": "Od datasetu k poznatku<br></br>ve třech krocích.",
+    "steps": [
+      {
+        "title": "Nahraj",
+        "body": "Dataset ve formátu CSV nebo Parquet.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Prozkoumej",
+        "body": "Automatické kontroly kvality a připravenosti na ML.",
+        "meta": "Ilustrativní kontroly"
+      },
+      {
+        "title": "Vylepši",
+        "body": "Vyřeš problémy před tréninkem.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Integrace do workflow",
+    "title": "Zapadá do workflow, které už používáš.",
+    "body": "Spusť jeden příkaz v CI, nebo importuj analyzátor vedle svého notebooku. V obou případech dorazí zpráva jako jeden soběstačný HTML soubor.",
+    "termTag": "Ukázková relace",
+    "analyzing": "Analyzuji dataset...",
+    "rowsOk": "řádků: {count}",
+    "colsOk": "proměnných: {count}",
+    "warnings": "upozornění: {count}",
+    "critical": "kritických problémů: {count}",
+    "healthLabel": "Zdraví datasetu:",
+    "generated": "report.html vygenerován",
+    "apiNote": "Zobrazený příkaz a API jsou ilustrativní — rozhraní se teprve formuje."
+  },
+  "OSS": {
+    "eyebrow": "Open source",
+    "title": "Transparentní od základu.",
+    "body": "Dataset Doctor je zamýšlen jako open source toolkit, který si vývojáři mohou projít, rozšířit a integrovat do svých workflow.",
+    "cta": "Zobrazit na GitHubu",
+    "pillars": [
+      {
+        "title": "Open source",
+        "body": "Čti každou kontrolu, audituj každou heuristiku, vydej vlastní fork.",
+        "meta": "Licence MIT"
+      },
+      {
+        "title": "Python především",
+        "body": "Navrhované rozhraní pro notebooky, skripty a pipeline.",
+        "meta": "Navrhované Python rozhraní"
+      },
+      {
+        "title": "Rozšiřitelné kontroly",
+        "body": "Navrhovaný katalog kontrol s prostorem pro vlastní validace.",
+        "meta": "Koncept vlastních kontrol"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Nejdřív prověř.",
+    "title2": "Pak <em>trénuj</em>.",
+    "sub": "Zachyť zjevné problémy datasetu dřív, než strávíš čas optimalizací špatného modelu.",
+    "ctaPrimary": "Zobrazit ukázkovou zprávu",
+    "note": "Produktový koncept · všude ukázková data"
+  },
+  "Project": {
+    "link": "Zobrazit na GitHubu",
+    "status": "Zatím nevydáno",
+    "hint": "Fáze konceptu — repozitář, dokumentace a tracker hlášení dorazí s prvním veřejným releasem."
+  },
+  "Footer": {
+    "tagline": "Diagnostika datasetů pro workflow strojového učení.",
+    "linksAria": "Odkazy projektu",
+    "linkSource": "Zobrazit zdroj",
+    "linkReadme": "README",
+    "linkIssues": "Nahlásit problém",
+    "copyright": "© {year} Dataset Doctor. Designový koncept — všude ukázková čísla."
+  }
+}

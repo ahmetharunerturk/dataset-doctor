@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Ga naar hoofdinhoud"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kritiek",
+      "warning": "Waarschuwing",
+      "info": "Informatie"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Begrijp je dataset voordat je traint",
+    "description": "Dataset Doctor legt ontbrekende waarden, dubbele rijen, klasse-onbalans, verdachte variabelen en datalekken vast in een helder diagnostisch rapport — voordat je je model traint.",
+    "keywords": [
+      "dataset",
+      "datakwaliteit",
+      "machine learning",
+      "ML-tooling",
+      "datasetdiagnose"
+    ]
+  },
+  "Theme": {
+    "label": "Thema",
+    "toggle": "Thema wisselen",
+    "light": "Licht",
+    "dark": "Donker",
+    "system": "Systeem"
+  },
+  "Language": {
+    "label": "Taal",
+    "select": "Taal kiezen",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — home",
+    "links": {
+      "features": "Functies",
+      "workflow": "Hoe het werkt",
+      "report": "Rapport",
+      "opensource": "Open source"
+    },
+    "githubAria": "Dataset Doctor op GitHub",
+    "cta": "Voorbeeldrapport bekijken",
+    "openMenu": "Menu openen",
+    "sheetTitle": "Navigatie",
+    "sheetDesc": "Secties en acties van de site",
+    "sheetMeta": "Open source · Python-vriendelijk",
+    "closeMenu": "Menu sluiten",
+    "sectionsAria": "Paginasecties"
+  },
+  "Hero": {
+    "eyebrow": "Open-source datasetdiagnose",
+    "title": "Ken je dataset<br></br><em>voordat</em> je je<br></br>model traint.",
+    "ledeLead": "Vang datakwaliteitsproblemen voordat het modelproblemen worden.",
+    "ledeRest": "Dataset Doctor helpt ontbrekende waarden, duplicaten, onbalans, verdachte variabelen en andere veelvoorkomende datasetproblemen zichtbaar te maken in een helder rapport.",
+    "ctaPrimary": "Voorbeeldrapport bekijken",
+    "conceptNote": "Een ontwerpconcept — een opensource Python-toolkit in de maak. Alle cijfers zijn illustratief.",
+    "meta": {
+      "source": "Open source",
+      "python": "Python-vriendelijk",
+      "builtFor": "Gemaakt voor ML-workflows"
+    }
+  },
+  "Tech": {
+    "caption": "Ontworpen voor moderne machine-learning-workflows.",
+    "aria": "Machine-learning-technologieën"
+  },
+  "Preview": {
+    "reportChrome": "Datasetrapport",
+    "sampleTag": "Voorbeelduitvoer",
+    "specimenStats": "{rows} rijen · {columns} kolommen",
+    "analyzedIn": "Voorbeeldanalyse: {seconds} s",
+    "healthScore": "Gezondheidsscore",
+    "chip": "Aandacht nodig",
+    "headFinding": "Bevinding",
+    "headDetail": "Detail",
+    "headSeverity": "Ernst",
+    "issues": [
+      {
+        "name": "Ontbrekende waarden",
+        "detail": "4 kolommen"
+      },
+      {
+        "name": "Dubbele rijen",
+        "detail": "218"
+      },
+      {
+        "name": "Klasse-onbalans",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Mogelijk datalek",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Illustratief voorbeeldrapport · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Waarom het ertoe doet",
+    "title": "Modelproblemen beginnen vaak nog vóór de training.",
+    "body": "De meeste teams ontdekken datasetproblemen te laat — na uren afstellen van architecturen en hyperparameters die nooit de bottleneck waren. Dan ligt de oplossing stroomopwaarts en moeten de experimenten opnieuw.",
+    "quote": "Een model dat op een zieke dataset is getraind, leert de ziekte.",
+    "indexLabel": "Symptoomindex",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Ontbrekende data",
+        "gloss": "Stille NaN-drift in 4 kolommen"
+      },
+      {
+        "name": "Dubbele observaties",
+        "gloss": "218 rijen twee keer vastgelegd"
+      },
+      {
+        "name": "Klasse-onbalans",
+        "gloss": "87 / 13-verdeling tussen de klassen"
+      },
+      {
+        "name": "Verdachte variabelen",
+        "gloss": "Verborgen proxies van het doel"
+      },
+      {
+        "name": "Onjuiste datatypen",
+        "gloss": "Getallen als tekst opgeslagen"
+      },
+      {
+        "name": "Datalekken",
+        "gloss": "Antwoorden in het trainingsframe"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "De checklist",
+    "title": "Alles wat het controleren waard is<br></br>voor <code>model.fit()</code>",
+    "body": "Acht passes over het schema, de statistiek en de relaties ertussen — de stille controles die bepalen of een model generaliseert.",
+    "big1": {
+      "label": "Pass 01 · Volledigheid",
+      "title": "Analyse van ontbrekende waarden",
+      "body": "Nullpatronen gegroepeerd per kolom, dtype en rijsegment — niet één zielig totaal.",
+      "caption": "Volle vierkanten markeren aanwezige waarden, rode contouren nullen — 4 van de 31 kolommen bevatten nullen · 0.8% van de cellen"
+    },
+    "big2": {
+      "label": "Pass 02 · Uniciteit",
+      "title": "Duplicaatdetectie",
+      "body": "Exacte en bijna-dubbele rijen gevangen via vingerafdruk-hashing, over elk kolommenpaar.",
+      "dupTag": "dup",
+      "caption": "Rijbalken tonen recordvingerafdrukken; overeenkomende rijen lichten amber op — 218 rijen vallen samen tot 109 unieke records"
+    },
+    "compact": [
+      {
+        "label": "Pass 03",
+        "title": "Klassenverdeling",
+        "body": "Meerderheids- en minderheidspriors, zichtbaar voordat ze de metrics scheef trekken."
+      },
+      {
+        "label": "Pass 04",
+        "title": "Uitbijterdetectie",
+        "body": "Waarden die ver buiten het verwachte bereik van hun kolom dwalen."
+      },
+      {
+        "label": "Pass 05",
+        "title": "Validatie van datatypen",
+        "body": "Getallen opgeslagen als tekst, data opgeslagen als alles behalve data."
+      },
+      {
+        "label": "Pass 06",
+        "title": "Waarschuwingen voor lekken",
+        "body": "Variabelen die antwoorden bewaren waar ze geen toegang toe zouden moeten hebben."
+      }
+    ],
+    "corr": {
+      "label": "Pass 07 · Relaties",
+      "title": "Correlatieanalyse",
+      "body": "Welke variabelen samen bewegen — en welke toevallig met het doel meebewegen.",
+      "legend": "Illustratieve correlatiekaart",
+      "note": "Voorbeeldbevinding: field_12 en field_27 hebben<hi> ρ 0.94</hi> — controleer op lekken"
+    },
+    "summary": {
+      "label": "Overzicht",
+      "title": "Datasetsamenvatting",
+      "body": "De feitelijke vorm van je data, vóór elke modelleringsbeslissing.",
+      "rows": [
+        {
+          "term": "Rijen",
+          "value": "12,458"
+        },
+        {
+          "term": "Kolommen",
+          "value": "31"
+        },
+        {
+          "term": "Numeriek",
+          "value": "22"
+        },
+        {
+          "term": "Categorisch",
+          "value": "9"
+        },
+        {
+          "term": "Geheugen",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Datasetgezondheid",
+    "title": "Eén score. Een helderder startpunt.",
+    "body": "Datasetgezondheid vat veelvoorkomende kwaliteitssignalen samen om te bepalen welke gebieden aandacht verdienen vóór de training.",
+    "ofTotal": "/ 100",
+    "overall": "Totale score",
+    "chip": "Aandacht nodig",
+    "disclaimer": "<lbl>Conceptpreview</lbl> — deze pagina is een productconcept. Scores en bevindingen zijn illustratief, niet berekend uit echte data.",
+    "catsHeadL": "Diagnosecategorieën",
+    "catsHeadR": "Score",
+    "categories": [
+      {
+        "label": "Volledigheid",
+        "value": "92",
+        "note": "nullen in 4 van de 31 kolommen"
+      },
+      {
+        "label": "Consistentie",
+        "value": "81",
+        "note": "gemengde encodings in region"
+      },
+      {
+        "label": "Klassenbalans",
+        "value": "44",
+        "note": "klassen-prior 87 / 13"
+      },
+      {
+        "label": "Duplicaatkwaliteit",
+        "value": "76",
+        "note": "218 dubbele rijen"
+      },
+      {
+        "label": "Lekrisico",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 sterk",
+      "50–79 in de gaten houden",
+      "0–49 nu ingrijpen"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Voorbeeldrapport",
+    "title": "Problemen, <em>geprioriteerd</em>.",
+    "body": "Elke bevinding wordt geleverd met bewijs en een vervolgactie — gesorteerd op ernst, zodat het eerste uur naar het grootste risico gaat.",
+    "excerptNote": "Geselecteerde bevindingen — het volledige rapport somt elke controle op met zijn bewijs.",
+    "evidence": "Bewijs",
+    "actionLabel": "Voorgestelde actie",
+    "leakLabels": [
+      "customer_status",
+      "mediaanvariabele"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Mogelijk lek van het doel",
+        "body": "De variabele \"customer_status\" heeft een verdacht sterke relatie met het doel.",
+        "action": "Controleer of deze kolom beschikbaar zou zijn op het moment van voorspellen.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Klasse-onbalans gedetecteerd",
+        "body": "Trainen op deze verdeling trekt het model naar de meerderheidsklasse, tenzij je weegt of herbevoorradt.",
+        "action": "Weeg de klassen of resample het trainingsdeel vóór het fitten; rapporteer precision en recall per klasse in plaats van alleen accuracy.",
+        "distLabelA": "Klasse A",
+        "distLabelB": "Klasse B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Dubbele observaties",
+        "body": "218 dubbele rijen gedetecteerd.",
+        "action": "Bewaar één kopie van elk gedupliceerd record en genereer de split opnieuw vóór de training — of traceer waarom duplicaten stroomopwaarts in de pipeline belanden.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "dubbele rijen · 1.75% van de dataset"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Hoe het werkt",
+    "title": "Van dataset tot inzicht<br></br>in drie stappen.",
+    "steps": [
+      {
+        "title": "Uploaden",
+        "body": "CSV- of Parquet-dataset.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Inspecteren",
+        "body": "Geautomatiseerde kwaliteits- en ML-gereedheidschecks.",
+        "meta": "Illustratieve checks"
+      },
+      {
+        "title": "Verbeteren",
+        "body": "Los problemen op vóór de training.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Workflowintegratie",
+    "title": "Past in de workflow die je al gebruikt.",
+    "body": "Draai één commando in CI, of importeer de analyse naast je notebook. In beide gevallen komt het rapport als één zelfstandig HTML-bestand.",
+    "termTag": "Voorbeelsessie",
+    "analyzing": "Dataset analyseren...",
+    "rowsOk": "{count} rijen",
+    "colsOk": "{count} variabelen",
+    "warnings": "{count} waarschuwingen",
+    "critical": "{count} kritieke problemen",
+    "healthLabel": "Datasetgezondheid:",
+    "generated": "report.html gegenereerd",
+    "apiNote": "Het getoonde commando en de API zijn illustratief — de interface krijgt nog vorm."
+  },
+  "OSS": {
+    "eyebrow": "Open source",
+    "title": "Transparant ontworpen.",
+    "body": "Dataset Doctor is bedacht als opensource toolkit die ontwikkelaars kunnen inspecteren, uitbreiden en integreren in hun bestaande workflows.",
+    "cta": "Bekijk op GitHub",
+    "pillars": [
+      {
+        "title": "Open source",
+        "body": "Lees elke controle, audite elke heuristiek, ship je eigen fork.",
+        "meta": "MIT-licentie"
+      },
+      {
+        "title": "Python eerst",
+        "body": "Een voorgestelde interface voor notebooks, scripts en pipelines.",
+        "meta": "Voorgestelde Python-interface"
+      },
+      {
+        "title": "Uitbreidbare checks",
+        "body": "Een voorgestelde controlecatalogus met ruimte voor eigen validaties.",
+        "meta": "Concept voor eigen checks"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Inspecteer eerst.",
+    "title2": "Train <em>daarna</em>.",
+    "sub": "Vang voor de hand liggende datasetproblemen voordat je tijd steekt in het optimaliseren van het verkeerde model.",
+    "ctaPrimary": "Voorbeeldrapport bekijken",
+    "note": "Productconcept · overal voorbeelddata"
+  },
+  "Project": {
+    "link": "Bekijk op GitHub",
+    "status": "Nog niet gepubliceerd",
+    "hint": "Conceptfase — de repository, documentatie en issue tracker komen met de eerste publieke release."
+  },
+  "Footer": {
+    "tagline": "Datasetdiagnose voor machine-learning-workflows.",
+    "linksAria": "Projectreferenties",
+    "linkSource": "Bron bekijken",
+    "linkReadme": "README",
+    "linkIssues": "Probleem melden",
+    "copyright": "© {year} Dataset Doctor. Een ontwerpconcept — overal voorbeeldcijfers."
+  }
+}

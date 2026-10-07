@@ -2,8 +2,8 @@
 
 import { useSyncExternalStore } from "react";
 import { Check, Monitor, Moon, Sun } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
+import { useLocale, useTranslations } from "next-intl";
+import { useTheme } from "@/components/theme-provider";
 
 import {
   DropdownMenu,
@@ -14,12 +14,16 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
+import { getDirection } from "@/lib/i18n/locales";
 
 const themeOptions = [
   { value: "system", icon: Monitor, labelKey: "system" },
   { value: "light", icon: Sun, labelKey: "light" },
   { value: "dark", icon: Moon, labelKey: "dark" },
 ] as const;
+
+/** The only values the RadioGroup can ever emit — mirror it for setTheme. */
+type ThemeOptionsValue = (typeof themeOptions)[number]["value"];
 
 /**
  * Compact theme selector (system / light / dark). The trigger icon defers to
@@ -44,7 +48,7 @@ export function ThemeToggle() {
     themeOptions.find((option) => option.value === active)?.icon ?? Monitor;
 
   return (
-    <DropdownMenu>
+    <DropdownMenu dir={getDirection(useLocale())}>
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
@@ -57,13 +61,16 @@ export function ThemeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>{t("label")}</DropdownMenuLabel>
-        <DropdownMenuRadioGroup value={active} onValueChange={setTheme}>
+        <DropdownMenuRadioGroup
+          value={active}
+          onValueChange={(value) => setTheme(value as ThemeOptionsValue)}
+        >
           {themeOptions.map(({ value, icon: Icon, labelKey }) => (
             <DropdownMenuRadioItem key={value} value={value}>
               <Icon className="size-4 shrink-0 text-muted-foreground" />
               <span>{t(labelKey)}</span>
               {mounted && active === value ? (
-                <Check className="ml-auto size-3.5 shrink-0 text-accent-text" />
+                <Check className="ms-auto size-3.5 shrink-0 text-accent-text" />
               ) : null}
             </DropdownMenuRadioItem>
           ))}

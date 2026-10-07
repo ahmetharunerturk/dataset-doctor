@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal } from "@/components/reveal";
+import { richTags } from "@/lib/rich-tags";
 import { useTranslations } from "next-intl";
 
 export function ProblemSection() {
@@ -27,7 +28,7 @@ export function ProblemSection() {
               {t("body")}
             </p>
 
-            <blockquote className="mt-14 border-l border-accent pl-8">
+            <blockquote className="mt-14 border-s border-accent ps-8">
               <p className="max-w-[24ch] font-serif text-[clamp(1.7rem,3vw,2.6rem)] leading-[1.15] italic">
                 “{t("quote")}”
               </p>
@@ -57,7 +58,7 @@ export function ProblemSection() {
                   <span>
                     <span className="block text-[15px] font-medium">{t(`symptoms.${i}.name`)}</span>
                     <span className="mt-1 block text-[13px] leading-snug text-muted-foreground">
-                      {t(`symptoms.${i}.gloss`)}
+                      {i === 2 ? t.rich(`symptoms.${i}.gloss`, richTags) : t(`symptoms.${i}.gloss`)}
                     </span>
                   </span>
                 </li>

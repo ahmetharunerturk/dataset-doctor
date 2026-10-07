@@ -50,7 +50,7 @@ export function DatasetPreview() {
               className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 gap-y-1.5 sm:grid-cols-[minmax(0,1fr)_auto_auto] sm:gap-x-5 border-b border-line py-3 last:border-b-0"
             >
               <span className="col-start-1 row-start-1 min-w-0 break-words text-[13.5px] font-medium">{t(`issues.${i}.name`)}</span>
-              <span className="tabular col-span-2 col-start-1 row-start-2 break-words font-mono text-[11.5px] text-muted-foreground sm:col-span-1 sm:col-start-2 sm:row-start-1">
+              <span dir={i === 2 ? "ltr" : undefined} className="tabular col-span-2 col-start-1 row-start-2 break-words font-mono text-[11.5px] text-muted-foreground sm:col-span-1 sm:col-start-2 sm:row-start-1">
                 {t(`issues.${i}.detail`)}
               </span>
               <span
@@ -71,9 +71,9 @@ export function DatasetPreview() {
           </span>
           <div className="flex items-center gap-2.5">
             {/* 68 sits in the 50-79 watch band (Meter contract) — warning tone, like the chip. */}
-            <span className="tabular font-mono text-[12.5px] font-semibold text-warning">
+            <bdi dir="ltr" className="tabular font-mono text-[12.5px] font-semibold text-warning">
               {`${SPECIMEN.health.overall} / 100`}
-            </span>
+            </bdi>
           <span className="veil-6 rounded-full border border-line px-2.5 py-1 font-mono text-[11px] tracking-[0.08em] text-warning uppercase">
               {t("chip")}
             </span>

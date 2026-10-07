@@ -6,7 +6,7 @@
   Semantic hues (critical/warning/info/ok) appear at micro scale only.
 
   Theming: :root carries the canonical dark palette (the original design, and
-  the no-JS fallback). The `.light` class — applied to <html> by next-themes —
+  the no-JS fallback). The `.light` class — applied to <html> by the pre-paint theme script —
   swaps every semantic token for its paper-and-ink counterpart. The accent
   keeps a lime hue in both directions, with darker ink on paper to preserve
   contrast for measurement marks and text.
@@ -83,6 +83,13 @@
   --color-ok: var(--ok);
   --color-code-bg: var(--code-bg);
 
+}
+
+/* Font stacks are emitted as real runtime custom properties (plain @theme), so
+   the per-script [data-script] overrides further down can re-point them — this
+   is what makes Amiri / Noto Sans Arabic / Noto Serif Hebrew actually apply.
+   Inside @theme inline they'd be inlined as literals and never overridable. */
+@theme {
   --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo,
@@ -260,4 +267,133 @@ body::after {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(var(--veil-rgb) / 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Script & direction layer — the 30-locale rollout.
+   The latin-first voice leans on tight grotesque spacing and serif italics.
+   Wide tracking wrecks Indic shaping, punishes Arabic joins and crowds CJK
+   glyphs; several shipped scripts have no italic form at all. These hooks
+   retune type per html[data-script] without touching a single component.
+   ─────────────────────────────────────────────────────────────────────── */
+
+/* Script faces come from per-route Google Fonts sheets (getScriptFontStylesheet).
+   The second family in each pair is the display voice for font-serif headings. */
+html[data-script="latin"] {
+  /* Instrument trio stands as-is. */
+}
+html[data-script="cyrillic"] {
+  --font-sans: "Noto Sans", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", var(--font-instrument-serif), Georgia, serif;
+}
+html[data-script="greek"] {
+  --font-sans: "Noto Sans", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif", var(--font-instrument-serif), Georgia, serif;
+}
+html[data-script="arabic"] {
+  --font-sans: "Noto Sans Arabic", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Amiri", "Noto Sans Arabic", Georgia, serif;
+}
+html[data-script="hebrew"] {
+  --font-sans: "Noto Sans Hebrew", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif Hebrew", var(--font-instrument-serif), Georgia, serif;
+}
+html[data-script="devanagari"] {
+  --font-sans: "Noto Sans Devanagari", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif Devanagari", var(--font-instrument-serif), Georgia, serif;
+}
+html[data-script="bengali"] {
+  --font-sans: "Noto Sans Bengali", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif Bengali", var(--font-instrument-serif), Georgia, serif;
+}
+html[data-script="thai"] {
+  --font-sans: "Noto Sans Thai", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif Thai", var(--font-instrument-serif), Georgia, serif;
+}
+html[data-script="han"] {
+  --font-sans: "Noto Sans SC", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif SC", var(--font-instrument-serif), Georgia, serif;
+}
+html[data-script="kana"] {
+  --font-sans: "Noto Sans JP", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif JP", var(--font-instrument-serif), Georgia, serif;
+}
+html[data-script="hangul"] {
+  --font-sans: "Noto Sans KR", var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Noto Serif KR", var(--font-instrument-serif), Georgia, serif;
+}
+
+/* Non-oblique scripts: italics are synthesised slurs there, so emphasis moves
+   to a measured accent underline echoing the status-chip look.
+   (Unlayered rules outrank Tailwind utilities, no !important arms race.) */
+html[data-script="arabic"] :is(em, .italic),
+html[data-script="hebrew"] :is(em, .italic),
+html[data-script="devanagari"] :is(em, .italic),
+html[data-script="bengali"] :is(em, .italic),
+html[data-script="thai"] :is(em, .italic),
+html[data-script="han"] :is(em, .italic),
+html[data-script="kana"] :is(em, .italic),
+html[data-script="hangul"] :is(em, .italic) {
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--accent-text) 70%, transparent);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.22em;
+}
+
+/* Complex-script tracking relief — mono chrome (commands, refs) keeps its own. */
+html[data-script="arabic"] :not(.font-mono, .font-mono *),
+html[data-script="hebrew"] :not(.font-mono, .font-mono *),
+html[data-script="devanagari"] :not(.font-mono, .font-mono *),
+html[data-script="bengali"] :not(.font-mono, .font-mono *),
+html[data-script="thai"] :not(.font-mono, .font-mono *) {
+  letter-spacing: normal;
+}
+/* …but mono chrome that carries LOCALIZED copy (eyebrows, meta rails, report
+   footers) still breaks Arabic/Hebrew joining while it keeps the wide Latin
+   tracking. Kill the tracking for those scripts only; pure-Latin mono (brand
+   mark, specimen refs) simply tightens — the fair price of coherent script. */
+html[data-script="arabic"] .font-mono,
+html[data-script="hebrew"] .font-mono {
+  letter-spacing: normal;
+}
+/* CJK needs barely any tracking; pull the label spacing down to a whisper. */
+html[data-script="han"] :not(.font-mono, .font-mono *),
+html[data-script="kana"] :not(.font-mono, .font-mono *),
+html[data-script="hangul"] :not(.font-mono, .font-mono *) {
+  letter-spacing: 0.015em;
+}
+
+/* Ascender-heavy scripts clip inside the 0.92 display leading — relax it. */
+html[data-script="thai"] :is(h1, h2, h3),
+html[data-script="devanagari"] :is(h1, h2, h3),
+html[data-script="bengali"] :is(h1, h2, h3) {
+  line-height: 1.14;
+}
+html[data-script="arabic"] :is(h1, h2, h3),
+html[data-script="hebrew"] :is(h1, h2, h3) {
+  line-height: 1.06;
+}
+
+/* Arabic/Hebrew headline widths grow glyph-for-glyph — dial the hero clamp
+   back a touch so the CTA row stays above the fold at 1024×768. */
+html[data-script="arabic"] h1,
+html[data-script="hebrew"] h1 {
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+}
+
+/* Soft numerals sit better beside Arabic/Thai/Persian words than Western digits
+   in body copy — mono data chips keep tabular Western figures on purpose. */
+
+/* The mobile sheet hinges at the inline end: mirror its entrance in RTL. */
+@keyframes dd-slide-in-from-start {
+  from {
+    transform: translateX(-28px);
+  }
+  to {
+    transform: none;
+  }
+}
+html[dir="rtl"] .sheet-panel[data-state="open"] {
+  animation-name: dd-slide-in-from-start;
 }

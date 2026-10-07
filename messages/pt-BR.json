@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Ir para o conteúdo principal"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Crítico",
+      "warning": "Aviso",
+      "info": "Informação"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Entenda seu dataset antes de treinar",
+    "description": "Dataset Doctor destaca valores ausentes, duplicados, desequilíbrio de classes, atributos suspeitos e vazamentos em um relatório de diagnóstico claro — antes de você treinar seu modelo.",
+    "keywords": [
+      "dataset",
+      "qualidade de dados",
+      "machine learning",
+      "ferramentas de ML",
+      "diagnóstico de datasets"
+    ]
+  },
+  "Theme": {
+    "label": "Tema",
+    "toggle": "Alternar tema",
+    "light": "Claro",
+    "dark": "Escuro",
+    "system": "Sistema"
+  },
+  "Language": {
+    "label": "Idioma",
+    "select": "Selecionar idioma",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — início",
+    "links": {
+      "features": "Recursos",
+      "workflow": "Como funciona",
+      "report": "Relatório",
+      "opensource": "Código aberto"
+    },
+    "githubAria": "Dataset Doctor no GitHub",
+    "cta": "Ver relatório de exemplo",
+    "openMenu": "Abrir menu",
+    "sheetTitle": "Navegação",
+    "sheetDesc": "Seções e ações do site",
+    "sheetMeta": "Código aberto · compatível com Python",
+    "closeMenu": "Fechar menu",
+    "sectionsAria": "Seções da página"
+  },
+  "Hero": {
+    "eyebrow": "Diagnóstico de datasets de código aberto",
+    "title": "Conheça seu dataset<br></br><em>antes</em> de treinar<br></br>seu modelo.",
+    "ledeLead": "Capture problemas de qualidade de dados antes que virem problemas do modelo.",
+    "ledeRest": "Dataset Doctor ajuda a revelar valores ausentes, duplicados, desequilíbrio, atributos suspeitos e outros problemas comuns de datasets em um relatório claro.",
+    "ctaPrimary": "Ver relatório de exemplo",
+    "conceptNote": "Um conceito de design — uma ferramenta de Python de código aberto em construção. Todos os números são ilustrativos.",
+    "meta": {
+      "source": "Código aberto",
+      "python": "Compatível com Python",
+      "builtFor": "Feito para fluxos de ML"
+    }
+  },
+  "Tech": {
+    "caption": "Projetado para fluxos modernos de machine learning.",
+    "aria": "Tecnologias de machine learning"
+  },
+  "Preview": {
+    "reportChrome": "Relatório do dataset",
+    "sampleTag": "Saída de exemplo",
+    "specimenStats": "{rows} linhas · {columns} colunas",
+    "analyzedIn": "Análise de exemplo: {seconds} s",
+    "healthScore": "Pontuação de saúde",
+    "chip": "Precisa de atenção",
+    "headFinding": "Achado",
+    "headDetail": "Detalhe",
+    "headSeverity": "Gravidade",
+    "issues": [
+      {
+        "name": "Valores ausentes",
+        "detail": "4 colunas"
+      },
+      {
+        "name": "Linhas duplicadas",
+        "detail": "218"
+      },
+      {
+        "name": "Desequilíbrio de classes",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Possível vazamento",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Relatório de exemplo ilustrativo · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Por que isso importa",
+    "title": "Os problemas do modelo costumam começar antes do treinamento.",
+    "body": "A maioria das equipes descobre os problemas do dataset tarde demais — depois de horas ajustando arquiteturas e hiperparâmetros que nunca foram o gargalo. Quando isso acontece, a correção fica a montante e os experimentos precisam ser refeitos.",
+    "quote": "Um modelo treinado em um dataset doente aprende a doença.",
+    "indexLabel": "Índice de sintomas",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Dados ausentes",
+        "gloss": "Deriva silenciosa de NaN em 4 colunas"
+      },
+      {
+        "name": "Observações duplicadas",
+        "gloss": "218 linhas registradas duas vezes"
+      },
+      {
+        "name": "Desequilíbrio de classes",
+        "gloss": "Divisão 87 / 13 entre as classes"
+      },
+      {
+        "name": "Atributos suspeitos",
+        "gloss": "Proxies do alvo disfarçados"
+      },
+      {
+        "name": "Tipos de dados incorretos",
+        "gloss": "Números interpretados como texto"
+      },
+      {
+        "name": "Vazamento de dados",
+        "gloss": "Respostas dentro do conjunto de treino"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "A lista de verificação",
+    "title": "Tudo o que vale a pena conferir<br></br>antes de <code>model.fit()</code>",
+    "body": "Oito passagens pelo esquema, pelas estatísticas e pelas relações entre eles — os controles discretos que decidem se um modelo vai generalizar.",
+    "big1": {
+      "label": "Passagem 01 · Completude",
+      "title": "Análise de valores ausentes",
+      "body": "Padrões de nulos agrupados por coluna, dtype e segmento de linhas — não apenas um triste total.",
+      "caption": "Os quadrados preenchidos marcam valores presentes, os contornos vermelhos marcam nulos — 4 das 31 colunas têm nulos · 0.8% das células"
+    },
+    "big2": {
+      "label": "Passagem 02 · Unicidade",
+      "title": "Detecção de duplicatas",
+      "body": "Linhas idênticas e quase idênticas capturadas por impressão de hash, em cada par de colunas.",
+      "dupTag": "dup",
+      "caption": "As barras de linhas mostram impressões dos registros; linhas correspondentes ficam destacadas em âmbar — 218 linhas se reduzem a 109 registros únicos"
+    },
+    "compact": [
+      {
+        "label": "Passagem 03",
+        "title": "Distribuição de classes",
+        "body": "Priors de maioria e minoria, à vista antes de distorcerem as métricas."
+      },
+      {
+        "label": "Passagem 04",
+        "title": "Detecção de outliers",
+        "body": "Valores fora do intervalo esperado de sua coluna."
+      },
+      {
+        "label": "Passagem 05",
+        "title": "Validação de tipos de dados",
+        "body": "Números armazenados como texto, datas armazenadas como qualquer coisa, menos datas."
+      },
+      {
+        "label": "Passagem 06",
+        "title": "Avisos de vazamento",
+        "body": "Atributos que guardam respostas às quais não deveriam ter acesso."
+      }
+    ],
+    "corr": {
+      "label": "Passagem 07 · Relações",
+      "title": "Análise de correlação",
+      "body": "Quais atributos se movem juntos — e quais por acaso se movem com o alvo.",
+      "legend": "Mapa de correlação ilustrativo",
+      "note": "Achado de exemplo: field_12 e field_27 têm<hi> ρ 0.94</hi> — verificar possível vazamento"
+    },
+    "summary": {
+      "label": "Visão geral",
+      "title": "Resumo do dataset",
+      "body": "O formato factual dos seus dados, antes de qualquer decisão de modelagem.",
+      "rows": [
+        {
+          "term": "Linhas",
+          "value": "12,458"
+        },
+        {
+          "term": "Colunas",
+          "value": "31"
+        },
+        {
+          "term": "Numéricas",
+          "value": "22"
+        },
+        {
+          "term": "Categóricas",
+          "value": "9"
+        },
+        {
+          "term": "Memória",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Saúde do dataset",
+    "title": "Uma pontuação só. Um ponto de partida mais claro.",
+    "body": "A saúde do dataset resume sinais comuns de qualidade para ajudar a decidir quais áreas merecem atenção antes do treinamento.",
+    "ofTotal": "/ 100",
+    "overall": "Pontuação geral",
+    "chip": "Precisa de atenção",
+    "disclaimer": "<lbl>Prévia do conceito</lbl> — esta página é um conceito de produto. As pontuações e achados exibidos são ilustrativos, não calculados a partir de dados reais.",
+    "catsHeadL": "Categorias de diagnóstico",
+    "catsHeadR": "Pontuação",
+    "categories": [
+      {
+        "label": "Completude",
+        "value": "92",
+        "note": "nulos em 4 das 31 colunas"
+      },
+      {
+        "label": "Consistência",
+        "value": "81",
+        "note": "codificações mistas em region"
+      },
+      {
+        "label": "Equilíbrio de classes",
+        "value": "44",
+        "note": "prior das classes 87 / 13"
+      },
+      {
+        "label": "Qualidade das duplicatas",
+        "value": "76",
+        "note": "218 linhas duplicadas"
+      },
+      {
+        "label": "Risco de vazamento",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 sólido",
+      "50–79 de olho",
+      "0–49 agir agora"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Relatório de exemplo",
+    "title": "Problemas <em>priorizados</em>.",
+    "body": "Cada achado vem com evidências e uma ação sugerida — ordenados por gravidade, para que a primeira hora vá ao maior risco.",
+    "excerptNote": "Achados selecionados — o relatório completo lista cada controle com suas evidências.",
+    "evidence": "Evidências",
+    "actionLabel": "Ação sugerida",
+    "leakLabels": [
+      "customer_status",
+      "atributo mediano"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Possível vazamento do alvo",
+        "body": "O atributo \"customer_status\" tem uma relação suspeitosamente forte com o alvo.",
+        "action": "Revise se esta coluna estaria realmente disponível no momento da predização.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Desequilíbrio de classes detectado",
+        "body": "Treinar com essa divisão enviesará o modelo para a classe majoritária, a menos que haja ponderação ou reamostragem.",
+        "action": "Pondere as classes ou reamostre o conjunto de treino antes do fitting; informe precisão e recall por classe em vez de só acurácia.",
+        "distLabelA": "Classe A",
+        "distLabelB": "Classe B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Observações duplicadas",
+        "body": "218 linhas duplicadas detectadas.",
+        "action": "Mantenha uma cópia de cada registro duplicado e gere novamente o split antes do treinamento — ou investigue por que duplicatas entram no pipeline.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "linhas duplicadas · 1.75% do dataset"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Como funciona",
+    "title": "Do dataset ao insight<br></br>em três passos.",
+    "steps": [
+      {
+        "title": "Enviar",
+        "body": "Um dataset CSV ou Parquet.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Inspecionar",
+        "body": "Controles automatizados de qualidade e prontidão para ML.",
+        "meta": "Controles ilustrativos"
+      },
+      {
+        "title": "Melhorar",
+        "body": "Corrija os problemas antes de treinar.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Integração ao fluxo",
+    "title": "Encaixa no fluxo que você já usa.",
+    "body": "Rode um comando no CI, ou importe o analisador ao lado do seu notebook. De qualquer forma, o relatório chega como um único arquivo HTML autossuficiente.",
+    "termTag": "Sessão de exemplo",
+    "analyzing": "Analisando dataset...",
+    "rowsOk": "{count} linhas",
+    "colsOk": "{count} atributos",
+    "warnings": "{count} avisos",
+    "critical": "{count} problemas críticos",
+    "healthLabel": "Saúde do dataset:",
+    "generated": "report.html gerado",
+    "apiNote": "O comando e a API exibidos são ilustrativos — a interface ainda está sendo definida."
+  },
+  "OSS": {
+    "eyebrow": "Código aberto",
+    "title": "Transparente por design.",
+    "body": "Dataset Doctor é pensado como uma ferramenta de código aberto que desenvolvedores podem inspecionar, estender e integrar aos fluxos que já usam.",
+    "cta": "Ver no GitHub",
+    "pillars": [
+      {
+        "title": "Código aberto",
+        "body": "Leia cada controle, audite cada heurística, publique seu próprio fork.",
+        "meta": "Licença MIT"
+      },
+      {
+        "title": "Python primeiro",
+        "body": "Uma interface proposta para notebooks, scripts e pipelines.",
+        "meta": "Interface Python proposta"
+      },
+      {
+        "title": "Controles extensíveis",
+        "body": "Um catálogo de controles proposto, com espaço para validações personalizadas.",
+        "meta": "Conceito de controles próprios"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Inspecione primeiro.",
+    "title2": "Treine <em>depois</em>.",
+    "sub": "Resolva os problemas óbvios do dataset antes de gastar tempo otimizando o modelo errado.",
+    "ctaPrimary": "Ver relatório de exemplo",
+    "note": "Conceito de produto · dados de exemplo em toda a página"
+  },
+  "Project": {
+    "link": "Ver no GitHub",
+    "status": "Ainda não publicado",
+    "hint": "Estágio de conceito — o repositório, a documentação e o rastreador de issues chegam com o primeiro lançamento público."
+  },
+  "Footer": {
+    "tagline": "Diagnóstico de datasets para fluxos de machine learning.",
+    "linksAria": "Referências do projeto",
+    "linkSource": "Ver código",
+    "linkReadme": "README",
+    "linkIssues": "Relatar um problema",
+    "copyright": "© {year} Dataset Doctor. Um conceito de design — números de exemplo em toda a página."
+  }
+}

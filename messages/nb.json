@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Hopp til hovedinnhold"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kritisk",
+      "warning": "Advarsel",
+      "info": "Informasjon"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Forstå datasettet ditt før du trener",
+    "description": "Dataset Doctor framhever manglende verdier, duplikater, klasseubalanse, mistenkelige variabler og lekkasjer i en tydelig diagnostisk rapport — før du trener modellen din.",
+    "keywords": [
+      "dataset",
+      "datakvalitet",
+      "maskinlæring",
+      "ML-verktøy",
+      "datasettdiagnose"
+    ]
+  },
+  "Theme": {
+    "label": "Tema",
+    "toggle": "Bytt tema",
+    "light": "Lyst",
+    "dark": "Mørkt",
+    "system": "System"
+  },
+  "Language": {
+    "label": "Språk",
+    "select": "Velg språk",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — hjem",
+    "links": {
+      "features": "Funksjoner",
+      "workflow": "Slik virker det",
+      "report": "Rapport",
+      "opensource": "Åpen kildekode"
+    },
+    "githubAria": "Dataset Doctor på GitHub",
+    "cta": "Se eksempelrapport",
+    "openMenu": "Åpne meny",
+    "sheetTitle": "Navigasjon",
+    "sheetDesc": "Seksjoner og handlinger på nettstedet",
+    "sheetMeta": "Åpen kildekode · Python-vennlig",
+    "closeMenu": "Lukk meny",
+    "sectionsAria": "Sideseksjoner"
+  },
+  "Hero": {
+    "eyebrow": "Datasettdiagnose med åpen kildekode",
+    "title": "Kjenn datasettet ditt<br></br><em>før</em> du trener<br></br>modellen din.",
+    "ledeLead": "Fang datakvalitetsproblemer før de blir modellproblemer.",
+    "ledeRest": "Dataset Doctor hjelper deg å framheve manglende verdier, duplikater, ubalanse, mistenkelige variabler og andre vanlige datasettproblemer i en tydelig rapport.",
+    "ctaPrimary": "Se eksempelrapport",
+    "conceptNote": "Et designkonsept — en Python-verktøykasse med åpen kildekode underveis. Alle tall er illustrative.",
+    "meta": {
+      "source": "Åpen kildekode",
+      "python": "Python-vennlig",
+      "builtFor": "Bygget for ML-arbeidsflyter"
+    }
+  },
+  "Tech": {
+    "caption": "Designet for moderne maskinlæringsflyter.",
+    "aria": "Maskinlæringsteknologier"
+  },
+  "Preview": {
+    "reportChrome": "Datasettrapport",
+    "sampleTag": "Eksempelutdata",
+    "specimenStats": "{rows} rader · {columns} kolonner",
+    "analyzedIn": "Eksempelanalyse: {seconds} s",
+    "healthScore": "Helsescore",
+    "chip": "Krever oppmerksomhet",
+    "headFinding": "Funn",
+    "headDetail": "Detalj",
+    "headSeverity": "Alvorlighet",
+    "issues": [
+      {
+        "name": "Manglende verdier",
+        "detail": "4 kolonner"
+      },
+      {
+        "name": "Dupliserte rader",
+        "detail": "218"
+      },
+      {
+        "name": "Klasseubalanse",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Mulig lekkasje",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Illustrativ eksempelrapport · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Hvorfor det betyr noe",
+    "title": "Modellproblemer starter ofte før treningen begynner.",
+    "body": "De fleste team oppdager datasettproblemer for sent — etter timer brukt på å finjustere arkitekturer og hyperparametere som aldri var flaskehalsen. Da ligger fiksen lenger opp i kjeden, og eksperimentene må kjøres på nytt.",
+    "quote": "En modell trent på et sykt dataset lærer sykdommen.",
+    "indexLabel": "Symptomindeks",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Manglende data",
+        "gloss": "Stille NaN-drift i 4 kolonner"
+      },
+      {
+        "name": "Dupliserte observasjoner",
+        "gloss": "218 rader registrert to ganger"
+      },
+      {
+        "name": "Klasseubalanse",
+        "gloss": "87 / 13-fordeling mellom klassene"
+      },
+      {
+        "name": "Mistenkelige variabler",
+        "gloss": "Skjulte proxyer for målet"
+      },
+      {
+        "name": "Feil datatyper",
+        "gloss": "Tall lagret som tekst"
+      },
+      {
+        "name": "Datalekkasje",
+        "gloss": "Svar inne i treningsrammen"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Sjekklista",
+    "title": "Alt verdt å sjekke<br></br>før <code>model.fit()</code>",
+    "body": "Åtte gjennomganger av skjemaet, statistikkene og sammenhengene mellom dem — de stille sjekkene som avgjør om en modell generaliserer.",
+    "big1": {
+      "label": "Gjennomgang 01 · Fullstendighet",
+      "title": "Analyse av manglende verdier",
+      "body": "Nullmønstre gruppert etter kolonne, dtype og radsegment — ikke bare én trist sum.",
+      "caption": "Fylte firkanter markerer tilstedeværende verdier, røde konturer markerer nuller — 4 av 31 kolonner har nuller · 0.8% av cellene"
+    },
+    "big2": {
+      "label": "Gjennomgang 02 · Unikhet",
+      "title": "Duplikatdeteksjon",
+      "body": "Eksakte og nesten-duplikater fanget med fingeravtrykkhashing, på hvert kolonnepar.",
+      "dupTag": "dup",
+      "caption": "Radbjelker viser recordfingeravtrykk; matchende rader utheves i rav — 218 rader faller sammen til 109 unike records"
+    },
+    "compact": [
+      {
+        "label": "Gjennomgang 03",
+        "title": "Klassefordeling",
+        "body": "Majoritets- og minoritetspriors, synlige før de forvrenger målingene."
+      },
+      {
+        "label": "Gjennomgang 04",
+        "title": "Utslagsdeteksjon",
+        "body": "Verdier som driver langt utenfor kolonnens forventede intervall."
+      },
+      {
+        "label": "Gjennomgang 05",
+        "title": "Validering av datatyper",
+        "body": "Tall lagret som tekst, datoer lagret som hva som helst annet enn datoer."
+      },
+      {
+        "label": "Gjennomgang 06",
+        "title": "Lekkasjeadvarsler",
+        "body": "Variabler som gjemmer svar de ikke skulle ha tilgang til."
+      }
+    ],
+    "corr": {
+      "label": "Gjennomgang 07 · Sammenhenger",
+      "title": "Korrelasjonsanalyse",
+      "body": "Hvilke variabler beveger seg sammen — og hvilke tilfeldigvis beveger seg med målet.",
+      "legend": "Illustrativt korrelasjonskart",
+      "note": "Eksempelfunn: field_12 og field_27 har<hi> ρ 0.94</hi> — sjekk for lekkasje"
+    },
+    "summary": {
+      "label": "Oversikt",
+      "title": "Datasettsammendrag",
+      "body": "Den faktiske formen på dataene dine, før enhver modelleringsbeslutning.",
+      "rows": [
+        {
+          "term": "Rader",
+          "value": "12,458"
+        },
+        {
+          "term": "Kolonner",
+          "value": "31"
+        },
+        {
+          "term": "Numeriske",
+          "value": "22"
+        },
+        {
+          "term": "Kategoriske",
+          "value": "9"
+        },
+        {
+          "term": "Minne",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Datasetthelse",
+    "title": "Én score. Et tydeligere utgangspunkt.",
+    "body": "Datasetthelse summerer vanlige kvalitetssignaler for å hjelpe deg å se hvilke områder som fortjener oppmerksomhet før trening.",
+    "ofTotal": "/ 100",
+    "overall": "Samlet score",
+    "chip": "Krever oppmerksomhet",
+    "disclaimer": "<lbl>Konseptforhåndsvisning</lbl> — denne siden er et produktkonsept. Scorene og funnene som vises er illustrative, ikke beregnet fra ekte data.",
+    "catsHeadL": "Diagnostiske kategorier",
+    "catsHeadR": "Score",
+    "categories": [
+      {
+        "label": "Fullstendighet",
+        "value": "92",
+        "note": "nuller i 4 av 31 kolonner"
+      },
+      {
+        "label": "Konsistens",
+        "value": "81",
+        "note": "blandede encodings i region"
+      },
+      {
+        "label": "Klassebalanse",
+        "value": "44",
+        "note": "klasseprior 87 / 13"
+      },
+      {
+        "label": "Duplikatkvalitet",
+        "value": "76",
+        "note": "218 dupliserte rader"
+      },
+      {
+        "label": "Lekkasjerisiko",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 sterk",
+      "50–79 følg med",
+      "0–49 handle nå"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Eksempelrapport",
+    "title": "Problemer, <em>prioritert</em>.",
+    "body": "Hvert følger med dokumentasjon og et foreslått neste steg — sortert etter alvorlighet, slik at den første timen går til største risiko.",
+    "excerptNote": "Utvalgte funn — den fulle rapporten lister hver sjekk med dokumentasjon.",
+    "evidence": "Dokumentasjon",
+    "actionLabel": "Foreslått handling",
+    "leakLabels": [
+      "customer_status",
+      "medianvariabel"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Mulig mållekkasje",
+        "body": "Variabelen \"customer_status\" har en mistenkelig sterk sammenheng med målet.",
+        "action": "Sjekk om denne kolonnen faktisk ville være tilgjengelig på prediksjonstidspunktet.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Klasseubalanse oppdaget",
+        "body": "Trening på denne fordelingen vil skjeve modellen mot majoritetsklassen, med mindre den vektes eller resamples.",
+        "action": "Vekt klassene eller resample treningsdelen før fitting; rapportér presisjon og recall per klasse i stedet for ren accuracy.",
+        "distLabelA": "Klasse A",
+        "distLabelB": "Klasse B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Dupliserte observasjoner",
+        "body": "218 dupliserte rader oppdaget.",
+        "action": "Behold én kopi av hvert duplisert record, og regenerer splittet før trening — eller spor hvorfor duplikater kommer inn tidligere i pipelinen.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "dupliserte rader · 1.75% av datasettet"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Slik virker det",
+    "title": "Fra dataset til innsikt<br></br>i tre steg.",
+    "steps": [
+      {
+        "title": "Last opp",
+        "body": "CSV- eller Parquet-dataset.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Inspektér",
+        "body": "Automatiserte kvalitets- og ML-beredskapssjekker.",
+        "meta": "Illustrative sjekker"
+      },
+      {
+        "title": "Forbedre",
+        "body": "Fiks problemene før trening.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Arbeidsflytintegrasjon",
+    "title": "Passer inn i arbeidsflyten du allerede bruker.",
+    "body": "Kjør én kommando i CI, eller importer analytikeren ved siden av notatboken din. Uansett kommer rapporten som én selvstendig HTML-fil.",
+    "termTag": "Eksempeløkt",
+    "analyzing": "Analyserer datasettet...",
+    "rowsOk": "{count} rader",
+    "colsOk": "{count} variabler",
+    "warnings": "{count} advarsler",
+    "critical": "{count} kritiske problemer",
+    "healthLabel": "Datasetthelse:",
+    "generated": "report.html generert",
+    "apiNote": "Kommandoen og API-en som vises er illustrative — grensesnittet er fortsatt under utforming."
+  },
+  "OSS": {
+    "eyebrow": "Åpen kildekode",
+    "title": "Transparent fra start.",
+    "body": "Dataset Doctor er ment som en verktøykasse med åpen kildekode som utviklere kan inspisere, utvide og integrere i arbeidsflytene sine.",
+    "cta": "Se på GitHub",
+    "pillars": [
+      {
+        "title": "Åpen kildekode",
+        "body": "Les hver sjekk, gransk hver heuristikk, ship din egen fork.",
+        "meta": "MIT-lisens"
+      },
+      {
+        "title": "Python først",
+        "body": "Et foreslått grensesnitt for notatbøker, skript og pipelines.",
+        "meta": "Foreslått Python-grensesnitt"
+      },
+      {
+        "title": "Utvidbare sjekker",
+        "body": "En foreslått sjekkkatalog med plass til egne valideringer.",
+        "meta": "Konsept for egne sjekker"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Inspektér først.",
+    "title2": "Tren <em>deretter</em>.",
+    "sub": "Fang de åpenbare datasettproblemene før du bruker tid på å optimalisere feil modell.",
+    "ctaPrimary": "Se eksempelrapport",
+    "note": "Produktkonsept · eksempeldata hele veien"
+  },
+  "Project": {
+    "link": "Se på GitHub",
+    "status": "Ikke publisert ennå",
+    "hint": "Konseptstadiet — repoet, dokumentasjonen og issue-trackeren kommer med første offentlige utgivelse."
+  },
+  "Footer": {
+    "tagline": "Datasettdiagnose for maskinlæringsarbeidsflyter.",
+    "linksAria": "Prosjektreferanser",
+    "linkSource": "Se kildekode",
+    "linkReadme": "README",
+    "linkIssues": "Rapporter et problem",
+    "copyright": "© {year} Dataset Doctor. Et designkonsept — eksempeltall hele veien."
+  }
+}

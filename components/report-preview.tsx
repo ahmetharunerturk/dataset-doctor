@@ -51,7 +51,7 @@ export function ReportPreview() {
                   </span>
                   <h3 className="text-[21px] font-semibold">{t(`findings.${i}.title`)}</h3>
                   <span
-                    className={`ml-auto rounded-full border px-2.5 py-0.5 font-mono text-[10px] tracking-[0.14em] uppercase ${SEVERITY_CLASS[SEVERITY[i]]}`}
+                    className={`ms-auto rounded-full border px-2.5 py-0.5 font-mono text-[10px] tracking-[0.14em] uppercase ${SEVERITY_CLASS[SEVERITY[i]]}`}
                   >
                     {tc(`severity.${SEVERITY[i]}`)}
                   </span>
@@ -115,7 +115,7 @@ export function ReportPreview() {
                     <p className="font-mono text-[10.5px] tracking-[0.22em] text-faint-foreground uppercase">
                       {t("actionLabel")}
                     </p>
-                    <p className="mt-5 border-l border-accent pl-5 text-[15.5px] leading-relaxed">
+                    <p className="mt-5 border-s border-accent ps-5 text-[15.5px] leading-relaxed">
                       {t(`findings.${i}.action`)}
                     </p>
                   </div>

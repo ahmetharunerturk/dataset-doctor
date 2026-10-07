@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Ugrás a fő tartalomra"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kritikus",
+      "warning": "Figyelmeztetés",
+      "info": "Információ"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — ismerd meg az adathalmazod a modell betanítása előtt",
+    "description": "A Dataset Doctor egy jól olvasható diagnosztikai jelentésben tárja fel a hiányzó értékeket, a duplikált sorokat, az osztályegyensúly-hiányt, a gyanús jellemzőket és az adatszivárgást — még a modell betanítása előtt.",
+    "keywords": [
+      "adathalmaz",
+      "adatminőség",
+      "gépi tanulás",
+      "ML-eszközök",
+      "adathalmaz-diagnózis"
+    ]
+  },
+  "Theme": {
+    "label": "Téma",
+    "toggle": "Téma váltása",
+    "light": "Világos",
+    "dark": "Sötét",
+    "system": "Rendszer szerint"
+  },
+  "Language": {
+    "label": "Nyelv",
+    "select": "Nyelv kiválasztása",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — Kezdőlap",
+    "links": {
+      "features": "Funkciók",
+      "workflow": "Hogyan működik",
+      "report": "Jelentés",
+      "opensource": "Nyílt forrás"
+    },
+    "githubAria": "Dataset Doctor a GitHubon",
+    "cta": "Minta jelentés megtekintése",
+    "openMenu": "Menü megnyitása",
+    "sheetTitle": "Navigáció",
+    "sheetDesc": "Az oldal szekciói és műveletei",
+    "sheetMeta": "Nyílt forrás · Python-barát",
+    "closeMenu": "Menü bezárása",
+    "sectionsAria": "Az oldal szekciói"
+  },
+  "Hero": {
+    "eyebrow": "Nyílt forrású adathalmaz-diagnózis",
+    "title": "Ismerd meg az adathalmazod,<br></br><em>mielőtt</em> betanítanád<br></br>a modelljeid.",
+    "ledeLead": "Fogd el az adatminőségi problémákat, mielőtt modellproblémákká válnának.",
+    "ledeRest": "A Dataset Doctor segít feltárni a hiányzó értékeket, a duplikátumokat, az egyensúlyhiányt, a gyanús jellemzőket és más gyakori problémákat egyetlen olvasható jelentésben.",
+    "ctaPrimary": "Minta jelentés megtekintése",
+    "conceptNote": "Design-koncepció — építés alatt álló nyílt forrású Python eszközkészlet. Minden szám csak illusztráció.",
+    "meta": {
+      "source": "Nyílt forrás",
+      "python": "Python-barát",
+      "builtFor": "ML-csővezetékekhez"
+    }
+  },
+  "Tech": {
+    "caption": "Modern gépi tanulási munkafolyamatokhoz tervezve.",
+    "aria": "Gépi tanulási technológiák"
+  },
+  "Preview": {
+    "reportChrome": "Adathalmaz-jelentés",
+    "sampleTag": "Minta kimenet",
+    "specimenStats": "Sorok: {rows} · Oszlopok: {columns}",
+    "analyzedIn": "Minta elemzés: {seconds} mp",
+    "healthScore": "Egészségpontszám",
+    "chip": "Figyelmet igényel",
+    "headFinding": "Megállapítás",
+    "headDetail": "Részletek",
+    "headSeverity": "Súlyosság",
+    "issues": [
+      {
+        "name": "Hiányzó értékek",
+        "detail": "4 oszlop"
+      },
+      {
+        "name": "Duplikált sorok",
+        "detail": "218"
+      },
+      {
+        "name": "Osztályegyensúly-hiány",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Lehetséges szivárgás",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Szemléltető minta jelentés · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Miért számít",
+    "title": "A modellproblémák gyakran már a betanítás előtt elkezdődnek.",
+    "body": "A legtöbb csapat túl későn fedez fel adathalmaz-problémákat — miután órákat töltött olyan architektúrák és hiperparaméterek hangolásával, amelyek soha nem voltak a szűk keresztmetszet. Ilyenkor a megoldás messzebb van a csővezetékben, és minden kísérletet újra kell futtatni.",
+    "quote": "A beteg adathalmazon tanított modell csak a betegséget tanulja meg.",
+    "indexLabel": "Tünetindex",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Hiányos adatok",
+        "gloss": "a NaN halkan szivárog 4 oszlopba"
+      },
+      {
+        "name": "Duplikált megfigyelések",
+        "gloss": "218 sort kétszer rögzítettek"
+      },
+      {
+        "name": "Osztályegyensúly-hiány",
+        "gloss": "87 / 13 arány az osztályok közt"
+      },
+      {
+        "name": "Gyanús jellemzők",
+        "gloss": "a cél proxy-változói álruhában"
+      },
+      {
+        "name": "Hibás adattípusok",
+        "gloss": "szövegként tárolt számok"
+      },
+      {
+        "name": "Adatszivárgás",
+        "gloss": "a válaszok még mindig a tanító keretben vannak"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Ellenőrzőlista",
+    "title": "Minden, amit érdemes ellenőrizni,<br></br><code>model.fit()</code> előtt",
+    "body": "Nyolc menet a séma, a statisztikák és a köztük lévő kapcsolatok felett — néma ellenőrzések, amelyek eldöntik, hogy a modell tud-e általánosítani.",
+    "big1": {
+      "label": "Menet 01 · teljesség",
+      "title": "Hiányzó értékek elemzése",
+      "body": "A hiányzási minták oszlop, adattípus és sorszelet szerint csoportosítva — nem csak egy unalmas összesített szám.",
+      "caption": "A teli négyzet meglévő értéket, a piros keret hiányt jelent — 31 oszlopból 4-ben van hiány · a cellák 0.8%-a"
+    },
+    "big2": {
+      "label": "Menet 02 · egyediség",
+      "title": "Duplikátumok felderítése",
+      "body": "Az azonos és majdnem azonos sorokat hash-ujjlenyomatok fogják meg minden oszloppáron.",
+      "dupTag": "dup",
+      "caption": "A sorsávok a rekordok ujjlenyomatát mutatják; az egyezők borostyánban világítanak — 218 sor 109 egyedi rekordba gyűrődik"
+    },
+    "compact": [
+      {
+        "label": "Menet 03",
+        "title": "Osztályeloszlás",
+        "body": "A többségi és kisebbségi priorok már a metrikák torzítása előtt látszanak."
+      },
+      {
+        "label": "Menet 04",
+        "title": "Kiugró értékek felderítése",
+        "body": "Értékek, amelyek messze sodródtak az oszlopuk várható tartományától."
+      },
+      {
+        "label": "Menet 05",
+        "title": "Adattípus-ellenőrzés",
+        "body": "Szövegként tárolt számok, és dátumok, amelyeket mindennek tároltak, csak dátumnak nem."
+      },
+      {
+        "label": "Menet 06",
+        "title": "Szivárgási figyelmeztetés",
+        "body": "Jellemzők, amelyek olyan válaszokat rejtenek, amelyekhez nem volna szabad hozzáférniük."
+      }
+    ],
+    "corr": {
+      "label": "Menet 07 · kapcsolatok",
+      "title": "Korrelációelemzés",
+      "body": "Mely jellemzők mozognak együtt — és melyek csak véletlenül a céllal együtt.",
+      "legend": "Szemléltető korrelációs térkép",
+      "note": "Minta megállapítás: a field_12 és a field_27<hi> ρ 0.94</hi> korrelációt oszt meg — ellenőrizd a szivárgást"
+    },
+    "summary": {
+      "label": "Áttekintés",
+      "title": "Adathalmaz-összefoglaló",
+      "body": "Az adataid valódi alakja, mielőtt bármilyen modellezési döntést hoznál.",
+      "rows": [
+        {
+          "term": "Sorok",
+          "value": "12,458"
+        },
+        {
+          "term": "Oszlopok",
+          "value": "31"
+        },
+        {
+          "term": "Numerikus",
+          "value": "22"
+        },
+        {
+          "term": "Kategorikus",
+          "value": "9"
+        },
+        {
+          "term": "Memória",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Az adathalmaz egészsége",
+    "title": "Egy pontszám. Világosabb kiindulópont.",
+    "body": "Az adathalmaz egészsége összefoglalja a gyakori minőségi jelzéseket, hogy látszódjon, mely területek igényelnek figyelmet a betanítás előtt.",
+    "ofTotal": "/ 100",
+    "overall": "Összpontszám",
+    "chip": "Figyelmet igényel",
+    "disclaimer": "<lbl>Koncepció előnézet</lbl> — ez az oldal egy termékkoncepció. A megjelenített pontszámok és megállapítások illusztratívak, nem valós adatokból számoltuk őket.",
+    "catsHeadL": "Diagnózis-kategóriák",
+    "catsHeadR": "Pontszám",
+    "categories": [
+      {
+        "label": "Teljesség",
+        "value": "92",
+        "note": "hiány 31-ből 4 oszlopban"
+      },
+      {
+        "label": "Konzisztencia",
+        "value": "81",
+        "note": "vegyes kódolás a region-ben"
+      },
+      {
+        "label": "Osztályegyensúly",
+        "value": "44",
+        "note": "osztályprior 87 / 13"
+      },
+      {
+        "label": "Duplikátum-minőség",
+        "value": "76",
+        "note": "218 duplikált sor"
+      },
+      {
+        "label": "Szivárgási kockázat",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 stabil",
+      "50–79 megfigyelés alatt",
+      "0–49 cselekedj most"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Minta jelentés",
+    "title": "Problémák <em>prioritási sorrendben</em>.",
+    "body": "Minden megállapítás bizonyítékkal és javasolt következő lépéssel jár — súlyosság szerint sorba rendezve, hogy az első órád a legnagyobb kockázatra menjen.",
+    "excerptNote": "Válogatott megállapítások — a teljes jelentés minden ellenőrzést felsorol a bizonyítékaival.",
+    "evidence": "Bizonyíték",
+    "actionLabel": "Javasolt lépés",
+    "leakLabels": [
+      "datetime",
+      "Szivárgási kockázat"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Lehetséges cél-szivárgás",
+        "body": "A \"customer_status\" jellemző gyanúsan erős kapcsolatot mutat a céllal.",
+        "action": "Ellenőrizd, hogy ez az oszlop valóban elérhető volt-e az előrejelzés idején.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Osztályegyensúly-hiány észlelve",
+        "body": "Ezen az eloszláson való betanítás a többségi osztály felé billenti a modellt, hacsak nem használsz osztálysúlyozást vagy újramintavételezést.",
+        "action": "Alkalmazz osztálysúlyozást vagy mintavételezd újra a tanítópartíciót a fit előtt, és számolj be minden osztályra precízióról és visszahívásról, ne csak az átlagos pontosságról.",
+        "distLabelA": "A osztály",
+        "distLabelB": "B osztály",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Duplikált megfigyelések",
+        "body": "218 duplikált sort észleltünk.",
+        "action": "Tartsd meg a duplikált rekordok egy-egy példányát, és a betanítás előtt építsd újra a partíciókat — vagy derítsd ki, miért szivárognak a duplikátumok a csővezeték mélyebb pontjáról.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "duplikált sor · az adathalmaz 1.75%-a"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Hogyan működik",
+    "title": "Az adathalmaztól a meglátásig<br></br>három lépésben.",
+    "steps": [
+      {
+        "title": "Töltsd fel",
+        "body": "Egy adathalmaz CSV vagy Parquet formátumban.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Ellenőrizd",
+        "body": "Automatikus minőség- és ML-készültség-ellenőrzések.",
+        "meta": "szemléltető ellenőrzések"
+      },
+      {
+        "title": "Javítsd",
+        "body": "Oldd meg a problémákat a betanítás előtt.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Beépülés a munkafolyamatba",
+    "title": "Beleillik abba a munkafolyamatba, amelyet már használsz.",
+    "body": "Futtass egyetlen parancsot a CI-ben, vagy importáld az elemzőt a notebookod mellé. Akárhogy is, a jelentés egyetlen önálló HTML-fájlként jön ki.",
+    "termTag": "Minta munkamenet",
+    "analyzing": "Az adathalmaz elemzése folyamatban...",
+    "rowsOk": "Sorok: {count}",
+    "colsOk": "Jellemzők: {count}",
+    "warnings": "Figyelmeztetések: {count}",
+    "critical": "Kritikus problémák: {count}",
+    "healthLabel": "Az adathalmaz egészsége:",
+    "generated": "A report.html elkészült",
+    "apiNote": "A megjelenített parancs és API csak illusztráció — az interfész még formát ölt."
+  },
+  "OSS": {
+    "eyebrow": "Nyílt forrás",
+    "title": "Átlátható a tervezésből adódóan.",
+    "body": "A Dataset Doctor olyan nyílt forrású eszközkészletként készül, amelyet a fejlesztők elolvashatnak, kibővíthetnek és beépíthetnek a munkafolyamataikba.",
+    "cta": "Megtekintés a GitHubon",
+    "pillars": [
+      {
+        "title": "Nyílt forrás",
+        "body": "Olvasd el minden ellenőrzést, nézd át minden heurisztikát, és tedd közzé a saját forkod.",
+        "meta": "MIT-licenc"
+      },
+      {
+        "title": "Python az első",
+        "body": "Javasolt interfész notebookokhoz, szkriptekhez és csővezetékekhez.",
+        "meta": "javasolt Python interfész"
+      },
+      {
+        "title": "Bővíthető ellenőrzések",
+        "body": "Javasolt ellenőrzés-katalógus, helyet hagyva a saját validációidnak.",
+        "meta": "egyedi ellenőrzések koncepciója"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Előbb ellenőrizz.",
+    "title2": "Aztán <em>taníts</em>.",
+    "sub": "Oldd meg az adathalmaz nyilvánvaló problémáit, mielőtt a rossz modell optimalizálásán pazarolnád az idődet.",
+    "ctaPrimary": "Minta jelentés megtekintése",
+    "note": "Termékkoncepció · mintaadatok az egész oldalon"
+  },
+  "Project": {
+    "link": "Megtekintés a GitHubon",
+    "status": "Még nem publikált",
+    "hint": "Koncepció fázis — a repo, a dokumentáció és a hibakövető az első nyilvános kiadással érkezik."
+  },
+  "Footer": {
+    "tagline": "Adathalmaz-diagnózis gépi tanulási munkafolyamatokhoz.",
+    "linksAria": "Projekt linkek",
+    "linkSource": "Forrás megtekintése",
+    "linkReadme": "README",
+    "linkIssues": "Probléma bejelentése",
+    "copyright": "© {year} Dataset Doctor. Design-koncepció — illusztratív számok az egész oldalon."
+  }
+}

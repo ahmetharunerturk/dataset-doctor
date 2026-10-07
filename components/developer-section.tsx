@@ -9,8 +9,8 @@ const LINE_TONE = ["text-ok", "text-ok", "text-warning", "text-critical", "text-
 export function DeveloperSection() {
   const t = useTranslations("Dev");
 
-  const lines = [
-    { tone: "", text: "$ dataset-doctor inspect dataset.csv" },
+  const lines: Array<{ tone: string; text: string; ltr?: true }> = [
+    { tone: "", ltr: true, text: "$ dataset-doctor inspect dataset.csv" },
     { tone: "text-faint-foreground", text: t("analyzing") },
     { tone: LINE_TONE[0], text: `✓ ${t("rowsOk", { count: SPECIMEN.rows })}` },
     { tone: LINE_TONE[1], text: `✓ ${t("colsOk", { count: SPECIMEN.columns })}` },
@@ -58,11 +58,11 @@ export function DeveloperSection() {
             <pre className="overflow-x-auto px-5 py-6 font-mono text-[12.5px] leading-loose">
               <code>
                 {lines.map((line, i) => (
-                  <span key={i} className={`block ${line.tone} ${i === 6 ? "mt-2 text-[13px] font-medium" : ""}`}>
+                  <span key={i} dir={line.ltr ? "ltr" : undefined} className={`block ${line.tone} ${i === 6 ? "mt-2 text-[13px] font-medium" : ""}`}>
                     {i === 6 ? (
                       <>
                         {t("healthLabel")}{" "}
-                        <span className="text-accent-text tabular">{`${SPECIMEN.health.overall} / 100`}</span>
+                        <bdi dir="ltr" className="text-accent-text tabular">{`${SPECIMEN.health.overall} / 100`}</bdi>
                       </>
                     ) : (
                       line.text

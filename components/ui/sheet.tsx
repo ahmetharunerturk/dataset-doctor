@@ -41,7 +41,7 @@ function SheetContent({
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(
-          "sheet-panel fixed inset-y-0 right-0 z-50 flex w-[min(360px,92vw)] flex-col overflow-y-auto border-l border-line bg-background px-6 py-5",
+          "sheet-panel fixed inset-y-0 end-0 z-50 flex w-[min(360px,92vw)] flex-col overflow-y-auto border-s border-line bg-background px-6 py-5",
           className,
         )}
         {...props}
@@ -49,7 +49,7 @@ function SheetContent({
         {children}
         <SheetPrimitive.Close
           aria-label={closeLabel}
-          className="absolute top-4 right-4 grid min-h-11 min-w-11 cursor-pointer place-items-center rounded-lg text-muted-foreground transition-colors hover:bg-panel hover:text-foreground"
+          className="absolute top-4 end-4 grid min-h-11 min-w-11 cursor-pointer place-items-center rounded-lg text-muted-foreground transition-colors hover:bg-panel hover:text-foreground"
         >
           <X className="size-4" />
         </SheetPrimitive.Close>

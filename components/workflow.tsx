@@ -28,7 +28,7 @@ export async function Workflow() {
           {[0, 1, 2].map((i) => (
             <li key={i} className="bg-raised p-8">
               <div className="flex items-baseline justify-between gap-4">
-                <span className="tabular font-mono text-[44px] leading-none text-faint-foreground/45">
+                <span className="tabular font-mono text-[44px] leading-none text-faint-foreground">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span className="font-mono text-[11px] tracking-[0.18em] text-faint-foreground uppercase">

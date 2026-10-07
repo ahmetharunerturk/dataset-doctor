@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Siirry pääsisältöön"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kriittinen",
+      "warning": "Varoitus",
+      "info": "Tieto"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — tunne aineistosi ennen mallin kouluttamista",
+    "description": "Dataset Doctor tuo esiin puuttuvat arvot, päällekkäiset rivit, luokkaepätasapainon, epäilyttävät piirteet ja tietovuodot helposti luettavassa diagnoosiraportissa — ennen kuin koulutat mallisi.",
+    "keywords": [
+      "aineisto",
+      "datan laatu",
+      "koneoppiminen",
+      "ML-työkalut",
+      "aineiston diagnosointi"
+    ]
+  },
+  "Theme": {
+    "label": "Teema",
+    "toggle": "Vaihda teemaa",
+    "light": "Vaalea",
+    "dark": "Tumma",
+    "system": "Järjestelmän mukaan"
+  },
+  "Language": {
+    "label": "Kieli",
+    "select": "Valitse kieli",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — Etusivu",
+    "links": {
+      "features": "Ominaisuudet",
+      "workflow": "Näin se toimii",
+      "report": "Raportti",
+      "opensource": "Avoin lähdekoodi"
+    },
+    "githubAria": "Dataset Doctor GitHubissa",
+    "cta": "Katso esimerkkiraportti",
+    "openMenu": "Avaa valikko",
+    "sheetTitle": "Navigointi",
+    "sheetDesc": "Sivuston osiot ja toiminnot",
+    "sheetMeta": "Avoin lähdekoodi · Python-ystävällinen",
+    "closeMenu": "Sulje valikko",
+    "sectionsAria": "Sivun osiot"
+  },
+  "Hero": {
+    "eyebrow": "Avoimen lähdekoodin aineistodiagnostiikka",
+    "title": "Tunne aineistosi,<br></br><em>ennen kuin</em> koulutat<br></br>mallisi.",
+    "ledeLead": "Tartu datan laatuongelmiin, ennen kuin niistä tulee mallin ongelmia.",
+    "ledeRest": "Dataset Doctor auttaa tuomaan esiin puuttuvat arvot, päällekkäisyydet, epätasapainon, epäilyttävät piirteet ja muut yleiset ongelmat yhdessä luettavassa raportissa.",
+    "ctaPrimary": "Katso esimerkkiraportti",
+    "conceptNote": "Suunnittelukonsepti — rakenteilla oleva avoimen lähdekoodin Python-työkalupakki. Kaikki luvut ovat vain havainnollistavia.",
+    "meta": {
+      "source": "Avoin lähdekoodi",
+      "python": "Python-ystävällinen",
+      "builtFor": "ML-putkistoihin"
+    }
+  },
+  "Tech": {
+    "caption": "Suunniteltu moderneihin koneoppimistyönkulkuihin.",
+    "aria": "Koneoppimisteknologiat"
+  },
+  "Preview": {
+    "reportChrome": "Aineistoraportti",
+    "sampleTag": "Esimerkkituloste",
+    "specimenStats": "Rivejä: {rows} · Sarakkeita: {columns}",
+    "analyzedIn": "Esimerkkianalyysi: {seconds} s",
+    "healthScore": "Terveyspisteet",
+    "chip": "Vaatii huomiota",
+    "headFinding": "Havainto",
+    "headDetail": "Yksityiskohdat",
+    "headSeverity": "Vakavuus",
+    "issues": [
+      {
+        "name": "Puuttuvat arvot",
+        "detail": "4 saraketta"
+      },
+      {
+        "name": "Päällekkäiset rivit",
+        "detail": "218"
+      },
+      {
+        "name": "Luokkaepätasapaino",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Mahdollinen vuoto",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Havainnollistava esimerkkiraportti · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Miksi tämä on tärkeää",
+    "title": "Mallin ongelmat alkavat usein jo ennen kuin koulutus alkaa.",
+    "body": "Useimmat tiimit huomaavat aineisto-ongelmat aivan liian myöhään — sen jälkeen, kun tunteja on käytetty sellaisten arkkitehtuurien ja hyperparametrien virittämiseen, jotka eivät koskaan olleet pullonkaula. Silloin ratkaisu on kauempana putkistossa, ja kaikki kokeet pitää ajaa uudelleen.",
+    "quote": "Sairaalla aineistolla koulutettu malli oppii vain sairauden.",
+    "indexLabel": "Oireindeksi",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Puutteellinen data",
+        "gloss": "NaN vuotaa hiljaa 4 sarakkeeseen"
+      },
+      {
+        "name": "Päällekkäiset havainnot",
+        "gloss": "218 riviä tallennettu kahdesti"
+      },
+      {
+        "name": "Luokkaepätasapaino",
+        "gloss": "87 / 13 jakauma luokkien välillä"
+      },
+      {
+        "name": "Epäilyttävät piirteet",
+        "gloss": "tavoitteen proxy-muuttujia valepuvussa"
+      },
+      {
+        "name": "Väärät tietotyypit",
+        "gloss": "tekstinä tallennetut numerot"
+      },
+      {
+        "name": "Tietovuoto",
+        "gloss": "vastaukset ovat yhä koulutuskehyksessä"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Tarkistuslista",
+    "title": "Kaikki mikä kannattaa tarkistaa,<br></br>ennen <code>model.fit()</code>:iä",
+    "body": "Kahdeksan läpikäyntiä skeeman, tilastojen ja niiden välisten suhteiden yli — hiljaisia tarkistuksia, jotka ratkaisevat, voiko malli yleistää.",
+    "big1": {
+      "label": "Läpikäynti 01 · täydellisyys",
+      "title": "Puuttuvien arvojen analyysi",
+      "body": "Tyhjyyskuviot ryhmiteltynä sarakkeen, tietotyypin ja rivisiivun mukaan — ei vain turtunut kokonaisluku.",
+      "caption": "Täysi neliö tarkoittaa arvoa on olemassa, punainen reunus tyhjää — 31:stä sarakkeesta 4:ssä on tyhjää · 0.8% soluista"
+    },
+    "big2": {
+      "label": "Läpikäynti 02 · ainutlaatuisuus",
+      "title": "Päällekkäisyyksien tunnistus",
+      "body": "Täysin samat ja lähes samat rivit napataan hajautussormenjäljillä jokaiselta sarakeparilta.",
+      "dupTag": "dup",
+      "caption": "Rivipalkit näyttävät tietueiden sormenjäljet; täsmäävät hehkuvat meripihkankeltaisina — 218 riviä taittuu 109:ksi ainutlaatuiseksi tietueeksi"
+    },
+    "compact": [
+      {
+        "label": "Läpikäynti 03",
+        "title": "Luokkajakauma",
+        "body": "Enemmistö- ja vähemmistöpriorit näkyvät ennen kuin ne vääristävät mittareita."
+      },
+      {
+        "label": "Läpikäynti 04",
+        "title": "Poikkeamien tunnistus",
+        "body": "Arvoja, jotka ovat ajautuneet kauas sarakkeensa odotetusta vaihteluvälistä."
+      },
+      {
+        "label": "Läpikäynti 05",
+        "title": "Tietotyyppien vahvistus",
+        "body": "Tekstinä tallennettuja numeroita ja päivämääriä, jotka on tallennettu aivan minä tahansa, paitsi päivämääränä."
+      },
+      {
+        "label": "Läpikäynti 06",
+        "title": "Vuotovaroitus",
+        "body": "Piirteitä, jotka pitävät sisällään vastauksia, joihin niiden ei pitäisi päästä."
+      }
+    ],
+    "corr": {
+      "label": "Läpikäynti 07 · suhteet",
+      "title": "Korrelaatioanalyysi",
+      "body": "Mitkä piirteet liikkuvat yhdessä — ja mitkä sattuvat liikkumaan tavoitteen kanssa.",
+      "legend": "Havainnollistava korrelaatiokartta",
+      "note": "Esimerkkihavainto: field_12 ja field_27 jakavat<hi> ρ 0.94</hi> korrelaation — tarkista vuoto"
+    },
+    "summary": {
+      "label": "Yleiskuva",
+      "title": "Aineistoyhteenveto",
+      "body": "Aineistosi todellinen muoto ennen mitään mallinnuspäätöksiä.",
+      "rows": [
+        {
+          "term": "Rivit",
+          "value": "12,458"
+        },
+        {
+          "term": "Sarakkeet",
+          "value": "31"
+        },
+        {
+          "term": "Numeeriset",
+          "value": "22"
+        },
+        {
+          "term": "Kategoriset",
+          "value": "9"
+        },
+        {
+          "term": "Muisti",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Aineiston terveys",
+    "title": "Yksi pistemäärä. Selkeämpi lähtökohta.",
+    "body": "Aineiston terveys tiivistää yleiset laatusignaalit, jotta näkyy, mitkä alueet vaativat huomiota ennen koulutusta.",
+    "ofTotal": "/ 100",
+    "overall": "Kokonaispistemäärä",
+    "chip": "Vaatii huomiota",
+    "disclaimer": "<lbl>Konseptiesikatselu</lbl> — tämä sivu on tuotekonsepti. Näytetyt pistemäärät ja havainnot ovat havainnollistavia, eikä niitä ole laskettu oikeasta datasta.",
+    "catsHeadL": "Diagnoosiluokat",
+    "catsHeadR": "Pistemäärä",
+    "categories": [
+      {
+        "label": "Täydellisyys",
+        "value": "92",
+        "note": "tyhjää 4:ssä 31:stä sarakkeesta"
+      },
+      {
+        "label": "Johdonmukaisuus",
+        "value": "81",
+        "note": "sekalaisia koodauksia kentässä region"
+      },
+      {
+        "label": "Luokkien tasapaino",
+        "value": "44",
+        "note": "luokkapriori 87 / 13"
+      },
+      {
+        "label": "Päällekkäisyyksien laatu",
+        "value": "76",
+        "note": "218 päällekkäistä riviä"
+      },
+      {
+        "label": "Vuotoriski",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 vakaa",
+      "50–79 tarkkailussa",
+      "0–49 toimi nyt"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Esimerkkiraportti",
+    "title": "Ongelmat <em>prioriteettijärjestyksessä</em>.",
+    "body": "Jokainen havainto sisältää todisteen ja ehdotetun seuraavan askeleen — vakavuuden mukaan järjestettynä, jotta ensimmäinen tuntisi menee suurimman riskin kohdalle.",
+    "excerptNote": "Valikoituja havaintoja — täysi raportti listaa jokaisen tarkistuksen todisteineen.",
+    "evidence": "Todiste",
+    "actionLabel": "Ehdotettu askel",
+    "leakLabels": [
+      "datetime",
+      "Vuotoriski"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Mahdollinen tavoitevuoto",
+        "body": "\"customer_status\"-piirre näyttää epäilyttävän vahvan yhteyden tavoitteeseen.",
+        "action": "Tarkista, oliko tämä sarake todella käytettävissä ennusteen tekohetkellä.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Luokkaepätasapaino havaittu",
+        "body": "Kouluttaminen tällä jakaumalla kallistaa mallia enemmistöluokkaan, ellei käytä luokkapainotusta tai uudelleennäytteistystä.",
+        "action": "Ota käyttöön luokkapainotus tai näytteistä koulutusjako uudelleen ennen fit:jä ja raportoi tarkkuus ja tuloksen haku jokaiselle luokalle pelkän kokonaistarkkuuden sijaan.",
+        "distLabelA": "Luokka A",
+        "distLabelB": "Luokka B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Päällekkäiset havainnot",
+        "body": "Havaittu 218 päällekkäistä riviä.",
+        "action": "Pidä yksi kopio jokaista päällekkäistä tietuetta ja rakenna jaot uudelleen ennen koulutusta — tai selvitä, miksi päällekkäisyydet vuotavat putkiston syvemmästä kohdasta.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "päällekkäisiä rivejä · 1.75% aineistosta"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Näin se toimii",
+    "title": "Aineistosta oivallukseen<br></br>kolmessa vaiheessa.",
+    "steps": [
+      {
+        "title": "Lataa",
+        "body": "Aineisto CSV- tai Parquet-muodossa.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Tarkista",
+        "body": "Automaattisia laatu- ja ML-valmiustarkistuksia.",
+        "meta": "havainnollistavia tarkistuksia"
+      },
+      {
+        "title": "Paranna",
+        "body": "Ratkaise ongelmat ennen koulutusta.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Sulautuu työnkulkuun",
+    "title": "Istuu työnkulkuun, jota käytät jo.",
+    "body": "Aja yksi komento CI:ssä tai tuo analysoija notebook-kannettavasi viereen. Kummassakin tapauksessa raportti on yksi itsenäinen HTML-tiedosto.",
+    "termTag": "Esimerkkiistunto",
+    "analyzing": "Analysoidaan aineistoa...",
+    "rowsOk": "Rivejä: {count}",
+    "colsOk": "Piirteitä: {count}",
+    "warnings": "Varoituksia: {count}",
+    "critical": "Kriittisiä ongelmia: {count}",
+    "healthLabel": "Aineiston terveys:",
+    "generated": "report.html luotu",
+    "apiNote": "Näytetty komento ja API ovat havainnollistavia — käyttöliittymä on vielä muotoutumassa."
+  },
+  "OSS": {
+    "eyebrow": "Avoin lähdekoodi",
+    "title": "Läpinäkyvä suunnittelultaan.",
+    "body": "Dataset Doctor on suunniteltu avoimen lähdekoodin työkalupakiksi, jonka kehittäjät voivat lukea, laajentaa ja liittää omiin työnkulkuihinsa.",
+    "cta": "Katso GitHubissa",
+    "pillars": [
+      {
+        "title": "Avoin lähdekoodi",
+        "body": "Lue jokainen tarkistus, käy jokainen heuristiikka läpi ja julkaise oma haarasi.",
+        "meta": "MIT-lisenssi"
+      },
+      {
+        "title": "Python ensin",
+        "body": "Ehdotettu käyttöliittymä muistikirjoille, skripteille ja putkistoille.",
+        "meta": "ehdotettu Python-liittymä"
+      },
+      {
+        "title": "Laajennettavat tarkistukset",
+        "body": "Ehdotettu tarkistusluettelo, jossa on tilaa omille validoinneillesi.",
+        "meta": "konsepti omista tarkistuksista"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Tarkista ensin.",
+    "title2": "Kouluta <em>sitten</em>.",
+    "sub": "Ratkaise aineiston ilmeiset ongelmat ennen kuin tuhlaat aikaa väärän mallin optimointiin.",
+    "ctaPrimary": "Katso esimerkkiraportti",
+    "note": "Tuotekonsepti · esimerkkidataa koko sivustolla"
+  },
+  "Project": {
+    "link": "Katso GitHubissa",
+    "status": "Ei vielä julkaistu",
+    "hint": "Konseptivaihe — repo, dokumentaatio ja ongelmaseuranta tulevat ensimmäisen julkisen julkaisun mukana."
+  },
+  "Footer": {
+    "tagline": "Aineistodiagnostiikkaa koneoppimistyönkulkuihin.",
+    "linksAria": "Projektin linkit",
+    "linkSource": "Katso lähdekoodi",
+    "linkReadme": "README",
+    "linkIssues": "Ilmoita ongelmasta",
+    "copyright": "© {year} Dataset Doctor. Suunnittelukonsepti — havainnollistavia lukuja koko sivustolla."
+  }
+}

@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Hoppa till huvudinnehåll"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kritiskt",
+      "warning": "Varning",
+      "info": "Information"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Förstå ditt dataset innan du tränar",
+    "description": "Dataset Doctor lyfter fram saknade värden, dubletter, klassobalans, misstänkta variabler och läckage i en tydlig diagnostisk rapport — innan du tränar din modell.",
+    "keywords": [
+      "dataset",
+      "datakvalitet",
+      "maskininlärning",
+      "ML-verktyg",
+      "datasetdiagnostik"
+    ]
+  },
+  "Theme": {
+    "label": "Tema",
+    "toggle": "Byt tema",
+    "light": "Ljust",
+    "dark": "Mörkt",
+    "system": "System"
+  },
+  "Language": {
+    "label": "Språk",
+    "select": "Välj språk",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — hem",
+    "links": {
+      "features": "Funktioner",
+      "workflow": "Så fungerar det",
+      "report": "Rapport",
+      "opensource": "Öppen källkod"
+    },
+    "githubAria": "Dataset Doctor på GitHub",
+    "cta": "Se exempelrapport",
+    "openMenu": "Öppna meny",
+    "sheetTitle": "Navigering",
+    "sheetDesc": "Sektioner och åtgärder på sidan",
+    "sheetMeta": "Öppen källkod · Python-vänligt",
+    "closeMenu": "Stäng meny",
+    "sectionsAria": "Sidsektioner"
+  },
+  "Hero": {
+    "eyebrow": "Datasetdiagnostik med öppen källkod",
+    "title": "Lär känna ditt dataset<br></br><em>innan</em> du tränar<br></br>din modell.",
+    "ledeLead": "Fånga datakvalitetsproblem innan de blir modellproblem.",
+    "ledeRest": "Dataset Doctor hjälper dig lyfta fram saknade värden, dubletter, obalans, misstänkta variabler och andra vanliga datasetproblem i en tydlig rapport.",
+    "ctaPrimary": "Se exempelrapport",
+    "conceptNote": "Ett designkoncept — ett open source Python-verktyg på gång. Alla siffror är illustrativa.",
+    "meta": {
+      "source": "Öppen källkod",
+      "python": "Python-vänligt",
+      "builtFor": "Byggt för ML-flöden"
+    }
+  },
+  "Tech": {
+    "caption": "Designat för moderna maskininlärningsflöden.",
+    "aria": "Maskininlärningstekniker"
+  },
+  "Preview": {
+    "reportChrome": "Datasetrapport",
+    "sampleTag": "Exempelutdata",
+    "specimenStats": "{rows} rader · {columns} kolumner",
+    "analyzedIn": "Exempelanalys: {seconds} s",
+    "healthScore": "Hälsopoäng",
+    "chip": "Kräver uppmärksamhet",
+    "headFinding": "Fynd",
+    "headDetail": "Detalj",
+    "headSeverity": "Allvar",
+    "issues": [
+      {
+        "name": "Saknade värden",
+        "detail": "4 kolumner"
+      },
+      {
+        "name": "Dubblettrader",
+        "detail": "218"
+      },
+      {
+        "name": "Klassobalans",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Möjligt läckage",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Illustrativ exempelrapport · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Varför det spelar roll",
+    "title": "Modellproblem börjar ofta innan träningen ens startat.",
+    "body": "De flesta team upptäcker datasetproblem för sent — efter timmar av finjustering av arkitekturer och hyperparametrar som aldrig var flaskhalsen. Då ligger fixen längre upp i kedjan, och experimenten kördes om på nytt.",
+    "quote": "En modell tränad på ett sjukt dataset lär sig sjukdomen.",
+    "indexLabel": "Symptomregister",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Saknade data",
+        "gloss": "Tyst NaN-drift i 4 kolumner"
+      },
+      {
+        "name": "Dubblerade observationer",
+        "gloss": "218 rader registrerade två gånger"
+      },
+      {
+        "name": "Klassobalans",
+        "gloss": "87 / 13-fördelning mellan klasserna"
+      },
+      {
+        "name": "Misstänkta variabler",
+        "gloss": "Maskerade proxyer för målet"
+      },
+      {
+        "name": "Fel datatyper",
+        "gloss": "Tal lagrade som strängar"
+      },
+      {
+        "name": "Dataläckage",
+        "gloss": "Svar inuti träningsramen"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Checklistan",
+    "title": "Allt värt att kontrollera<br></br>före <code>model.fit()</code>",
+    "body": "Åtta genomgångar av schemat, statistiken och sambanden dem emellan — de tysta kontroller som avgör om en modell generaliserar.",
+    "big1": {
+      "label": "Genomgång 01 · Fullständighet",
+      "title": "Analys av saknade värden",
+      "body": "Nullmönster grupperade per kolumn, dtype och radsegment — inte bara ett trist totaltal.",
+      "caption": "Fyllda fyrkanter markerar förligvärden, röda konturer nuller — 4 av 31 kolumner har nuller · 0.8% av cellerna"
+    },
+    "big2": {
+      "label": "Genomgång 02 · Unikhet",
+      "title": "Dubblettupptäckt",
+      "body": "Exakta och nästan-dubbletter fångade med fingeravtryckshashning, på varje kolumnpar.",
+      "dupTag": "dup",
+      "caption": "Radband visar postfingeravtryck; matchande rader lyser i bärnsten — 218 rader viks ihop till 109 unika poster"
+    },
+    "compact": [
+      {
+        "label": "Genomgång 03",
+        "title": "Klassfördelning",
+        "body": "Majoritets- och minoritetspriors, synliga innan de skevar till mätvärdena."
+      },
+      {
+        "label": "Genomgång 04",
+        "title": "Utläggarupptäckt",
+        "body": "Värden som driver långt utanför sin kolumns förväntade intervall."
+      },
+      {
+        "label": "Genomgång 05",
+        "title": "Validering av datatyper",
+        "body": "Tal lagrade som strängar, datum lagrade som allt annat än datum."
+      },
+      {
+        "label": "Genomgång 06",
+        "title": "Läckagevarningar",
+        "body": "Variabler som gömmer svar de inte borde ha tillgång till."
+      }
+    ],
+    "corr": {
+      "label": "Genomgång 07 · Samband",
+      "title": "Korrelationsanalys",
+      "body": "Vilka variabler rör sig tillsammans — och vilka råkar röra sig med målet.",
+      "legend": "Illustrativt korrelationskort",
+      "note": "Exempelfynd: field_12 och field_27 har<hi> ρ 0.94</hi> — kontrollera för läckage"
+    },
+    "summary": {
+      "label": "Översikt",
+      "title": "Datasetsammanfattning",
+      "body": "Din datas faktiska form, före varje modelleringsbeslut.",
+      "rows": [
+        {
+          "term": "Rader",
+          "value": "12,458"
+        },
+        {
+          "term": "Kolumner",
+          "value": "31"
+        },
+        {
+          "term": "Numeriska",
+          "value": "22"
+        },
+        {
+          "term": "Kategoriska",
+          "value": "9"
+        },
+        {
+          "term": "Minne",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Datasethälsa",
+    "title": "En enda poäng. En tydligare startpunkt.",
+    "body": "Datasethälsa sammanfattar vanliga kvalitetssignaler för att visa vilka områden som förtjänar uppmärksamhet före träning.",
+    "ofTotal": "/ 100",
+    "overall": "Totalpoäng",
+    "chip": "Kräver uppmärksamhet",
+    "disclaimer": "<lbl>Konceptförhandsvisning</lbl> — den här sidan är ett produktkoncept. Poängen och fynden som visas är illustrativa, inte beräknade från verklig data.",
+    "catsHeadL": "Diagnostiska kategorier",
+    "catsHeadR": "Poäng",
+    "categories": [
+      {
+        "label": "Fullständighet",
+        "value": "92",
+        "note": "nuller i 4 av 31 kolumner"
+      },
+      {
+        "label": "Konsistens",
+        "value": "81",
+        "note": "blandade kodningar i region"
+      },
+      {
+        "label": "Klassbalans",
+        "value": "44",
+        "note": "klassprior 87 / 13"
+      },
+      {
+        "label": "Dubblettkvalitet",
+        "value": "76",
+        "note": "218 dubblettrader"
+      },
+      {
+        "label": "Läckagerisk",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 starkt",
+      "50–79 håll ögonen öppna",
+      "0–49 åtgärda nu"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Exempelrapport",
+    "title": "Problem, <em>prioriterade</em>.",
+    "body": "Varje fynd levereras med bevis och ett föreslaget nästa steg — sorterade efter allvar, så att den första timmen går till största risken.",
+    "excerptNote": "Utvalda fynd — den fullständiga rapporten listar varje kontroll med dess bevis.",
+    "evidence": "Bevis",
+    "actionLabel": "Föreslagen åtgärd",
+    "leakLabels": [
+      "customer_status",
+      "medianvariabel"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Möjligt målläckage",
+        "body": "Variabeln \"customer_status\" har ett misstänkt starkt samband med målet.",
+        "action": "Kontrollera om den här kolumnen faktiskt skulle finnas tillgänglig vid prediktionstillfället.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Klassobalans upptäckt",
+        "body": "Träning på den här fördelningen kommer att skeva modellen mot majoritetsklassen, om du inte väger eller resamplar.",
+        "action": "Väg klasserna eller resampla träningsdelen före fitting; rapportera precision och recall per klass istället för bara accuracy.",
+        "distLabelA": "Klass A",
+        "distLabelB": "Klass B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Dubblerade observationer",
+        "body": "218 dubblettrader upptäckta.",
+        "action": "Behåll en kopia av varje dubblerad post och generera om spliten före träningen — eller spåra varför dubbletter kommer in tidigare i pipelinen.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "dubblettrader · 1.75% av datasetet"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Så fungerar det",
+    "title": "Från dataset till insikt<br></br>i tre steg.",
+    "steps": [
+      {
+        "title": "Ladda upp",
+        "body": "Ett CSV- eller Parquet-dataset.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Inspektera",
+        "body": "Automatiserade kontroller av kvalitet och ML-beredskap.",
+        "meta": "Illustrativa kontroller"
+      },
+      {
+        "title": "Förbättra",
+        "body": "Åtgärda problemen före träningen.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Flödesintegration",
+    "title": "Passar in i flödet du redan använder.",
+    "body": "Kör ett kommando i CI, eller importera analytikern bredvid din notebook. Oavsett kommer rapporten som en enda fristående HTML-fil.",
+    "termTag": "Exempelsession",
+    "analyzing": "Analyserar datasetet...",
+    "rowsOk": "rader: {count}",
+    "colsOk": "variabler: {count}",
+    "warnings": "varningar: {count}",
+    "critical": "kritiska problem: {count}",
+    "healthLabel": "Datasethälsa:",
+    "generated": "report.html skapad",
+    "apiNote": "Kommandot och API:t som visas är illustrativa — gränssnittet formas fortfarande."
+  },
+  "OSS": {
+    "eyebrow": "Öppen källkod",
+    "title": "Transparent från grunden.",
+    "body": "Dataset Doctor är tänkt som ett verktyg med öppen källkod som utvecklare kan granska, utöka och integrera i sina flöden.",
+    "cta": "Se på GitHub",
+    "pillars": [
+      {
+        "title": "Öppen källkod",
+        "body": "Läs varje kontroll, granska varje heuristik, ship:a din egen fork.",
+        "meta": "MIT-licens"
+      },
+      {
+        "title": "Python först",
+        "body": "Ett föreslaget gränssnitt för notebooks, skript och pipelines.",
+        "meta": "Föreslaget Python-gränssnitt"
+      },
+      {
+        "title": "Utbyggbara kontroller",
+        "body": "En föreslagen kontrollkatalog med plats för egna valideringar.",
+        "meta": "Koncept för egna kontroller"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Inspektera först.",
+    "title2": "Träna <em>sedan</em>.",
+    "sub": "Fånga uppenbara datasetproblem innan du lägger tid på att optimera fel modell.",
+    "ctaPrimary": "Se exempelrapport",
+    "note": "Produktkoncept · exempeldata hela vägen"
+  },
+  "Project": {
+    "link": "Se på GitHub",
+    "status": "Ännu inte publicerat",
+    "hint": "Konceptstadiet — repot, dokumentationen och issue-trackern kommer med första publika release."
+  },
+  "Footer": {
+    "tagline": "Datasetdiagnostik för maskininlärningsflöden.",
+    "linksAria": "Projektreferenser",
+    "linkSource": "Se källkod",
+    "linkReadme": "README",
+    "linkIssues": "Rapportera ett problem",
+    "copyright": "© {year} Dataset Doctor. Ett designkoncept — exempelsiffror hela vägen."
+  }
+}

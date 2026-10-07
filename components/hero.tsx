@@ -14,11 +14,11 @@ export function Hero() {
       <div className="dot-grid absolute inset-0" aria-hidden="true" />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-[-14%] left-[12%] h-[540px] w-[540px] rounded-full bg-accent/[0.045] blur-[130px]"
+        className="pointer-events-none absolute top-[-14%] start-[12%] h-[540px] w-[540px] rounded-full bg-accent/[0.045] blur-[130px]"
       />
 
       <div className="shell relative py-20 md:py-28">
-        <div className="grid items-start gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:gap-14">
+        <div className="grid items-start gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,500px)] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_minmax(0,540px)] xl:gap-14">
           <Reveal>
             <div>
               <p className="font-mono text-[11px] tracking-[0.22em] text-accent-text uppercase">

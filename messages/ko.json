@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "본문으로 건너뛰기"
+  },
+  "Common": {
+    "severity": {
+      "critical": "심각",
+      "warning": "경고",
+      "info": "정보"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — 학습 전에 데이터셋부터 파악하세요",
+    "description": "Dataset Doctor는 결측치, 중복 행, 클래스 불균형, 의심스러운 피처, 데이터 누수를 모델을 학습시키기 전에 읽기 쉬운 진단 리포트로 드러냅니다.",
+    "keywords": [
+      "데이터셋",
+      "데이터 품질",
+      "머신러닝",
+      "ML 도구",
+      "데이터셋 진단"
+    ]
+  },
+  "Theme": {
+    "label": "테마",
+    "toggle": "테마 전환",
+    "light": "라이트",
+    "dark": "다크",
+    "system": "시스템"
+  },
+  "Language": {
+    "label": "언어",
+    "select": "언어 선택",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — 홈",
+    "links": {
+      "features": "기능",
+      "workflow": "동작 방식",
+      "report": "리포트",
+      "opensource": "오픈 소스"
+    },
+    "githubAria": "GitHub의 Dataset Doctor",
+    "cta": "샘플 리포트 보기",
+    "openMenu": "메뉴 열기",
+    "sheetTitle": "내비게이션",
+    "sheetDesc": "사이트의 섹션과 동작",
+    "sheetMeta": "오픈 소스 · Python 친화적",
+    "closeMenu": "메뉴 닫기",
+    "sectionsAria": "페이지 섹션"
+  },
+  "Hero": {
+    "eyebrow": "오픈 소스 데이터셋 진단",
+    "title": "모델을 학습하기<em>전에</em>,<br></br>데이터셋부터<br></br>파악하세요.",
+    "ledeLead": "데이터 품질 문제가 모델 문제가 되기 전에 잡아냅니다.",
+    "ledeRest": "Dataset Doctor는 결측치, 중복 행, 클래스 불균형, 의심스러운 피처 등 데이터셋에서 흔한 문제를 읽기 쉬운 리포트로 드러냅니다.",
+    "ctaPrimary": "샘플 리포트 보기",
+    "conceptNote": "디자인 컨셉 — 제작 중인 오픈 소스 Python 툴킷입니다. 모든 숫자는 예시입니다.",
+    "meta": {
+      "source": "오픈 소스",
+      "python": "Python 친화적",
+      "builtFor": "ML 워크플로용"
+    }
+  },
+  "Tech": {
+    "caption": "현대적인 머신러닝 워크플로를 위해 설계했습니다.",
+    "aria": "머신러닝 기술"
+  },
+  "Preview": {
+    "reportChrome": "데이터셋 리포트",
+    "sampleTag": "샘플 출력",
+    "specimenStats": "{rows}행 · {columns}열",
+    "analyzedIn": "샘플 분석: {seconds}초",
+    "healthScore": "건강 점수",
+    "chip": "주의 필요",
+    "headFinding": "발견",
+    "headDetail": "세부 정보",
+    "headSeverity": "심각도",
+    "issues": [
+      {
+        "name": "결측치",
+        "detail": "4개 열"
+      },
+      {
+        "name": "중복 행",
+        "detail": "218"
+      },
+      {
+        "name": "클래스 불균형",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "누수 의심",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "예시용 샘플 리포트 · report.html"
+  },
+  "Problem": {
+    "eyebrow": "왜 중요한가",
+    "title": "모델 문제는 학습이 시작되기 전부터 시작되는 경우가 많습니다.",
+    "body": "대부분의 팀은 데이터셋 문제를 너무 늦게 발견합니다. 병목이 아니었던 아키텍처와 하이퍼파라미터 튜닝에 시간을 쓴 다음에야. 그 시점의 수정은 파이프라인 더 위쪽에서 이루어져야 하고, 실험은 처음부터 다시 돌려야 합니다.",
+    "quote": "병든 데이터셋으로 학습된 모델은 병만 배웁니다.",
+    "indexLabel": "증상 인덱스",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "데이터 결측",
+        "gloss": "4개 열에서 조용히 퍼지는 NaN"
+      },
+      {
+        "name": "중복 관측",
+        "gloss": "218행이 두 번씩 기록되었습니다"
+      },
+      {
+        "name": "클래스 불균형",
+        "gloss": "클래스 간 87 / 13 분포"
+      },
+      {
+        "name": "의심스러운 피처",
+        "gloss": "위장한 타깃 프록시 변수"
+      },
+      {
+        "name": "잘못된 데이터 타입",
+        "gloss": "문자열로 저장된 숫자"
+      },
+      {
+        "name": "데이터 누수",
+        "gloss": "학습 프레임 안에 들어 있는 정답"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "체크리스트",
+    "title": "<code>model.fit()</code> 전에<br></br>확인할 가치가 있는 모든 것",
+    "body": "스키마, 통계량, 그리고 둘 사이의 관계를 훑는 여덟 번의 스캔. 모델의 일반화를 좌우하는 것은 이런 소소한 검사들입니다.",
+    "big1": {
+      "label": "패스 01 · 완전성",
+      "title": "결측치 분석",
+      "body": "열, dtype, 행 세그먼트별로 묶은 결측 패턴 — 기운 합계 하나가 아닙니다.",
+      "caption": "채워진 사각형은 값의 존재를, 붉은 윤곽선은 결측을 나타냅니다 — 31개 열 중 4개에 결측 · 전체 셀의 0.8%"
+    },
+    "big2": {
+      "label": "패스 02 · 고유성",
+      "title": "중복 감지",
+      "body": "모든 열 쌍의 해시 지문으로 완전 일치와 준 일치 행을 잡아냅니다.",
+      "dupTag": "dup",
+      "caption": "행 막대는 레코드의 지문이며, 일치하는 행은 호박색으로 빛납니다 — 218행이 109개의 고유 레코드로 접힙니다"
+    },
+    "compact": [
+      {
+        "label": "패스 03",
+        "title": "클래스 분포",
+        "body": "다수·소수 사전 비율이 지표를 왜곡하기 전에 모습을 드러냅니다."
+      },
+      {
+        "label": "패스 04",
+        "title": "이상치 감지",
+        "body": "해당 열의 기대 범위를 한참 벗어난 값."
+      },
+      {
+        "label": "패스 05",
+        "title": "데이터 타입 검증",
+        "body": "문자열로 저장된 숫자, 날짜가 아니게 된 날짜."
+      },
+      {
+        "label": "패스 06",
+        "title": "누수 경고",
+        "body": "보아서는 안 될 답을 쥐고 있는 피처."
+      }
+    ],
+    "corr": {
+      "label": "패스 07 · 관계",
+      "title": "상관관계 분석",
+      "body": "어떤 피처가 함께 움직이는지 — 그리고 어떤 피처가 우연히 타깃과 함께 움직이는지.",
+      "legend": "예시용 상관관계 지도",
+      "note": "샘플 발견: field_12와 field_27가<hi> ρ 0.94</hi> — 누수를 조사하세요"
+    },
+    "summary": {
+      "label": "요약",
+      "title": "데이터셋 요약",
+      "body": "모델링 결정을 내리기 전에, 데이터의 사실로서의 형태를.",
+      "rows": [
+        {
+          "term": "행 수",
+          "value": "12,458"
+        },
+        {
+          "term": "열 수",
+          "value": "31"
+        },
+        {
+          "term": "수치형",
+          "value": "22"
+        },
+        {
+          "term": "범주형",
+          "value": "9"
+        },
+        {
+          "term": "메모리",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "데이터셋 건강 상태",
+    "title": "하나의 점수. 더 명확한 출발점.",
+    "body": "데이터셋 건강 상태는 흔한 품질 신호를 모아, 학습 전에 어느 영역부터 손봐야 하는지 알기 쉽게 보여줍니다.",
+    "ofTotal": "/ 100",
+    "overall": "종합 점수",
+    "chip": "주의 필요",
+    "disclaimer": "<lbl>컨셉 미리보기</lbl> — 이 페이지는 제품 컨셉입니다. 표시된 점수와 발견 사항은 실제 데이터가 아니라 예시입니다.",
+    "catsHeadL": "진단 카테고리",
+    "catsHeadR": "점수",
+    "categories": [
+      {
+        "label": "완전성",
+        "value": "92",
+        "note": "31개 열 중 4개에 결측"
+      },
+      {
+        "label": "일관성",
+        "value": "81",
+        "note": "region 인코딩 혼재"
+      },
+      {
+        "label": "클래스 균형",
+        "value": "44",
+        "note": "클래스 사전 비율 87 / 13"
+      },
+      {
+        "label": "중복 품질",
+        "value": "76",
+        "note": "중복 행 218개"
+      },
+      {
+        "label": "누수 위험",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 건실함",
+      "50–79 지켜볼 것",
+      "0–49 지금 행동"
+    ]
+  },
+  "Report": {
+    "eyebrow": "샘플 리포트",
+    "title": "문제를 <em>우선순위</em>대로.",
+    "body": "모든 발견에는 증거와 권장 조치가 붙습니다. 심각도순으로 정렬되니, 첫 1시간을 가장 큰 위험에 쓸 수 있습니다.",
+    "excerptNote": "일부 발견 사항 발췌 — 전체 리포트는 모든 검사와 그 증거를 나열합니다.",
+    "evidence": "증거",
+    "actionLabel": "권장 조치",
+    "leakLabels": [
+      "datetime",
+      "누수 위험"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "타깃 누수 의심",
+        "body": "피처 \"customer_status\"가 타깃과 수상할 만큼 강한 관계를 보입니다.",
+        "action": "예측 시점에 실제로 사용 가능했던 열인지 확인하세요.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "클래스 불균형 감지",
+        "body": "이 분포 그대로 학습하면 클래스 가중치나 리샘플링을 적용하지 않는 한 모델이 다수 클래스로 쏠립니다.",
+        "action": "적합 전에 클래스에 가중치를 주거나 학습 분할을 리샘플링하고, 단순한 accuracy 대신 클래스별 precision과 recall을 보고하세요.",
+        "distLabelA": "클래스 A",
+        "distLabelB": "클래스 B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "중복 관측",
+        "body": "중복 행 218개를 감지했습니다.",
+        "action": "각 중복 레코드는 사본 한 개만 남기고 학습 전에 분할을 다시 만드세요. 아니면 어째서 중복이 파이프라인 더 위쪽에서 흘러 들어오는지 추적하세요.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "중복 행 · 데이터셋의 1.75%"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "동작 방식",
+    "title": "데이터셋에서 인사이트까지,<br></br>세 단계.",
+    "steps": [
+      {
+        "title": "업로드",
+        "body": "CSV 또는 Parquet 형식의 데이터셋.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "진단",
+        "body": "품질과 ML 준비도를 자동으로 검사합니다.",
+        "meta": "예시용 검사 항목"
+      },
+      {
+        "title": "개선",
+        "body": "학습 전에 문제를 해결합니다.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "워크플로에 통합",
+    "title": "이미 쓰는 워크플로에 스며듭니다.",
+    "body": "CI에서 한 줄을 실행하거나, 노트북 옆에 애널라이저를 import 하세요. 어느 쪽이든 리포트는 자기완결형 HTML 파일 하나로 도착합니다.",
+    "termTag": "샘플 세션",
+    "analyzing": "데이터셋 분석 중...",
+    "rowsOk": "행 수 {count}",
+    "colsOk": "피처 수 {count}",
+    "warnings": "경고 {count}",
+    "critical": "심각한 문제 {count}",
+    "healthLabel": "데이터셋 건강 상태:",
+    "generated": "report.html 생성 완료",
+    "apiNote": "표시된 명령과 API는 예시입니다. 인터페이스는 아직 확정되지 않았습니다."
+  },
+  "OSS": {
+    "eyebrow": "오픈 소스",
+    "title": "설계부터 투명하게.",
+    "body": "Dataset Doctor는 개발자가 들여다보고, 확장하고, 자기 워크플로에 심을 수 있는 오픈 소스 툴킷을 목표로 합니다.",
+    "cta": "GitHub에서 보기",
+    "pillars": [
+      {
+        "title": "오픈 소스",
+        "body": "모든 검사를 읽고, 모든 휴리스틱을 감사하고, 자기 포크를 공개하세요.",
+        "meta": "MIT 라이선스"
+      },
+      {
+        "title": "Python 우선",
+        "body": "노트북, 스크립트, 파이프라인을 위한 제안 인터페이스.",
+        "meta": "제안된 Python 인터페이스"
+      },
+      {
+        "title": "확장 가능한 검사",
+        "body": "커스텀 검증을 위한 자리를 마련한 검사 카탈로그 제안.",
+        "meta": "커스텀 검사 컨셉"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "먼저 진단하세요.",
+    "title2": "그다음 <em>학습</em>하세요.",
+    "sub": "잘못된 모델을 튜닝하는 데 시간을 낭비하기 전에, 데이터셋의 뻔한 문제들을 치우세요.",
+    "ctaPrimary": "샘플 리포트 보기",
+    "note": "제품 컨셉 · 사이트 전체에 예시 데이터"
+  },
+  "Project": {
+    "link": "GitHub에서 보기",
+    "status": "아직 공개 전",
+    "hint": "컨셉 단계 — 첫 공개 릴리스와 함께 저장소, 문서, 이슈 트래커가 열립니다."
+  },
+  "Footer": {
+    "tagline": "머신러닝 워크플로를 위한 데이터셋 진단.",
+    "linksAria": "프로젝트 링크",
+    "linkSource": "소스 보기",
+    "linkReadme": "README",
+    "linkIssues": "문제 보고",
+    "copyright": "© {year} Dataset Doctor. 디자인 컨셉 · 사이트 전체에 예시 숫자입니다."
+  }
+}

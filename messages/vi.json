@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Chuyển đến nội dung chính"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Nghiêm trọng",
+      "warning": "Cảnh báo",
+      "info": "Thông tin"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Hiểu dữ liệu của bạn trước khi huấn luyện mô hình",
+    "description": "Dataset Doctor làm nổi bật giá trị thiếu, dòng trùng lặp, mất cân bằng lớp, đặc trưng đáng ngờ và rò rỉ trong một báo cáo chẩn đoán dễ đọc — trước khi bạn huấn luyện mô hình.",
+    "keywords": [
+      "tập dữ liệu",
+      "chất lượng dữ liệu",
+      "học máy",
+      "công cụ ML",
+      "chẩn đoán dữ liệu"
+    ]
+  },
+  "Theme": {
+    "label": "Giao diện",
+    "toggle": "Đổi giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Theo hệ thống"
+  },
+  "Language": {
+    "label": "Ngôn ngữ",
+    "select": "Chọn ngôn ngữ",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — trang chủ",
+    "links": {
+      "features": "Tính năng",
+      "workflow": "Cách hoạt động",
+      "report": "Báo cáo",
+      "opensource": "Mã nguồn mở"
+    },
+    "githubAria": "Dataset Doctor trên GitHub",
+    "cta": "Xem báo cáo mẫu",
+    "openMenu": "Mở menu",
+    "sheetTitle": "Điều hướng",
+    "sheetDesc": "Các mục và thao tác trên trang",
+    "sheetMeta": "Mã nguồn mở · thân thiện với Python",
+    "closeMenu": "Đóng menu",
+    "sectionsAria": "Các phần của trang"
+  },
+  "Hero": {
+    "eyebrow": "Chẩn đoán tập dữ liệu mã nguồn mở",
+    "title": "Hiểu thật rõ tập dữ liệu<br></br><em>trước</em> khi huấn luyện<br></br>mô hình của bạn.",
+    "ledeLead": "Bắt lỗi chất lượng dữ liệu trước khi chúng thành lỗi của mô hình.",
+    "ledeRest": "Dataset Doctor giúp bạn nhìn thấy giá trị thiếu, dòng trùng lặp, mất cân bằng, đặc trưng đáng ngờ và những vấn đề phổ biến khác của tập dữ liệu trong một báo cáo dễ đọc.",
+    "ctaPrimary": "Xem báo cáo mẫu",
+    "conceptNote": "Concept thiết kế — bộ công cụ Python mã nguồn mở đang được xây dựng. Mọi con số chỉ mang tính minh họa.",
+    "meta": {
+      "source": "Mã nguồn mở",
+      "python": "Thân thiện với Python",
+      "builtFor": "Cho quy trình ML"
+    }
+  },
+  "Tech": {
+    "caption": "Thiết kế cho các quy trình học máy hiện đại.",
+    "aria": "Công nghệ học máy"
+  },
+  "Preview": {
+    "reportChrome": "Báo cáo tập dữ liệu",
+    "sampleTag": "Kết quả mẫu",
+    "specimenStats": "{rows} dòng · {columns} cột",
+    "analyzedIn": "Phân tích mẫu: {seconds} giây",
+    "healthScore": "Điểm sức khỏe",
+    "chip": "Cần lưu ý",
+    "headFinding": "Phát hiện",
+    "headDetail": "Chi tiết",
+    "headSeverity": "Mức độ",
+    "issues": [
+      {
+        "name": "Giá trị thiếu",
+        "detail": "4 cột"
+      },
+      {
+        "name": "Dòng trùng lặp",
+        "detail": "218"
+      },
+      {
+        "name": "Mất cân bằng lớp",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Nghi ngờ rò rỉ",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Báo cáo mẫu minh họa · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Vì sao quan trọng",
+    "title": "Vấn đề của mô hình thường đã bắt đầu từ trước khi huấn luyện.",
+    "body": "Hầu hết đội ngũ nhận ra vấn đề của tập dữ liệu quá muộn — sau hàng giờ chỉnh kiến trúc và siêu tham số vốn chẳng bao giờ là nút cổ chai. Lúc đó, việc sửa phải diễn ra ở khâu phía trên, và mọi thí nghiệm phải chạy lại từ đầu.",
+    "quote": "Mô hình huấn luyện trên một tập dữ liệu ốm yếu chỉ học được đúng căn bệnh đó.",
+    "indexLabel": "Chỉ mục triệu chứng",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Thiếu dữ liệu",
+        "gloss": "NaN âm thầm rò rỉ trong 4 cột"
+      },
+      {
+        "name": "Quan sát trùng lặp",
+        "gloss": "218 dòng bị ghi hai lần"
+      },
+      {
+        "name": "Mất cân bằng lớp",
+        "gloss": "Phân bố 87 / 13 giữa các lớp"
+      },
+      {
+        "name": "Đặc trưng đáng ngờ",
+        "gloss": "Biến giả danh mục tiêu trá hình"
+      },
+      {
+        "name": "Sai kiểu dữ liệu",
+        "gloss": "Số được lưu dưới dạng chuỗi"
+      },
+      {
+        "name": "Rò rỉ dữ liệu",
+        "gloss": "Đáp án còn nằm trong khung huấn luyện"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Danh sách kiểm tra",
+    "title": "Mọi thứ đáng soát xét<br></br>trước <code>model.fit()</code>",
+    "body": "Tám lượt quét cấu trúc, thống kê và mối liên hệ giữa chúng — những phép kiểm âm thầm quyết định mô hình có khái quát hóa được hay không.",
+    "big1": {
+      "label": "Lượt 01 · Tính đầy đủ",
+      "title": "Phân tích giá trị thiếu",
+      "body": "Các mẫu thiếu dữ liệu nhóm theo cột, kiểu dữ liệu và phân đoạn dòng — không phải một con số tổng ủ rũ.",
+      "caption": "Ô tô đặc nghĩa là có giá trị, viền đỏ nghĩa là thiếu — 4/31 cột có khoảng trống · 0.8% ô"
+    },
+    "big2": {
+      "label": "Lượt 02 · Tính duy nhất",
+      "title": "Phát hiện trùng lặp",
+      "body": "Dòng giống hệt và gần giống đều bị bắt bằng dấu vân tay băm trên mọi cặp cột.",
+      "dupTag": "dup",
+      "caption": "Thanh dòng thể hiện dấu vân tay bản ghi; dòng khớp sáng lên màu hổ phách — 218 dòng gộp lại còn 109 bản ghi duy nhất"
+    },
+    "compact": [
+      {
+        "label": "Lượt 03",
+        "title": "Phân bố lớp",
+        "body": "Tỷ lệ tiên nghiệm đa số và thiểu số lộ diện trước khi bóp méo chỉ số."
+      },
+      {
+        "label": "Lượt 04",
+        "title": "Phát hiện ngoại lệ",
+        "body": "Giá trị trôi quá xa khỏi miền kỳ vọng của cột."
+      },
+      {
+        "label": "Lượt 05",
+        "title": "Kiểm tra kiểu dữ liệu",
+        "body": "Số lưu thành chuỗi, ngày tháng lưu thành thứ gì trừ ngày tháng."
+      },
+      {
+        "label": "Lượt 06",
+        "title": "Cảnh báo rò rỉ",
+        "body": "Đặc trưng đang giữ đáp án mà lẽ ra nó không được phép chạm tới."
+      }
+    ],
+    "corr": {
+      "label": "Lượt 07 · Quan hệ",
+      "title": "Phân tích tương quan",
+      "body": "Đặc trưng nào cùng chuyển động — và đặc trưng nào chỉ tình cờ đi cùng mục tiêu.",
+      "legend": "Bản đồ tương quan minh họa",
+      "note": "Phát hiện mẫu: field_12 và field_27 cùng chạm<hi> ρ 0.94</hi> — hãy soát rò rỉ"
+    },
+    "summary": {
+      "label": "Tổng quan",
+      "title": "Tóm tắt tập dữ liệu",
+      "body": "Hình hài thực sự của dữ liệu bạn, trước mọi quyết định mô hình hóa.",
+      "rows": [
+        {
+          "term": "Số dòng",
+          "value": "12,458"
+        },
+        {
+          "term": "Số cột",
+          "value": "31"
+        },
+        {
+          "term": "Kiểu số",
+          "value": "22"
+        },
+        {
+          "term": "Kiểu danh mục",
+          "value": "9"
+        },
+        {
+          "term": "Bộ nhớ",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Sức khỏe tập dữ liệu",
+    "title": "Một con số. Một điểm xuất phát rõ ràng hơn.",
+    "body": "Điểm sức khỏe tập dữ liệu gói gọn các tín hiệu chất lượng thường gặp, để bạn biết khu vực nào cần xử lý trước khi huấn luyện.",
+    "ofTotal": "/ 100",
+    "overall": "Điểm tổng",
+    "chip": "Cần lưu ý",
+    "disclaimer": "<lbl>Xem trước concept</lbl> — trang này là một concept sản phẩm. Điểm số và phát hiện hiển thị mang tính minh họa, không được tính từ dữ liệu thật.",
+    "catsHeadL": "Hạng mục chẩn đoán",
+    "catsHeadR": "Điểm",
+    "categories": [
+      {
+        "label": "Tính đầy đủ",
+        "value": "92",
+        "note": "thiếu dữ liệu ở 4/31 cột"
+      },
+      {
+        "label": "Tính nhất quán",
+        "value": "81",
+        "note": "trộn lẫn mã hóa ở region"
+      },
+      {
+        "label": "Cân bằng lớp",
+        "value": "44",
+        "note": "tỷ lệ tiên nghiệm lớp 87 / 13"
+      },
+      {
+        "label": "Chất lượng trùng lặp",
+        "value": "76",
+        "note": "218 dòng trùng lặp"
+      },
+      {
+        "label": "Rủi ro rò rỉ",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 vững",
+      "50–79 để mắt",
+      "0–49 hành động ngay"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Báo cáo mẫu",
+    "title": "Vấn đề, đã <em>xếp theo ưu tiên</em>.",
+    "body": "Mỗi phát hiện đều kèm chứng cứ và bước xử lý đề xuất — sắp theo mức độ nghiêm trọng, để giờ đầu tiên rơi vào rủi ro lớn nhất.",
+    "excerptNote": "Trích một số phát hiện — báo cáo đầy đủ liệt kê từng phép kiểm cùng chứng cứ của nó.",
+    "evidence": "Chứng cứ",
+    "actionLabel": "Bước xử lý đề xuất",
+    "leakLabels": [
+      "datetime",
+      "rủi ro rò rỉ"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Nghi ngờ rò rỉ mục tiêu",
+        "body": "Đặc trưng \"customer_status\" có mối liên hệ mạnh bất thường với mục tiêu.",
+        "action": "Hãy xác nhận cột này thực sự đã tồn tại tại thời điểm dự đoán.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Phát hiện mất cân bằng lớp",
+        "body": "Huấn luyện trên tỷ lệ này sẽ kéo mô hình về phía lớp đa số, nếu bạn không dùng trọng số lớp hoặc lấy mẫu lại.",
+        "action": "Gắn trọng số cho các lớp hoặc lấy mẫu lại phần huấn luyện trước khi fit; báo cáo precision và recall theo lớp thay vì chỉ accuracy.",
+        "distLabelA": "Lớp A",
+        "distLabelB": "Lớp B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Quan sát trùng lặp",
+        "body": "Phát hiện 218 dòng trùng lặp.",
+        "action": "Giữ lại một bản cho mỗi bản ghi trùng và dựng lại cách chia dữ liệu trước khi huấn luyện — hoặc truy tìm vì sao bản trùng rò vào từ phía trên của pipeline.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "dòng trùng lặp · 1.75% tập dữ liệu"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Cách hoạt động",
+    "title": "Từ tập dữ liệu đến phát hiện,<br></br>ba bước.",
+    "steps": [
+      {
+        "title": "Tải lên",
+        "body": "Tập dữ liệu định dạng CSV hoặc Parquet.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Soi xét",
+        "body": "Kiểm tra chất lượng và mức sẵn sàng cho ML tự động.",
+        "meta": "Phép kiểm minh họa"
+      },
+      {
+        "title": "Cải thiện",
+        "body": "Giải quyết vấn đề trước khi huấn luyện.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Gắn vào quy trình của bạn",
+    "title": "Vừa vặn với quy trình bạn đang dùng.",
+    "body": "Chạy một lệnh trong CI, hoặc import trình phân tích cạnh cuốn sổ tay của bạn. Cách nào thì báo cáo cũng đến như một tệp HTML độc lập.",
+    "termTag": "Phiên mẫu",
+    "analyzing": "Đang phân tích tập dữ liệu...",
+    "rowsOk": "số dòng: {count}",
+    "colsOk": "đặc trưng: {count}",
+    "warnings": "cảnh báo: {count}",
+    "critical": "vấn đề nghiêm trọng: {count}",
+    "healthLabel": "Sức khỏe tập dữ liệu:",
+    "generated": "report.html đã tạo",
+    "apiNote": "Lệnh và API hiển thị mang tính minh họa — giao diện vẫn đang định hình."
+  },
+  "OSS": {
+    "eyebrow": "Mã nguồn mở",
+    "title": "Minh bạch ngay từ thiết kế.",
+    "body": "Dataset Doctor được hình dung như một bộ công cụ mã nguồn mở mà người phát triển có thể đọc, mở rộng và nhúng vào quy trình riêng của họ.",
+    "cta": "Xem trên GitHub",
+    "pillars": [
+      {
+        "title": "Mã nguồn mở",
+        "body": "Đọc mọi phép kiểm, rà soát mọi quy tắc kinh nghiệm, phát hành fork của riêng bạn.",
+        "meta": "Giấy phép MIT"
+      },
+      {
+        "title": "Python trước tiên",
+        "body": "Giao diện đề xuất cho sổ tay, script và pipeline.",
+        "meta": "Giao diện Python đề xuất"
+      },
+      {
+        "title": "Kiểm tra có thể mở rộng",
+        "body": "Danh mục phép kiểm đề xuất, có chỗ dành cho các kiểm định tùy biến của bạn.",
+        "meta": "Concept kiểm tra tùy biến"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Soi xét trước.",
+    "title2": "<em>Huấn luyện</em> sau.",
+    "sub": "Xử lý những vấn đề hiển nhiên của tập dữ liệu trước khi đốt thời gian tối ưu sai mô hình.",
+    "ctaPrimary": "Xem báo cáo mẫu",
+    "note": "Concept sản phẩm · dữ liệu mẫu khắp trang"
+  },
+  "Project": {
+    "link": "Xem trên GitHub",
+    "status": "Chưa phát hành",
+    "hint": "Giai đoạn concept — kho mã, tài liệu và trình theo dõi vấn đề sẽ ra mắt cùng phiên bản công khai đầu tiên."
+  },
+  "Footer": {
+    "tagline": "Chẩn đoán tập dữ liệu cho quy trình học máy.",
+    "linksAria": "Liên kết dự án",
+    "linkSource": "Xem mã nguồn",
+    "linkReadme": "README",
+    "linkIssues": "Báo cáo vấn đề",
+    "copyright": "© {year} Dataset Doctor. Concept thiết kế — số liệu mẫu khắp trang."
+  }
+}

@@ -104,7 +104,7 @@ export function Navbar() {
             }}
           >
             <div className="border-b border-line pb-4">
-              <SheetTitle className="pr-10 text-[15px] font-semibold">{t("sheetTitle")}</SheetTitle>
+              <SheetTitle className="pe-10 text-[15px] font-semibold">{t("sheetTitle")}</SheetTitle>
               <SheetDescription className="mt-1 text-[13px] text-muted-foreground">
                 {t("sheetDesc")}
               </SheetDescription>

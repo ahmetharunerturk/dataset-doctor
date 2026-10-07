@@ -6,7 +6,10 @@ const base = process.env.SITE_URL ?? "http://localhost:3000";
 const repository = "https://github.com/ahmetharunerturk/dataset-doctor";
 const projectConfig = await readFile(new URL("../lib/project.ts", import.meta.url), "utf8");
 const repositoryPublished = /export const REPO_PUBLISHED = true\b/.test(projectConfig);
-const locales = ["en", "de", "tr"];
+const locales = ["en", "de", "tr", "ar", "he", "fa"];
+/** Direction + script family per locale — fa shares the Arabic complex-script set. */
+const dirs = { en: "ltr", de: "ltr", tr: "ltr", ar: "rtl", he: "rtl", fa: "rtl" };
+const scriptFamily = { en: "latin", de: "latin", tr: "latin", ar: "arabic", he: "hebrew", fa: "arabic" };
 const catalogs = Object.fromEntries(await Promise.all(locales.map(async (locale) => [
   locale, JSON.parse(await readFile(new URL(`../messages/${locale}.json`, import.meta.url), "utf8")),
 ])));
@@ -47,6 +50,8 @@ for (const locale of locales) {
     assert.equal(response.status, 200);
     const html = (await response.text()).replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
     assert.match(html, new RegExp(`<html[^>]*lang="${locale}"`));
+    assert.match(html, new RegExp(`<html[^>]*dir="${dirs[locale]}"`), `${locale}: direction`);
+    assert.match(html, new RegExp(`<html[^>]*data-script="${scriptFamily[locale]}"`), `${locale}: script family`);
     assert.ok(html.includes(`<title>${catalogs[locale].Meta.title}</title>`));
     assert.equal((html.match(/<h1\b/g) ?? []).length, 1);
     for (const id of ["features", "how-it-works", "report", "open-source"]) {

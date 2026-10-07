@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "跳转到主要内容"
+  },
+  "Common": {
+    "severity": {
+      "critical": "严重",
+      "warning": "警告",
+      "info": "信息"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — 训练前，先摸清你的数据集",
+    "description": "Dataset Doctor 在一份清晰的诊断报告中呈现缺失值、重复行、类别失衡、可疑特征与数据泄漏——在你训练模型之前。",
+    "keywords": [
+      "数据集",
+      "数据质量",
+      "机器学习",
+      "ML 工具",
+      "数据集体检"
+    ]
+  },
+  "Theme": {
+    "label": "主题",
+    "toggle": "切换主题",
+    "light": "浅色",
+    "dark": "深色",
+    "system": "跟随系统"
+  },
+  "Language": {
+    "label": "语言",
+    "select": "选择语言",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — 首页",
+    "links": {
+      "features": "功能",
+      "workflow": "工作流程",
+      "report": "报告",
+      "opensource": "开源"
+    },
+    "githubAria": "GitHub 上的 Dataset Doctor",
+    "cta": "查看示例报告",
+    "openMenu": "打开菜单",
+    "sheetTitle": "导航",
+    "sheetDesc": "本站各区块与操作",
+    "sheetMeta": "开源 · 对 Python 友好",
+    "closeMenu": "关闭菜单",
+    "sectionsAria": "页面区块"
+  },
+  "Hero": {
+    "eyebrow": "开源数据集体检",
+    "title": "摸清你的数据集<br></br><em>再</em>训练<br></br>你的模型。",
+    "ledeLead": "在数据质量问题变成模型问题之前，先把它们逮住。",
+    "ledeRest": "Dataset Doctor 帮你在一份清晰的报告里呈现缺失值、重复行、失衡、可疑特征等数据集常见问题。",
+    "ctaPrimary": "查看示例报告",
+    "conceptNote": "设计概念——一套正在构建中的开源 Python 工具箱。所有数字均为示意。",
+    "meta": {
+      "source": "开源",
+      "python": "对 Python 友好",
+      "builtFor": "面向 ML 流程"
+    }
+  },
+  "Tech": {
+    "caption": "为现代机器学习流程而设计。",
+    "aria": "机器学习技术"
+  },
+  "Preview": {
+    "reportChrome": "数据集报告",
+    "sampleTag": "示例输出",
+    "specimenStats": "行数 {rows} · 列数 {columns}",
+    "analyzedIn": "示例分析：{seconds} 秒",
+    "healthScore": "健康分",
+    "chip": "需要处理",
+    "headFinding": "发现",
+    "headDetail": "详情",
+    "headSeverity": "严重度",
+    "issues": [
+      {
+        "name": "缺失值",
+        "detail": "4 列"
+      },
+      {
+        "name": "重复行",
+        "detail": "218"
+      },
+      {
+        "name": "类别失衡",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "疑似泄漏",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "示意性示例报告 · report.html"
+  },
+  "Problem": {
+    "eyebrow": "为什么重要",
+    "title": "模型的问题，多半在开跑之前就埋下了。",
+    "body": "多数团队发现数据集问题时已经太晚——在架构和超参数上花掉的时间从来不是瓶颈。到那时修复得回上游做，实验还得全部重跑。",
+    "quote": "用病着的数据集训练出来的模型，学到的是病。",
+    "indexLabel": "症状索引",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "数据缺失",
+        "gloss": "4 列里悄悄漂移的 NaN"
+      },
+      {
+        "name": "重复观测",
+        "gloss": "218 行被记录了两次"
+      },
+      {
+        "name": "类别失衡",
+        "gloss": "类间 87 / 13 的分布"
+      },
+      {
+        "name": "可疑特征",
+        "gloss": "伪装起来的目标代理变量"
+      },
+      {
+        "name": "数据类型错误",
+        "gloss": "数字被存成了字符串"
+      },
+      {
+        "name": "数据泄漏",
+        "gloss": "训练框里躺着答案"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "检查清单",
+    "title": "在 <code>model.fit()</code> 之前<br></br>值得检查的一切",
+    "body": "围绕结构、统计量以及两者关系的八轮扫描——正是这些不起眼的检查，决定模型能不能泛化。",
+    "big1": {
+      "label": "第 01 轮 · 完整性",
+      "title": "缺失值分析",
+      "body": "按列、类型与行片段归组的空值图样——而不只是一个没精打采的总数。",
+      "caption": "实心方块表示有值，红色轮廓表示空值——31 列中有 4 列含空值 · 占全部单元格 0.8%"
+    },
+    "big2": {
+      "label": "第 02 轮 · 唯一性",
+      "title": "重复检测",
+      "body": "对每一对列做哈希指纹，捕捉完全相同与近乎相同的行。",
+      "dupTag": "dup",
+      "caption": "行条形显示记录指纹；匹配行以琥珀色点亮——218 行折叠为 109 条唯一记录"
+    },
+    "compact": [
+      {
+        "label": "第 03 轮",
+        "title": "类别分布",
+        "body": "在多数与少数先验扭曲指标之前，先让它们现形。"
+      },
+      {
+        "label": "第 04 轮",
+        "title": "离群值检测",
+        "body": "远远漂出所在列预期范围的取值。"
+      },
+      {
+        "label": "第 05 轮",
+        "title": "数据类型校验",
+        "body": "数字存成字符串，日期存成除了日期以外的任何东西。"
+      },
+      {
+        "label": "第 06 轮",
+        "title": "泄漏告警",
+        "body": "把不该拿到的答案保管起来的特征。"
+      }
+    ],
+    "corr": {
+      "label": "第 07 轮 · 关系",
+      "title": "相关性分析",
+      "body": "哪些特征一起动——以及哪些只是碰巧和目标一起动。",
+      "legend": "示意性相关性图谱",
+      "note": "示例发现：field_12 与 field_27 的<hi> ρ 0.94</hi>——排查泄漏"
+    },
+    "summary": {
+      "label": "概览",
+      "title": "数据集小结",
+      "body": "在任何建模决策之前，先看清数据的事实形状。",
+      "rows": [
+        {
+          "term": "行数",
+          "value": "12,458"
+        },
+        {
+          "term": "列数",
+          "value": "31"
+        },
+        {
+          "term": "数值列",
+          "value": "22"
+        },
+        {
+          "term": "类别列",
+          "value": "9"
+        },
+        {
+          "term": "占用内存",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "数据集健康度",
+    "title": "一个分数。一个更清楚的起点。",
+    "body": "数据集健康度汇总常见的质量信号，帮你判断训练之前该优先处理哪一块。",
+    "ofTotal": "/ 100",
+    "overall": "总评分",
+    "chip": "需要处理",
+    "disclaimer": "<lbl>概念预览</lbl>——本页是一个产品概念。所示分数与发现均为示意，并非基于真实数据计算。",
+    "catsHeadL": "诊断类别",
+    "catsHeadR": "得分",
+    "categories": [
+      {
+        "label": "完整性",
+        "value": "92",
+        "note": "31 列中 4 列含空值"
+      },
+      {
+        "label": "一致性",
+        "value": "81",
+        "note": "region 编码混杂"
+      },
+      {
+        "label": "类别平衡",
+        "value": "44",
+        "note": "类先验 87 / 13"
+      },
+      {
+        "label": "重复质量",
+        "value": "76",
+        "note": "218 行重复"
+      },
+      {
+        "label": "泄漏风险",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 扎实",
+      "50–79 留意",
+      "0–49 立刻动手"
+    ]
+  },
+  "Report": {
+    "eyebrow": "示例报告",
+    "title": "问题<em>排好优先级</em>。",
+    "body": "每个发现都附带证据与建议动作——按严重度排序，让第一小时落在最大的风险上。",
+    "excerptNote": "节选部分发现——完整报告为每项检查列出其证据。",
+    "evidence": "证据",
+    "actionLabel": "建议动作",
+    "leakLabels": [
+      "customer_status",
+      "中位数特征"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "疑似目标泄漏",
+        "body": "特征 \"customer_status\" 与目标之间存在可疑的强关联。",
+        "action": "确认在预测当时这个列是否真的可用。",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "检测到类别失衡",
+        "body": "照这个分布训练，除非加权重或重采样，否则模型会倒向多数类。",
+        "action": "给类别加权或在拟合前重采样训练切分；按类报告 precision 与 recall，别只看 accuracy。",
+        "distLabelA": "类别 A",
+        "distLabelB": "类别 B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "重复观测",
+        "body": "检测到 218 行重复。",
+        "action": "每条重复记录只留一份副本，训练前重新生成切分——或者去查重复为何从上游流进了管道。",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "重复行 · 占数据集 1.75%"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "工作流程",
+    "title": "三步，<br></br>从数据集到洞见。",
+    "steps": [
+      {
+        "title": "上传",
+        "body": "CSV 或 Parquet 数据集。",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "体检",
+        "body": "自动化的质量与 ML 就绪度检查。",
+        "meta": "示意性检查"
+      },
+      {
+        "title": "改善",
+        "body": "训练之前解决问题。",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "接入你的流程",
+    "title": "嵌进你已经在用的工作流。",
+    "body": "在 CI 里跑一条命令，或把分析器 import 到笔记本旁边。两种方式，报告都是一个独立的 HTML 文件。",
+    "termTag": "示例会话",
+    "analyzing": "正在分析数据集...",
+    "rowsOk": "行数 {count}",
+    "colsOk": "特征数 {count}",
+    "warnings": "警告 {count}",
+    "critical": "严重问题 {count}",
+    "healthLabel": "数据集健康度：",
+    "generated": "已生成 report.html",
+    "apiNote": "所示命令与 API 均为示意——接口仍在敲定。"
+  },
+  "OSS": {
+    "eyebrow": "开源",
+    "title": "从设计起就透明。",
+    "body": "Dataset Doctor 定位为开源工具箱，开发者可以审阅每一处检查、扩展它，并嵌入自己的流程。",
+    "cta": "在 GitHub 查看",
+    "pillars": [
+      {
+        "title": "开源",
+        "body": "读懂每项检查，审计每条启发式规则，发布你自己的分支。",
+        "meta": "MIT 许可证"
+      },
+      {
+        "title": "Python 优先",
+        "body": "面向笔记本、脚本与流水线的建议接口。",
+        "meta": "建议中的 Python 接口"
+      },
+      {
+        "title": "可扩展检查",
+        "body": "建议的检查目录，为自定义校验留出位置。",
+        "meta": "自定义检查概念"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "先体检。",
+    "title2": "后<em>训练</em>。",
+    "sub": "在把时间浪费给错误的模型调优之前，先解决数据集里那些明显的问题。",
+    "ctaPrimary": "查看示例报告",
+    "note": "产品概念 · 全站示例数据"
+  },
+  "Project": {
+    "link": "在 GitHub 查看",
+    "status": "尚未发布",
+    "hint": "概念阶段——代码仓库、文档与 issue 跟踪随首个公开版本上线。"
+  },
+  "Footer": {
+    "tagline": "面向机器学习流程的数据集体检。",
+    "linksAria": "项目链接",
+    "linkSource": "查看源码",
+    "linkReadme": "README",
+    "linkIssues": "报告问题",
+    "copyright": "© {year} Dataset Doctor. 设计概念——全站示例数字。"
+  }
+}

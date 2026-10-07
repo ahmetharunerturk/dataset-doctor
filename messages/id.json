@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Langsung ke konten utama"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Kritis",
+      "warning": "Peringatan",
+      "info": "Info"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — Pahami dataset Anda sebelum melatih model",
+    "description": "Dataset Doctor menyoroti nilai yang hilang, baris duplikat, ketidakseimbangan kelas, fitur mencurigakan, dan kebocoran dalam laporan diagnostik yang mudah dibaca — sebelum Anda melatih model Anda.",
+    "keywords": [
+      "dataset",
+      "kualitas data",
+      "machine learning",
+      "peralatan ML",
+      "diagnostik dataset"
+    ]
+  },
+  "Theme": {
+    "label": "Tema",
+    "toggle": "Ganti tema",
+    "light": "Terang",
+    "dark": "Gelap",
+    "system": "Sistem"
+  },
+  "Language": {
+    "label": "Bahasa",
+    "select": "Pilih bahasa",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — beranda",
+    "links": {
+      "features": "Fitur",
+      "workflow": "Cara kerja",
+      "report": "Laporan",
+      "opensource": "Open source"
+    },
+    "githubAria": "Dataset Doctor di GitHub",
+    "cta": "Lihat contoh laporan",
+    "openMenu": "Buka menu",
+    "sheetTitle": "Navigasi",
+    "sheetDesc": "Bagian dan aksi situs",
+    "sheetMeta": "Open source · bersahabat dengan Python",
+    "closeMenu": "Tutup menu",
+    "sectionsAria": "Bagian halaman"
+  },
+  "Hero": {
+    "eyebrow": "Diagnostik dataset open source",
+    "title": "Kenali dataset Anda<br></br><em>sebelum</em> melatih<br></br>model Anda.",
+    "ledeLead": "Tangkap masalah kualitas data sebelum menjadi masalah model.",
+    "ledeRest": "Dataset Doctor membantu memperlihatkan nilai yang hilang, baris duplikat, ketidakseimbangan, fitur mencurigakan, dan masalah umum lainnya pada dataset dalam satu laporan yang mudah dibaca.",
+    "ctaPrimary": "Lihat contoh laporan",
+    "conceptNote": "Konsep desain — perangkat open source Python yang masih dibangun. Semua angka bersifat ilustratif.",
+    "meta": {
+      "source": "Open source",
+      "python": "Bersahabat dengan Python",
+      "builtFor": "Untuk alur kerja ML"
+    }
+  },
+  "Tech": {
+    "caption": "Dirancang untuk alur kerja machine learning masa kini.",
+    "aria": "Teknologi machine learning"
+  },
+  "Preview": {
+    "reportChrome": "Laporan dataset",
+    "sampleTag": "Keluaran contoh",
+    "specimenStats": "{rows} baris · {columns} kolom",
+    "analyzedIn": "Contoh analisis: {seconds} detik",
+    "healthScore": "Skor kesehatan",
+    "chip": "Perlu perhatian",
+    "headFinding": "Temuan",
+    "headDetail": "Detail",
+    "headSeverity": "Tingkat",
+    "issues": [
+      {
+        "name": "Nilai hilang",
+        "detail": "4 kolom"
+      },
+      {
+        "name": "Baris duplikat",
+        "detail": "218"
+      },
+      {
+        "name": "Ketidakseimbangan kelas",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Dugaan kebocoran",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Contoh laporan ilustratif · report.html"
+  },
+  "Problem": {
+    "eyebrow": "Kenapa ini penting",
+    "title": "Masalah model sering sudah ada jauh sebelum pelatihan dimulai.",
+    "body": "Sebagian besar tim baru menyadari masalah dataset ketika sudah telat — setelah berjam-jam mengutak-utik arsitektur dan hyperparameter yang sejak awal bukanlah penyempit jalannya. Perbaikan saat itu harus terjadi lebih jauh di hulu, dan seluruh eksperimen mesti diulang.",
+    "quote": "Model yang dilatih pada dataset yang sakit hanya belajar tentang sakitnya.",
+    "indexLabel": "Indeks gejala",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Data hilang",
+        "gloss": "NaN yang diam-diam merayap di 4 kolom"
+      },
+      {
+        "name": "Observasi duplikat",
+        "gloss": "218 baris tercatat dua kali"
+      },
+      {
+        "name": "Ketidakseimbangan kelas",
+        "gloss": "Distribusi 87 / 13 antar kelas"
+      },
+      {
+        "name": "Fitur mencurigakan",
+        "gloss": "Variabel proksi target yang menyamar"
+      },
+      {
+        "name": "Salah tipe data",
+        "gloss": "Angka yang disimpan sebagai string"
+      },
+      {
+        "name": "Kebocoran data",
+        "gloss": "Jawaban masih tinggal di frame latih"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Daftar periksa",
+    "title": "Semua yang layak diperiksa<br></br>sebelum <code>model.fit()</code>",
+    "body": "Delapan kali pindai skema, statistik, dan hubungan di antaranya — pemeriksaan senyap yang menentukan apakah model bisa menggeneralisasi.",
+    "big1": {
+      "label": "Giliran 01 · Kelengkapan",
+      "title": "Analisis nilai hilang",
+      "body": "Pola kekosongan yang dikelompokkan per kolom, dtype, dan segmen baris — bukan satu angka total yang menyedihkan.",
+      "caption": "Kotak terisi menandai nilai yang ada, garis merah menandai yang kosong — 4 dari 31 kolom punya kekosongan · 0.8% sel"
+    },
+    "big2": {
+      "label": "Giliran 02 · Keunikan",
+      "title": "Deteksi duplikat",
+      "body": "Baris identik dan nyaris identik ditangkap lewat sidik jari hash di setiap pasang kolom.",
+      "dupTag": "dup",
+      "caption": "Batang baris menampilkan sidik jari rekaman; yang cocok menyala warna ambar — 218 baris melipat jadi 109 rekaman unik"
+    },
+    "compact": [
+      {
+        "label": "Giliran 03",
+        "title": "Distribusi kelas",
+        "body": "Prior mayoritas dan minoritas tampak sebelum menyelewengkan metrik."
+      },
+      {
+        "label": "Giliran 04",
+        "title": "Deteksi pencilan",
+        "body": "Nilai yang melayang jauh di luar rentang wajar kolomnya."
+      },
+      {
+        "label": "Giliran 05",
+        "title": "Validasi tipe data",
+        "body": "Angka yang disimpan sebagai string, tanggal yang disimpan sebagai apa pun kecuali tanggal."
+      },
+      {
+        "label": "Giliran 06",
+        "title": "Peringatan kebocoran",
+        "body": "Fitur yang menyimpan jawaban yang seharusnya tidak bisa diakses."
+      }
+    ],
+    "corr": {
+      "label": "Giliran 07 · Hubungan",
+      "title": "Analisis korelasi",
+      "body": "Fitur mana yang bergerak bersama — dan mana yang kebetulan bergerak bersama target.",
+      "legend": "Peta korelasi ilustratif",
+      "note": "Contoh temuan: field_12 dan field_27 memegang<hi> ρ 0.94</hi> — periksa kebocoran"
+    },
+    "summary": {
+      "label": "Ringkasan",
+      "title": "Ikhtisar dataset",
+      "body": "Bentuk faktual data Anda, sebelum keputusan pemodelan apa pun diambil.",
+      "rows": [
+        {
+          "term": "Baris",
+          "value": "12,458"
+        },
+        {
+          "term": "Kolom",
+          "value": "31"
+        },
+        {
+          "term": "Numerik",
+          "value": "22"
+        },
+        {
+          "term": "Kategorikal",
+          "value": "9"
+        },
+        {
+          "term": "Memori",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Kesehatan dataset",
+    "title": "Satu skor. Titik awal yang lebih jelas.",
+    "body": "Kesehatan dataset merangkum sinyal kualitas yang biasa dicek, sehingga terlihat area mana yang perlu disentuh sebelum pelatihan.",
+    "ofTotal": "/ 100",
+    "overall": "Skor keseluruhan",
+    "chip": "Perlu perhatian",
+    "disclaimer": "<lbl>Pratinjau konsep</lbl> — halaman ini adalah konsep produk. Skor dan temuan yang ditampilkan bersifat ilustratif, tidak dihitung dari data nyata.",
+    "catsHeadL": "Kategori diagnostik",
+    "catsHeadR": "Skor",
+    "categories": [
+      {
+        "label": "Kelengkapan",
+        "value": "92",
+        "note": "nilai hilang di 4 dari 31 kolom"
+      },
+      {
+        "label": "Konsistensi",
+        "value": "81",
+        "note": "encoding campuran di region"
+      },
+      {
+        "label": "Keseimbangan kelas",
+        "value": "44",
+        "note": "prior kelas 87 / 13"
+      },
+      {
+        "label": "Kualitas duplikat",
+        "value": "76",
+        "note": "218 baris duplikat"
+      },
+      {
+        "label": "Risiko kebocoran",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 kokoh",
+      "50–79 pantau",
+      "0–49 ambil tindakan sekarang"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Contoh laporan",
+    "title": "Masalah yang <em>diprioritaskan</em>.",
+    "body": "Setiap temuan datang lengkap dengan bukti dan tindakan lanjutan yang disarankan — urut berdasarkan tingkat keparahan, supaya jam pertama Anda jatuh ke risiko terbesar.",
+    "excerptNote": "Sebagian temuan — laporan lengkap menjabarkan tiap pemeriksaan beserta buktinya.",
+    "evidence": "Bukti",
+    "actionLabel": "Tindakan yang disarankan",
+    "leakLabels": [
+      "datetime",
+      "risiko kebocoran"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Dugaan kebocoran target",
+        "body": "Fitur \"customer_status\" memegang hubungan yang mencurigakan kuat dengan target.",
+        "action": "Periksa kembali apakah kolom ini benar-benar tersedia pada saat prediksi.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Ketidakseimbangan kelas terdeteksi",
+        "body": "Melatih pada pembagian ini akan mencondongkan model ke kelas mayoritas, kecuali bobot kelas atau resampling dipakai.",
+        "action": "Berikan bobot pada kelas atau ulangi pembagian latih sebelum fitting; laporkan presisi dan recall per kelas, bukan sekadar akurasi.",
+        "distLabelA": "Kelas A",
+        "distLabelB": "Kelas B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Observasi duplikat",
+        "body": "218 baris duplikat terdeteksi.",
+        "action": "Sisakan satu salinan dari setiap rekaman duplikat dan bangun ulang pembagian data sebelum pelatihan — atau telusuri kenapa duplikat mengalir masuk lebih jauh di hulu.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "baris duplikat · 1.75% dari dataset"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Cara kerja",
+    "title": "Dari dataset ke wawasan,<br></br>tiga langkah.",
+    "steps": [
+      {
+        "title": "Unggah",
+        "body": "Dataset dalam format CSV atau Parquet.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Periksa",
+        "body": "Pemeriksaan kualitas dan kesiapan ML secara otomatis.",
+        "meta": "Pemeriksaan ilustratif"
+      },
+      {
+        "title": "Perbaiki",
+        "body": "Selesaikan masalah sebelum pelatihan.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Menyatu dengan alur kerja",
+    "title": "Pas dengan alur kerja yang sudah Anda pakai.",
+    "body": "Jalankan satu perintah di CI, atau impor penganalisis di samping notebook Anda. Bagaimanapun caranya, laporan datang sebagai satu berkas HTML yang mandiri.",
+    "termTag": "Sesi contoh",
+    "analyzing": "Menganalisis dataset...",
+    "rowsOk": "baris: {count}",
+    "colsOk": "fitur: {count}",
+    "warnings": "peringatan: {count}",
+    "critical": "masalah kritis: {count}",
+    "healthLabel": "Kesehatan dataset:",
+    "generated": "report.html dibuat",
+    "apiNote": "Perintah dan API yang ditampilkan bersifat ilustratif — antarmuka masih dalam penyusunan."
+  },
+  "OSS": {
+    "eyebrow": "Open source",
+    "title": "Transparan sejak dari rancangan.",
+    "body": "Dataset Doctor dirancang sebagai perangkat open source yang bisa dibedah, diperluas, dan ditanamkan pengembang ke alur kerja mereka sendiri.",
+    "cta": "Lihat di GitHub",
+    "pillars": [
+      {
+        "title": "Open source",
+        "body": "Baca setiap pemeriksaan, audit setiap heuristik, terbitkan fork Anda sendiri.",
+        "meta": "Lisensi MIT"
+      },
+      {
+        "title": "Python dahulu",
+        "body": "Antarmuka yang disarankan untuk notebook, skrip, dan pipeline.",
+        "meta": "Antarmuka Python yang disarankan"
+      },
+      {
+        "title": "Pemeriksaan yang bisa diperluas",
+        "body": "Katalog pemeriksaan yang disarankan, lengkap dengan ruang untuk validasi Anda sendiri.",
+        "meta": "Konsep pemeriksaan kustom"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Periksa dahulu.",
+    "title2": "Lalu <em>latih</em>.",
+    "sub": "Tangani masalah dataset yang sudah jelas lebih dulu, sebelum waktu habis untuk mengoptimalkan model yang salah.",
+    "ctaPrimary": "Lihat contoh laporan",
+    "note": "Konsep produk · data contoh di seluruh situs"
+  },
+  "Project": {
+    "link": "Lihat di GitHub",
+    "status": "Belum dirilis",
+    "hint": "Tahap konsep — repositori, dokumentasi, dan pelacak isu akan hadir bersama rilis publik pertama."
+  },
+  "Footer": {
+    "tagline": "Diagnostik dataset untuk alur kerja machine learning.",
+    "linksAria": "Tautan proyek",
+    "linkSource": "Lihat kode sumber",
+    "linkReadme": "README",
+    "linkIssues": "Laporkan masalah",
+    "copyright": "© {year} Dataset Doctor. Konsep desain — angka contoh di seluruh situs."
+  }
+}

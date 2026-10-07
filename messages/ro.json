@@ -1,0 +1,374 @@
+{
+  "A11y": {
+    "skip": "Sari la conținutul principal"
+  },
+  "Common": {
+    "severity": {
+      "critical": "Critic",
+      "warning": "Avertisment",
+      "info": "Informație"
+    }
+  },
+  "Meta": {
+    "title": "Dataset Doctor — înțelege-ți setul de date înainte de antrenament",
+    "description": "Dataset Doctor scoate la lumină valorile lipsă, rândurile duplicate, dezechilibrul de clase, caracteristicile suspecte și scurgerile de date într-un raport diagnostic ușor de citit — înainte să-ți antrenezi modelul.",
+    "keywords": [
+      "set de date",
+      "calitatea datelor",
+      "machine learning",
+      "unelte ML",
+      "diagnostic seturi de date"
+    ]
+  },
+  "Theme": {
+    "label": "Temă",
+    "toggle": "Schimbă tema",
+    "light": "Luminos",
+    "dark": "Întunecat",
+    "system": "După sistem"
+  },
+  "Language": {
+    "label": "Limbă",
+    "select": "Alege limba",
+    "en": "English",
+    "de": "Deutsch",
+    "tr": "Türkçe"
+  },
+  "Nav": {
+    "homeAria": "Dataset Doctor — Acasă",
+    "links": {
+      "features": "Caracteristici",
+      "workflow": "Cum funcționează",
+      "report": "Raport",
+      "opensource": "Open source"
+    },
+    "githubAria": "Dataset Doctor pe GitHub",
+    "cta": "Vezi un raport demonstrativ",
+    "openMenu": "Deschide meniul",
+    "sheetTitle": "Navigare",
+    "sheetDesc": "Secțiunile și acțiunile site-ului",
+    "sheetMeta": "Open source · prietenos cu Python",
+    "closeMenu": "Închide meniul",
+    "sectionsAria": "Secțiunile paginii"
+  },
+  "Hero": {
+    "eyebrow": "Diagnostic de seturi de date open source",
+    "title": "Înțelege-ți setul de date<br></br><em>înainte</em> să-ți antrenezi<br></br>modelul.",
+    "ledeLead": "Prinde problemele de calitate a datelor înainte să devină probleme ale modelului.",
+    "ledeRest": "Dataset Doctor ajută să fie puse în lumină valorile lipsă, duplicatele, dezechilibrul, caracteristicile suspecte și alte probleme comune, într-un singur raport lizibil.",
+    "ctaPrimary": "Vezi un raport demonstrativ",
+    "conceptNote": "Concept de design — un toolkit Python open source aflat în construcție. Toate cifrele sunt doar ilustrative.",
+    "meta": {
+      "source": "Open source",
+      "python": "Prietenos cu Python",
+      "builtFor": "Pentru pipeline-uri ML"
+    }
+  },
+  "Tech": {
+    "caption": "Proiectat pentru fluxuri moderne de machine learning.",
+    "aria": "Tehnologii de machine learning"
+  },
+  "Preview": {
+    "reportChrome": "Raport de set de date",
+    "sampleTag": "Ieșire demonstrativă",
+    "specimenStats": "Rânduri: {rows} · Coloane: {columns}",
+    "analyzedIn": "Analiză demonstrativă: {seconds} sec",
+    "healthScore": "Scor de sănătate",
+    "chip": "Necesită atenție",
+    "headFinding": "Constatare",
+    "headDetail": "Detalii",
+    "headSeverity": "Severitate",
+    "issues": [
+      {
+        "name": "Valori lipsă",
+        "detail": "4 coloane"
+      },
+      {
+        "name": "Rânduri duplicate",
+        "detail": "218"
+      },
+      {
+        "name": "Dezechilibru de clase",
+        "detail": "87 / 13"
+      },
+      {
+        "name": "Posibilă scurgere",
+        "detail": "customer_status"
+      }
+    ],
+    "generatedBy": "Raport demonstrativ ilustrativ · report.html"
+  },
+  "Problem": {
+    "eyebrow": "De ce contează",
+    "title": "Problemele modelului încep adesea înainte să înceapă antrenamentul.",
+    "body": "Majoritatea echipelor descoperă problemele setului de date mult prea târziu — după ore de reglaj pe arhitecturi și hiperparametri care nu au fost niciodată blocajul. Atunci soluția e mai adânc în pipeline, iar toate experimentele trebuie reexecutate.",
+    "quote": "Un model antrenat pe un set de date bolnav nu învață decât boala.",
+    "indexLabel": "Indice de simptome",
+    "indexRange": "S-01 — S-06",
+    "symptoms": [
+      {
+        "name": "Date incomplete",
+        "gloss": "NaN se scurge silențios în 4 coloane"
+      },
+      {
+        "name": "Observații duplicate",
+        "gloss": "218 rânduri înregistrate de două ori"
+      },
+      {
+        "name": "Dezechilibru de clase",
+        "gloss": "distribuție 87 / 13 între clase"
+      },
+      {
+        "name": "Caracteristici suspecte",
+        "gloss": "variabile proxy pentru țintă deghizate"
+      },
+      {
+        "name": "Tipuri de date greșite",
+        "gloss": "numere stocate ca text"
+      },
+      {
+        "name": "Scurgere de date",
+        "gloss": "răspunsurile sunt încă în cadrul de antrenament"
+      }
+    ]
+  },
+  "Features": {
+    "eyebrow": "Listă de verificare",
+    "title": "Tot ce merită verificat,<br></br><code>model.fit()</code> înainte",
+    "body": "Opt treceri peste schemă, statistici și relațiile dintre ele — verificări tăcute care decid dacă modelul va generaliza.",
+    "big1": {
+      "label": "Trecera 01 · completitudine",
+      "title": "Analiza valorilor lipsă",
+      "body": "Modelele de goluri grupate pe coloană, tip de date și felie de rând — nu doar un număr total tern.",
+      "caption": "Pătratele pline înseamnă valoare existentă, cadrele roșii înseamnă gol — 4 din 31 de coloane au goluri · 0.8% din celule"
+    },
+    "big2": {
+      "label": "Trecera 02 · unicitate",
+      "title": "Detectare duplicate",
+      "body": "Rândurile identice și aproape identice sunt prinse prin amprente hash pe fiecare pereche de coloane.",
+      "dupTag": "dup",
+      "caption": "Barele de rând arată amprentele înregistrărilor; cele potrivite strălucesc în chihlimbar — 218 rânduri se îndoaie în 109 înregistrări unice"
+    },
+    "compact": [
+      {
+        "label": "Trecera 03",
+        "title": "Distribuția claselor",
+        "body": "Prioriile de majoritate și minoritate se văd înainte să deformeze metricile."
+      },
+      {
+        "label": "Trecera 04",
+        "title": "Detectarea valorilor aberante",
+        "body": "Valori rătăcite mult în afara intervalului așteptat al coloanei lor."
+      },
+      {
+        "label": "Trecera 05",
+        "title": "Validarea tipurilor de date",
+        "body": "Numere stocate ca text, date stocate ca orice, numai ca dată nu."
+      },
+      {
+        "label": "Trecera 06",
+        "title": "Avertisment de scurgere",
+        "body": "Caracteristici care dețin răspunsuri la care nu ar trebui să aibă acces."
+      }
+    ],
+    "corr": {
+      "label": "Trecera 07 · relații",
+      "title": "Analiza corelațiilor",
+      "body": "Ce caracteristici se mișcă împreună — și care se întâmplă să se miște cu ținta.",
+      "legend": "Hartă de corelație ilustrativă",
+      "note": "Constatare demonstrativă: field_12 și field_27 împart<hi> ρ 0.94</hi> — verifică scurgerea"
+    },
+    "summary": {
+      "label": "Privire de ansamblu",
+      "title": "Rezumatul setului de date",
+      "body": "Forma reală a datelor tale înainte de orice decizie de modelare.",
+      "rows": [
+        {
+          "term": "Rânduri",
+          "value": "12,458"
+        },
+        {
+          "term": "Coloane",
+          "value": "31"
+        },
+        {
+          "term": "Numerice",
+          "value": "22"
+        },
+        {
+          "term": "Categorice",
+          "value": "9"
+        },
+        {
+          "term": "Memorie",
+          "value": "14.2 MB"
+        }
+      ]
+    }
+  },
+  "Health": {
+    "eyebrow": "Sănătatea setului de date",
+    "title": "Un singur scor. Un punct de plecare mai clar.",
+    "body": "Sănătatea setului de date sintetizează semnalele comune de calitate, ca să fie clar care zone merită atenție înainte de antrenament.",
+    "ofTotal": "/ 100",
+    "overall": "Scor general",
+    "chip": "Necesită atenție",
+    "disclaimer": "<lbl>Previzualizare de concept</lbl> — această pagină este un concept de produs. Scorurile și constatările afișate sunt ilustrative și nu au fost calculate din date reale.",
+    "catsHeadL": "Categorii de diagnostic",
+    "catsHeadR": "Scor",
+    "categories": [
+      {
+        "label": "Completitudine",
+        "value": "92",
+        "note": "goluri în 4 din 31 de coloane"
+      },
+      {
+        "label": "Consistență",
+        "value": "81",
+        "note": "codificări mixte în region"
+      },
+      {
+        "label": "Echilibru de clase",
+        "value": "44",
+        "note": "prior de clase 87 / 13"
+      },
+      {
+        "label": "Calitatea duplicatelor",
+        "value": "76",
+        "note": "218 rânduri duplicate"
+      },
+      {
+        "label": "Risc de scurgere",
+        "value": "55",
+        "note": "customer_status · ρ 0.94"
+      }
+    ],
+    "legend": [
+      "80–100 solid",
+      "50–79 sub observație",
+      "0–49 acționează acum"
+    ]
+  },
+  "Report": {
+    "eyebrow": "Raport demonstrativ",
+    "title": "Probleme <em>în ordinea priorității</em>.",
+    "body": "Fiecare constatare vine cu dovezi și un pas următor sugerat — ordonate după severitate, ca prima ta oră să meargă către cel mai mare risc.",
+    "excerptNote": "Constatări selectate — raportul complet enumeră fiecare verificare cu dovezile ei.",
+    "evidence": "Dovezi",
+    "actionLabel": "Pas sugerat",
+    "leakLabels": [
+      "datetime",
+      "Risc de scurgere"
+    ],
+    "findings": [
+      {
+        "ref": "LEAK-001",
+        "title": "Posibilă scurgere de țintă",
+        "body": "Caracteristica \"customer_status\" arată o relație suspect de puternică cu ținta.",
+        "action": "Verifică dacă această coloană era chiar disponibilă la momentul predicției.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "BAL-004",
+        "title": "Dezechilibru de clase detectat",
+        "body": "Antrenarea pe această distribuție va înclina modelul spre clasa majoritară, dacă nu folosești ponderarea claselor sau re-esantionarea.",
+        "action": "Aplică ponderarea claselor sau re-esantionează partiția de antrenament înainte de fit și raportează precizia și recall-ul pe fiecare clasă, nu doar exactitatea generală.",
+        "distLabelA": "Clasa A",
+        "distLabelB": "Clasa B",
+        "statValue": "",
+        "statCaption": ""
+      },
+      {
+        "ref": "DUP-012",
+        "title": "Observații duplicate",
+        "body": "Au fost detectate 218 rânduri duplicate.",
+        "action": "Păstrează o singură copie a fiecărei înregistrări duplicate și reconstruiește partițiile înainte de antrenament — sau află de ce duplicatele se scurg dintr-o sursă mai adâncă din pipeline.",
+        "distLabelA": "",
+        "distLabelB": "",
+        "statValue": "218",
+        "statCaption": "rânduri duplicate · 1.75% din setul de date"
+      }
+    ]
+  },
+  "Work": {
+    "eyebrow": "Cum funcționează",
+    "title": "De la set de date la perspectivă,<br></br>în trei pași.",
+    "steps": [
+      {
+        "title": "Încarcă",
+        "body": "Un set de date în format CSV sau Parquet.",
+        "meta": "csv · parquet"
+      },
+      {
+        "title": "Verifică",
+        "body": "Verificări automate de calitate și pregătire ML.",
+        "meta": "verificări ilustrative"
+      },
+      {
+        "title": "Îmbunătățește",
+        "body": "Rezolvă problemele înainte de antrenament.",
+        "meta": "report.html"
+      }
+    ]
+  },
+  "Dev": {
+    "eyebrow": "Integrare în flux",
+    "title": "Se potrivește în fluxul de lucru pe care îl folosești deja.",
+    "body": "Rulează o singură comandă în CI sau importă analizorul lângă notebook-ul tău. Oricum, raportul iese ca un singur fișier HTML independent.",
+    "termTag": "Sesiune demonstrativă",
+    "analyzing": "Se analizează setul de date...",
+    "rowsOk": "Rânduri: {count}",
+    "colsOk": "Caracteristici: {count}",
+    "warnings": "Avertismente: {count}",
+    "critical": "Probleme critice: {count}",
+    "healthLabel": "Sănătatea setului de date:",
+    "generated": "report.html generat",
+    "apiNote": "Comanda și API-ul afișate sunt ilustrative — interfața este încă în formare."
+  },
+  "OSS": {
+    "eyebrow": "Open source",
+    "title": "Transparent din design.",
+    "body": "Dataset Doctor este proiectat ca un toolkit open source pe care dezvoltatorii să-l poată citi, extinde și integra în fluxurile lor.",
+    "cta": "Vezi pe GitHub",
+    "pillars": [
+      {
+        "title": "Open source",
+        "body": "Citește fiecare verificare, revizuiește fiecare euristică și publică propriul tău fork.",
+        "meta": "Licență MIT"
+      },
+      {
+        "title": "Python întâi",
+        "body": "Interfață propusă pentru notebook-uri, scripturi și pipeline-uri.",
+        "meta": "interfață Python propusă"
+      },
+      {
+        "title": "Verificări extensibile",
+        "body": "Un catalog de verificări propus, cu loc pentru validările tale proprii.",
+        "meta": "concept de verificări custom"
+      }
+    ]
+  },
+  "CTA": {
+    "title1": "Verifică întâi.",
+    "title2": "Apoi <em>antrenează</em>.",
+    "sub": "Rezolvă problemele evidente ale setului de date înainte să-ți pierzi timpul optimizând modelul greșit.",
+    "ctaPrimary": "Vezi un raport demonstrativ",
+    "note": "Concept de produs · date demonstrative în tot site-ul"
+  },
+  "Project": {
+    "link": "Vezi pe GitHub",
+    "status": "Nepublicat încă",
+    "hint": "Fază de concept — depozitul, documentația și urmăritorul de probleme vor veni odată cu prima lansare publică."
+  },
+  "Footer": {
+    "tagline": "Diagnostic de seturi de date pentru fluxuri de machine learning.",
+    "linksAria": "Linkuri de proiect",
+    "linkSource": "Vezi sursa",
+    "linkReadme": "README",
+    "linkIssues": "Raportează o problemă",
+    "copyright": "© {year} Dataset Doctor. Concept de design — cifre ilustrative în tot site-ul."
+  }
+}

@@ -1,8 +1,9 @@
 import { defineRouting } from "next-intl/routing";
+import { DEFAULT_LOCALE, LOCALES, localeCodes } from "@/lib/i18n/locales";
 
 export const routing = defineRouting({
-  locales: ["en", "de", "tr"],
-  defaultLocale: "en",
+  locales: [...localeCodes],
+  defaultLocale: DEFAULT_LOCALE,
   localePrefix: "always",
   // Unprefixed visits always use English; explicit locale URLs stay selected.
   localeDetection: false,
@@ -11,8 +12,7 @@ export const routing = defineRouting({
 
 export type Locale = (typeof routing.locales)[number];
 
-export const localeShort: Record<Locale, string> = {
-  en: "EN",
-  de: "DE",
-  tr: "TR",
-};
+/** Short display codes, derived from the central registry. */
+export const localeShort: Record<Locale, string> = Object.fromEntries(
+  LOCALES.map((entry) => [entry.code, entry.shortName]),
+) as Record<Locale, string>;

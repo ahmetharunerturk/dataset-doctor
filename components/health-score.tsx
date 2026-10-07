@@ -7,8 +7,6 @@ import { SPECIMEN } from "@/lib/specimen";
 import { useTranslations } from "next-intl";
 
 const OVERALL = SPECIMEN.health.overall;
-/** Illustrative correlation featured in the leakage-risk note. */
-const RHO = SPECIMEN.leak.rho;
 
 const TONE_TEXT = ["text-ok", "text-warning", "text-critical"];
 
@@ -40,13 +38,16 @@ export function HealthScore() {
         <Reveal delay={0.08}>
           <div className="mt-14 flex flex-wrap items-end justify-between gap-6 border-y border-line-strong py-10">
             <div className="flex items-baseline gap-3">
-              <span className="tabular font-serif text-[clamp(4.5rem,10vw,7.5rem)] leading-[0.8]">
-                {OVERALL}
-              </span>
-              <span className="tabular font-mono text-[13px] tracking-[0.14em] text-faint-foreground uppercase">
-                {t("ofTotal")}
-              </span>
-              <span className="ml-3 font-mono text-[11px] tracking-[0.18em] text-faint-foreground uppercase">
+              {/* Fixed LTR pair (68 / 100); the label beside it re-flows with the script. */}
+              <bdi dir="ltr" className="flex items-baseline gap-3">
+                <span className="tabular font-serif text-[clamp(4.5rem,10vw,7.5rem)] leading-[0.8]">
+                  {OVERALL}
+                </span>
+                <span className="tabular font-mono text-[13px] tracking-[0.14em] text-faint-foreground uppercase">
+                  {t("ofTotal")}
+                </span>
+              </bdi>
+              <span className="ms-3 font-mono text-[11px] tracking-[0.18em] text-faint-foreground uppercase">
                 {t("overall")}
               </span>
             </div>
@@ -72,7 +73,7 @@ export function HealthScore() {
                   <div>
                     <p className="text-[15px] font-medium">{t(`categories.${i}.label`)}</p>
                     <p className="mt-1 text-[12.5px] text-muted-foreground">
-                      {t(`categories.${i}.note`, { rho: RHO })}
+                      {t.rich(`categories.${i}.note`, richTags)}
                     </p>
                   </div>
                   <div className="col-span-2 md:col-span-1 md:order-none order-last">
